@@ -1077,7 +1077,7 @@
                                } else {
                                    html ="<label for='aciklama'>Açıklama</label><select class='uzun' parca_tipi='"+_opt.html()+"' name='aciklama' id='aciklama'><option value='0'>Seçiniz..</option>";
                                    for( var x = 0; x < res.data.varyantlar.length; x++ ){
-                                       html += "<option value='"+res.data.varyantlar[x].stok_kodu+"'>"+res.data.varyantlar[x].isim+"</option>";
+                                       html += "<option value='"+res.data.varyantlar[x].stok_kodu+"'>"+res.data.varyantlar[x].aciklama+"</option>";
                                    }
                                    html += "</select>";
                                    varyant_append.append( html );
