@@ -1,0 +1,1306 @@
+html, body {
+	height: 100%;
+	background:#1a1a1a;
+
+	
+}
+#loader {
+	display:none;
+	height: 60px;
+	position: absolute;
+	width: 100%;
+	background: rgba(228, 255, 0, 0.45);
+	z-index:1002;
+}
+#loader .rolling {
+	margin: 11px auto 0 auto;
+	width: 20px;
+}
+
+#loader .sok{
+	text-align: center;
+	font-family: 'montserratregular';
+	font-size: 14px;
+	color: #ffffff;
+}
+#wrapper {
+	color:#f7feff;
+}
+
+#container {
+	/*background:red;*/
+	margin:0 auto 0 auto;
+	font-family:'montserratlight';
+	color:#f7feff;
+}
+
+.header {
+	background:#7b3275;
+	height:60px;
+}
+
+
+.page-header {
+	text-align: center;
+	padding: 15px 0;
+	font-family: 'montserratbold';
+	color: #f3f3f3;
+	background: #232323;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+	box-shadow: 2px 0 4px #000;
+}
+
+.gitas-popup {
+	background:#242424;
+	color:#f7feff !important;
+	font-family:'montserratlight';
+}
+
+.popup-form .notf {
+
+}
+
+.popup-form .notf > span {
+	display: block;
+	padding: 10px 0;
+}
+
+.popup-form .notf > span.ok {
+	color: #2fff2d;
+}
+.popup-form .notf > span.bok {
+	color: #ff3939;
+}
+.popup-form .notf > ul {
+	margin-bottom:5px;
+}
+.popup-form .notf > ul li {
+	font-size: 13px;
+	font-family: 'montserratregular';
+	padding: 2px 0;
+}
+
+.popup-form .form-row {
+	text-align:center;
+}
+.popup-form .input-row {
+	margin:0 !important;
+}
+.popup-form .input-col {
+	display:inline-block;
+	padding:0 10px;
+}
+
+
+.ui-dialog {
+	box-shadow: 4px 4px 20px #1d1d1d,
+				-4px -4px 20px #1d1d1d;
+	border: 1px solid #443142;
+}
+
+.ui-dialog-titlebar {
+	background: #242424;
+    color: #b9b9b9 !important;
+    font-family: 'montserratregular';
+    font-size: 11px;
+    padding: 11px;
+}
+
+.ui-dialog-titlebar-close {
+	float:right;
+	font-family: 'montserratregular';
+	color:#f7feff !important;
+}
+
+#popup-overlay {
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+    background:#181818;
+    border:1px solid #0a0a0a;
+	width:100%;
+	height:100%;
+	opacity:0.8;
+	z-index:1001;
+}
+
+
+#popup {
+    display:none;
+    position:absolute;
+    top:10%;
+    width:100%;
+    opacity:0;
+    background: #272727;
+    box-shadow: 4px 5px 10px #000000;
+    text-align:center;
+    z-index:10001;
+    font-family: 'montserratlight';
+    color:#fff;
+}
+
+
+#popup.loader #popup-buton {
+    display:none;
+}
+
+#popup-header{
+    padding:15px 5px;
+    text-align:center;
+    font-size:20px;
+    margin-bottom:10px;
+    font-family: 'montserratmedium';
+    /*border-bottom:1px dashed #d3d3d3;*/
+}
+
+#popup-buton {
+    position: absolute;
+    /*right: -8px;*/
+    top: -11px;
+    left:50%;
+    margin-left:-6px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+#popup #popup-content {
+    display:inline-block;
+    padding: 10px 0;
+}
+
+/* full */
+@media screen and ( min-width:992px ) {
+	#container {
+		width:1000px;
+	}
+}
+
+
+/* bir boy kucuk */
+@media screen and ( min-width:768px ) and (max-width:991px ) {
+	#container {
+		width:750px;
+	}
+}
+
+
+.datatable {
+	width:100%;
+	margin-top:20px;
+}
+
+.dtfilter {
+
+}
+
+.dtcontent {
+
+}
+
+.dtcontent ul {
+
+}
+
+
+.dtcontent > ul > li {
+	/*height:29px;*/
+	padding: 3px 5px;
+	background:#242424;
+	margin-bottom:3px;
+}
+
+.datatable .part2 {
+	display:none;
+	margin:10px 0;
+	padding:10px 0;
+}
+
+.gitas-table .part2 {
+	display:none;
+	margin: 10px 0;
+	padding: 10px 0;
+}
+.gitas-table .part2 table {
+	position: relative;
+	top: 5px;
+}
+
+.dtcontent > ul > li.kompbut{
+	cursor:pointer;
+}
+
+.dtcontent > ul > li .content{
+	float:left;
+}
+
+.dtcontent .dtnav {
+	float:right;
+}
+.dtcontent .right-content {
+	float:right;
+	margin-right: 15px;
+}
+.gitas-table .right-content.tarih .col-subtitle{
+	position: relative;
+	top: 14px;
+}
+
+
+.dtcontent .dtnav li {
+	float:left;
+	margin-left:15px;
+}
+
+.dtcontent .col-ico{
+	display:inline-block;
+}
+
+.dtcontent .dtico,
+.gitas-table .dtico{
+	position: relative;
+    top: 3px;
+}
+
+.dtcontent .col-bigtitle,
+.gitas-table .content .col-bigtitle {
+	display:inline-block;
+	position: relative;
+    top: -4px;
+	font-family:'montserratbold';
+	margin-left: 6px;
+	font-size:14px;
+}
+.dtcontent .col-bigtitle.light,
+.gitas-table .content .col-bigtitle.light {
+	font-family:'montserratlight' !important;
+	font-size:14px;
+}
+
+
+.dtcontent .col-subtitle,
+.gitas-table .content .col-subtitle{
+	display:inline-block;
+	position: relative;
+    top: -4px;
+    color:#d3d3d3;
+	font-size: 11px;
+	font-style: italic;
+}
+.dtcontent .content .col-subtitle,
+.gitas-table .content .col-subtitle{
+	margin-left: 15px;
+}
+.dtcontent .col-subtitle.tarih,
+.gitas-table .content .col-subtitle.tarih{
+	top:6px !important;
+}
+.dtcontent .col-subtitle.gray,
+.gitas-table .content .col-subtitle.gray{
+	color:#d9d9d9;
+}
+
+.gitas-table .kompbut{
+	cursor:pointer;
+}
+
+.gitas-table .content{
+	float:left;
+	position: relative;
+	top: 4px;
+}
+
+.gitas-table .dtnav {
+	float:right;
+	position: relative;
+	top: 4px;
+}
+.gitas-table .right-content {
+	float:right;
+	margin-right: 15px;
+}
+.gitas-table .right-content .col-ico{
+	position: relative;
+	top: 3px;
+}
+.gitas-table .dtnav li {
+	float:left;
+	margin-left:15px;
+}
+
+.gitas-table .col-ico{
+	display:inline-block;
+}
+
+
+
+.dtico {
+	display:inline-block;
+	width:25px;
+	height:25px;
+}
+
+.dtico.arti {
+	background:url('../img/ico_dt_arti.png');
+}
+.dtico.artikucuk {
+	background:url('../img/ico_dt_artikucuk.png');
+}
+.dtico.ayarlar {
+	background:url('../img/ico_dt_ayarlar.png');
+}
+.dtico.parca {
+	background:url('../img/ico_dt_parca.png');
+}
+.dtico.stats {
+	background:url('../img/ico_dt_stats.png');
+}
+.dtico.talep {
+	background:url('../img/ico_dt_talep.png');
+}
+.dtico.talepgri {
+	background:url('../img/ico_dt_talepgri.png');
+}
+.dtico.talepsari {
+	background:url('../img/ico_dt_talepsari.png');
+}
+.dtico.warning1 {
+	background:url('../img/ico_dt_warning1.png');
+}
+.dtico.warning2 {
+	background:url('../img/ico_dt_warning2.png');
+}
+.dtico.warning3 {
+	background:url('../img/ico_dt_warning3.png');
+}
+.dtico.eksi {
+	background:url('../img/ico_dt_eksi.png');
+}
+.dtico.eksikucuk {
+	background:url('../img/ico_dt_eksikucuk.png');
+}
+.dtico.buyutec {
+	background:url('../img/ico_dt_buyutec.png');
+}
+.dtico.formgri {
+	background:url('../img/ico_dt_formgri.png');
+}
+.dtico.formyesil {
+	background:url('../img/ico_dt_formyesil.png');
+}
+.dtico.letrevize {
+	background:url('../img/ico_dt_letrevize.png');
+}
+.dtico.letrevizekucuk {
+	background:url('../img/ico_dt_letrevizekucuk.png');
+}
+.dtico.letservis {
+	background:url('../img/ico_dt_letservis.png');
+}
+.dtico.lethurdakucuk {
+	background:url('../img/ico_dt_lethurdakucuk.png');
+}
+.dtico.barkodsari {
+	background:url('../img/ico_dt_barkodsari.png');
+}
+.dtico.personelgri {
+	background:url('../img/ico_dt_personelgri.png');
+}
+.dtico.editmor {
+	background:url('../img/ico_dt_editmor.png');
+}
+.dtico.carpikirmizi {
+	background:url('../img/ico_dt_carpikirmizi.png');
+}
+.dtico.msginput {
+	background:url('../img/ico_dt_msginput.png');
+}
+.dtico.msginput_okunmadi {
+	background:url('../img/ico_dt_msginput_okunmadi.png');
+}
+.dtico.msgout {
+	background:url('../img/ico_dt_msgout.png');
+}
+.dtico.otobus {
+	background:url('../img/ico_dt_otobus.png');
+}
+.dtico.saatgri {
+	background:url('../img/ico_dt_saatgri.png');
+}
+.dtico.saatkirmizi {
+	background:url('../img/ico_dt_saatkirmizi.png');
+}
+.dtico.saatturuncu {
+	background:url('../img/ico_dt_saatturuncu.png');
+}
+.dtico.saatmavi {
+	background:url('../img/ico_dt_saatmavi.png');
+}
+.dtico.sepet {
+	background:url('../img/ico_dt_sepet.png');
+}
+.dtico.surucubeyaz {
+	background:url('../img/ico_dt_surucubeyaz.png');
+}
+.dtico.surucusari {
+	background:url('../img/ico_dt_surucusari.png');
+}
+.dtico.tickgri {
+	background:url('../img/ico_dt_tickgri.png');
+}
+.dtico.tickyesil {
+	background:url('../img/ico_dt_tickyesil.png');
+}
+.dtico.uyarizil {
+	background:url('../img/ico_dt_uyarizil.png');
+}
+.dtico.powergri {
+	background:url('../img/ico_dt_powergri.png');
+}
+.dtico.poweryesil {
+	background:url('../img/ico_dt_poweryesil.png');
+}
+.dtico.loopgri {
+	background:url('../img/ico_dt_loopgri.png');
+}
+.dtico.loopyesil {
+	background:url('../img/ico_dt_loopyesil.png');
+}
+
+.minitableico {
+	display:inline-block;
+	width:20px;
+	height:20px;
+	    position: relative;
+    top: 5px;
+}
+
+.minitableico.edit {
+	background:url('../img/ico_minitable_edit.png');
+}
+.minitableico.sil {
+	background:url('../img/ico_minitable_sil.png');
+}
+.minitableico.buyutec {
+	background:url('../img/ico_minitable_buyutec.png');
+}
+.minitableico.letrevize {
+	background:url('../img/ico_minitable_letrevize.png');
+}
+.minitableico.letyok {
+	background:url('../img/ico_minitable_letyok.png');
+}
+
+.minitableico.lethurda {
+	background:url('../img/ico_minitable_lethurda.png');
+}
+.section {
+
+}
+
+.section-content {
+	padding:20px 0;
+}
+
+.section-header {
+	text-align:center;
+	padding-bottom:10px;
+	border-bottom:1px solid #464646;
+	font-family:'montserratbold';
+	font-size:14px;
+	margin-bottom:20px;
+}
+.section-header > label {
+	position: relative;
+	top: 18px;
+	background: #1a1a1a;
+	padding: 0 2px;
+	color: #d3d3d3;
+}
+
+.form-section-header {
+	text-align:center;
+	padding-bottom:10px;
+	/*border-bottom:1px solid #b06aaa;*/
+	font-family:'montserratbold';
+	font-size:14px;
+	margin:20px 0;
+	color:#b06aaa;
+}
+
+.form-section-header.kisa {
+	width:90%;
+	/*margin:0 auto;*/
+	margin:20px auto;
+	border-bottom:1px solid #efd0ec;
+	color:#fff;
+	font-family:'montserratlight';
+}
+
+.form-section-header.full {
+	margin:20px auto;
+	border-bottom:1px solid #efd0ec;
+	color:#fff;
+	font-family:'montserratlight';
+}
+.popup-form {
+	padding: 20px;
+}
+
+.varyant-listesi{
+	padding: 5px;
+}
+.varyant-item{
+	display: inline-block;
+	padding: 0 0 0px 10px;
+	background: #3a3a3a;
+	border-radius: 8px;
+	margin:5px;
+}
+.varyant-item > span {
+	display: inline-block;
+	position: relative;
+	top: -8px;
+	right: 3px;
+	color: #cacaca;
+	font-size: 12px;
+	font-family: 'montserratmedium';
+}
+
+.form {
+	text-align:center;
+}
+
+.form .nav {
+	margin:20px 0;
+}
+
+.form-notf{
+
+}
+
+.form-notf > span {
+	display: block;
+	padding: 9px 0;
+	font-size: 12px;
+}
+.form-notf .ok{
+	border: 1px dashed #2aa52e;
+	color: #55ff38;
+}
+.form-notf .bok{
+	border: 1px dashed #ff0000;
+	color: #ff3939;
+}
+
+.input-container{
+	padding:8px 0
+}
+
+.input-container label {
+	font-size: 11px;
+	margin-bottom: 4px;
+	font-weight: 600;
+	font-style: italic;
+	letter-spacing:0.5px;
+	color:#85aaaf;
+}
+
+.input-container .uzun {
+	width:250px !important;
+}
+.input-container .kisa {
+	width:70px !important;
+}
+
+.full{
+	width:90% !important;
+}
+
+.input-container textarea{
+	font-size: 13px;
+	padding: 5px 10px 3px 10px;
+	width: 300px;
+	height:100px;
+	background:#313131;
+	border: 2px solid #272727;
+	transition:all 0.4s;
+	color:#bbb;
+}
+
+.input-container input[type='checkbox'],
+.input-container input[type='radio']{
+	position: relative;
+	top: 2px;
+}
+
+.input-container input[type='text'],
+.input-container input[type='email'],
+.input-container input[type='password'],
+.input-container input[type='search'],
+.input-container select{
+	background:#313131;
+	font-size: 13px;
+	padding: 5px 10px 3px 10px;
+	width: 180px;
+	border: 2px solid #272727;
+	transition:all 0.4s;
+	color:#bbb;
+}
+
+.input-container input[type='text']:focus,
+.input-container input[type='email']:focus,
+.input-container input[type='password']:focus,
+.input-container input[type='search']:focus,
+.input-container select:focus,
+.input-container textarea:focus {
+	border: 2px solid #344244;
+}
+
+.input-container.au label{
+	display:block;
+	text-align:center;
+}
+
+.input-container.au.cb label{
+	display:inline-block !important;
+}
+
+.input-error {
+	display:none;
+	color: #ff0000;
+	font-size: 10px;
+	padding-top: 4px;
+	max-width: 95px;
+	margin: 0 auto;
+}
+
+.redborder {
+	border-color:#ff0000 !important;
+}
+/*
+.input-row{
+	display:inline-block;
+}
+
+.input-row > .input-container {
+	display:inline-block;
+	margin-right:20px;
+}
+
+.input-row > .input-container:last-child {
+	margin-right:0 !important;
+}*/
+
+.form-section-33 {
+	width: 33%;
+	float: left;
+}
+
+.form-section-nav {
+
+}
+
+.section-form {
+	/*background: #272727;*/
+	padding:10px 0;
+}
+ .form-row {
+
+}
+.form-row .form-col{
+	display:inline-block;
+	margin: 0 5px;
+}
+
+.barkodlu-hidden,
+.barkodsuz-hidden {
+	display:none;
+}
+
+.mnbtn{
+	font-size: 11px;
+	padding:8px 14px 7px 14px;
+	margin: 0 5px;
+	border-radius: 7px;
+	letter-spacing: 0.5px;
+	opacity:1;
+}
+.mnbtn:disabled {
+	cursor:default;
+	opacity:0.5;
+}
+.mnbtn.gri{
+	color: #fff;
+	background: #242424;
+}
+
+.mnbtn.mor{
+	color: #fff;
+	background: #7b3275;
+}
+
+.mnbtn.acikgri {
+	color: #7b3275;
+	background: #cccccc;
+	font-size:12px !important;
+	font-family:'montserratbold';
+	padding: 12px 15px 10px 15px !important;
+}
+.input-button {
+	background: #313131;
+	color: #ffffff;
+	font-family: 'montserratbold';
+	padding: 3.6px 7px;
+	border: 2px solid #272727;
+	margin-left: 1px;
+}
+.input-button:hover{
+	border: 2px solid #b06aaa;
+	transition:all 0.4s;
+}
+
+
+.gcont {
+	background:#181818;
+	border:1px solid #0a0a0a;
+	padding:5px;
+	margin:20px 0;
+}
+
+.gcont .rcont {
+	float:left;
+	width:85%;
+}
+.gcont .rcont .rcontent {
+	padding-top:10px;
+}
+
+.gcont .lcont {
+	float: left;
+	width: 15%;
+}
+.gcont .lcont .info {
+	text-align: center;
+	font-family: 'montserratmedium';
+	color: #c5a552;
+	margin: 5px 0 5px 0;
+}
+
+.gcont .rcont .info {
+	font-family: 'montserratlight';
+	color: #c5a552;
+	font-size:12px;
+	margin: 5px 0 5px 0;
+}
+
+.gcont .lcont .ico {
+
+}
+
+.gcont .lcont .ico img {
+	width: 85px;
+	margin: 0 auto;
+	display: block;
+}
+
+.input-row{
+	margin-bottom: 20px;
+	text-align:center;
+}
+.binput-container{
+	display: inline-block;
+	margin: 0 20px;
+}
+.binput-container > label,
+.binput-container .katbir > label,
+.binput-container .katiki > label {
+	font-family:'montserratmedium';
+	color:#c5a552;
+	text-align:center;
+	display:block;
+	font-size:14px;
+}
+.binput-container input[type="text"],
+.binput-container input[type="password"],
+.binput-container input[type="email"],
+.binput-container textarea{
+	box-shadow:inset 1px 2px 3px #000000;
+	background:#111111;
+	border:1px solid #0a0a0a;
+	border-radius:2px;
+	padding:5px;
+	font-family:'montserratmedium';
+	color:#fff;
+	text-align:center;
+}
+
+.binput-container select {
+	color:#fff;
+	text-align:center;
+	padding:5px;
+	box-shadow:inset 1px 2px 3px #000000;
+	background:#111111;
+	border:1px solid #0a0a0a;
+	border-radius:2px;
+}
+
+.binput-container select.uzun {
+	width:250px;
+}
+
+.binput-container input[type="text"].kisa,
+.binput-container input[type="password"].kisa,
+.binput-container input[type="email"].kisa {
+	width: 120px;
+	height: 25px;
+}
+.binput-container input[type="text"].orta,
+.binput-container input[type="password"].orta,
+.binput-container input[type="email"].orta {
+	width: 160px;
+	height: 25px;
+}
+
+.binput-container input[type="text"].uzun,
+.binput-container input[type="password"].uzun,
+.binput-container input[type="email"].uzun {
+    width: 350px;
+    height: 25px;
+}
+
+
+.binput-container.ikikat {
+
+}
+
+.binput-container.ikikat .katbir{
+
+}
+
+.binput-container.ikikat .katiki{
+	margin-top:10px;
+}
+
+.binput-container.textarea {
+	width:100%;
+}
+.binput-container textarea.form-notlar{
+	width: 90%;
+	height: 140px;
+	margin-bottom: 12px;
+}
+.binput-container textarea.orta{
+	width: 350px;
+	height: 140px;
+}
+
+.obareycb-container {
+	position:relative;
+    transition:all 0.3s;
+}
+.obareycb-container:after{
+	clear:both;
+	visibility:hidden;
+	height:0;
+	display:block;
+	content:"";
+}
+.obareycb-container label {
+	font-size: 14px;
+	display: block;
+	position: relative;
+	top: 7px;
+	cursor: pointer;
+	left: 4px;
+	float: left;
+}
+
+.obareycb-container .obareycb {
+	width:28px;
+	height:28px;
+	box-shadow:inset 1px 2px 3px #000000;
+	background:#111111;
+	border:1px solid #0a0a0a;
+	border-radius:2px;
+	display:block;
+	float:left;
+	position: relative;
+}
+
+.obareycb-container.selected .obareycb:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 17px;
+	top: 5px;
+	left: 5px;
+	border-radius: 2px;
+	height: 17px;
+	background: purple;
+}
+
+.adim {
+	display:none;
+	transition:all 0.4s;
+}
+
+.adimlar-header {
+	margin-bottom: 40px;
+}
+
+.adimlar-header ul{
+	background:#232323;
+}
+
+.adimlar-header ul li{
+	float:left;
+	position:relative;
+	width:20%;
+}
+.adimlar-header ul li .adim-alt {
+	position: relative;
+	top: 22px;
+	font-size: 12px;
+	text-align: center;
+	color: #d3d3d3;
+}
+.adimlar-header ul li.ok .adim-alt {
+	color: #c5a552;
+}
+.adimlar-header ul li.ok,
+.adimlar-header ul li.ok .adim-ust {
+	background: #c5a552;
+}
+
+.adimlar-header ul li .adim-ust {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: -7px;
+	left: 43%;
+	border-radius: 50%;
+	background: #232323;
+}
+
+.plaka-container {
+	text-align:center;
+}
+.plaka-input {
+	display:inline-block;
+}
+
+.plaka-input .lmavi {
+	float: left;
+	width: 30px;
+	background: #0064cb;
+	height: 50px;
+}
+.plaka-input input {
+	float: left;
+	display: block;
+	height: 50px;
+	padding-left: 10px;
+	font-size: 29px;
+	width: 180px;
+}
+
+.form-nav{
+	text-align:center;
+	padding:20px 0;
+}
+.form-nav button {
+	width:46%;
+}
+
+.parca-cikis-cont{
+	display:inline-block;
+	padding:15px;
+	border:3px solid transparent;
+	margin: 10px;
+	text-align: center;
+}
+.parca-cikis-cont.ok {
+	border-color:#2aa52e;
+}
+.parca-cikis-cont.bok{
+	border-color:#ff0000;
+}
+.parca-cikis-cont .title {
+	text-align: center;
+	color: #c5a552;
+}
+.parca-cikis-cont .state {
+	font-size: 11px;
+	text-align: center;
+	margin: 10px 0;
+}
+.parca-cikis-cont .buton-cont {
+	margin-bottom: 10px;
+}
+.ief-ozet {
+	/*position: absolute;*/
+	/*left: 200px;*/
+	margin-bottom:20px;
+	text-align:center;
+}
+.ief-ozet > button {
+	/*display:block;*/
+	margin:15px;
+}
+.barkodlu-popup-form {
+
+}
+
+.parca-tipi-popup-form .parca-tipi {
+    font-size: 17px;
+    font-family: 'montserratmedium';
+    color: #c5a552;
+}
+.parca-tipi-popup-form .info {
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+.parca-tipi-popup-form .parca-info {
+    margin: 20px 0;
+}
+
+.parca-tipi-popup-form .parca-info .state {
+    margin-bottom: 10px;
+}
+
+.parca-tipi-popup-form .parca-info .state.ok {
+    color:#2aa52e;
+}
+
+.parca-tipi-popup-form .parca-info .state.bok{
+    color:#ff0000;
+}
+
+.parca-tipi-popup-form .parca-info ul {
+    font-size: 12px;
+    line-height: 19px;
+}
+
+table.obarey-table {
+    margin: 10px auto 15px auto;
+}
+table.obarey-table tbody tr{
+    background:#191919;
+    border-radius:4px;
+}
+table.obarey-table tbody tr:nth-child(odd){
+	background:#1d1d1d;
+}
+
+table.obarey-table tbody tr td {
+	padding: 8px 25px 11px 25px;
+	vertical-align: middle;
+	font-size: 11px;
+}
+table.obarey-table thead tr td{
+    padding:5px;
+    font-size: 13px;
+}
+
+table.obarey-table thead tr td {
+
+    color: #c5a552;
+}
+table.obarey-table tbody tr td {
+
+}
+table.obarey-table .giren-parca-sil {
+    position:relative;
+    top:6px;
+}
+
+.detay-popup {
+	text-align:center;
+}
+
+.detay-popup .input-col{
+	display:inline-block;
+	padding:0 15px;
+}
+.detay-popup .input-row {
+	margin:0 !important;
+}
+.flight {
+	font-family: 'montserratlight' !important;
+}
+.fbold {
+	font-family: 'montserratbold' !important;
+}
+.fsemibold {
+	font-family: 'montserratsemibold' !important;
+}
+.fregular {
+	font-family: 'montserratregular' !important;
+}
+
+.ckirmizi {
+	color:#ff3a35 !important;
+}
+
+.csari {
+	color:#eed46b !important;
+}
+
+.cmavi {
+	color:#6987f8 !important;
+}
+.cacikmavi {
+	color:#67ccdb !important;
+}
+
+.cgri {
+	color:#858585 !important;
+}
+
+.cturuncu {
+	color:#f08d24 !important;
+}
+
+.cyesil {
+	color:#4edd1d !important;
+}
+
+.fs10{
+	font-size:10px !important;
+}
+.fs11{
+	font-size:11px !important;
+}
+.fs12{
+	font-size:12px !important;
+}
+/* common */
+.active {
+	display:block !important;
+}
+.activeib {
+	display:inline-block !important;
+}
+.hidden {
+	display:none !important;
+}
+.mtop-20{
+	margin-top:20px !important;
+}
+.mbot-20{
+	margin-bottom:20px;
+}
+.mtop-15 {
+	margin-top:15px;
+}
+.wp_25{
+	width:25%;
+}
+.wp_33{
+	width:33.33%;
+}
+.wp_50{
+	width:50%;
+}
+.wp_75{
+	width:75%;
+}
+.wp_100{
+	width:100%;
+}
+.fleft {
+	float:left;
+}
+.fright {
+	float:right;
+}
+.clearfix:after {
+	clear:both;
+	visibility:hidden;
+	height:0;
+	display:block;
+	content:"";
+}
+
+.obarey-tooltip {
+	display:none;
+	position:absolute;
+	padding:2px;
+	background:#d2d2d2;
+	z-index: 10002; /* popuptan 1 fazla */
+}
+
+.obarey-tooltip > img {
+	width:100px;
+	height:100%;
+}
+.obarey-tooltip > .tooltip-text {
+	text-align:center;
+	font-size:14px;
+	background:#fff;
+	padding:10px;
+	font-family: 'montserratregular';
+	line-height:1.5;
+}
+
+
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, select, textarea, button,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+button {
+	background:none;
+	cursor:pointer;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: 0;
+}
+:focus {
+    outline: 0;
+}

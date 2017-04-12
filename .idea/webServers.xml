@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1091cc08-f1ca-4680-9a4a-a73826c52666" name="Xampp Apache" url="http://localhost/gitasWeb/">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\gitasWeb" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
