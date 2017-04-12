@@ -103,6 +103,12 @@
 
             });
 
+            $(document).on("click", "stats", function(){
+
+                
+
+            });
+
         });
     </script>
 
