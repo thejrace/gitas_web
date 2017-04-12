@@ -351,11 +351,8 @@ class Is_Emri_Formu extends Data_Out{
 
         $cikanlar_html = "";
         foreach( $this->form_cikanlari_listele() as $cikan ){
-            if( $cikan["tip"] == Parca_Tipi::$BARKODSUZ ){
-                $Parca = new Barkodsuz_Parca( $cikan["stok_kodu"] );
-            } else {
-                $Parca = new Barkodlu_Parca( $cikan["stok_kodu"] );
-            }
+            $Parca = Parca::get( $cikan["stok_kodu"] );
+
             $Parca_Tipi = new Parca_Tipi( $Parca->get_details("tip") );
             $Satici_Firma = new Satici_Firma( $Parca->get_details("satici_firma"));
             $tooltip_data = 'Fatura No: ' . $Parca->get_details("fatura_no") . '<br> Satıcı Firma: ' . $Satici_Firma->get_details("isim");
@@ -397,15 +394,14 @@ class Is_Emri_Formu extends Data_Out{
 
         $girenler_html = "";
         foreach( $this->form_girenleri_listele(true) as $giren ){
+            $Parca = Parca::get($giren["stok_kodu"]);
             if( $giren["tip"] == Parca_Tipi::$BARKODLU ){
-                $Parca = new Barkodlu_Parca($giren["stok_kodu"]);
                 $parca_adi = $Parca->get_details("aciklama");
 
                 $Satici_Firma = new Satici_Firma( $Parca->get_details("satici_firma"));
                 $tooltip_data = 'Fatura No: ' . $Parca->get_details("fatura_no") . '<br> Satıcı Firma: ' . $Satici_Firma->get_details("isim");
             } else {
-                $Parca = new Barkodsuz_Parca($giren["stok_kodu"] );
-                $parca_adi = $Parca->get_details("isim");
+                $parca_adi = $Parca->get_details("aciklama");
                 $tooltip_data = "";
                 if( $giren["ekleme"] == 1 ){
                     $tooltip_data = "Ekleme Yapıldı.";

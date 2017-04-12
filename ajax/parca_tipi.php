@@ -38,7 +38,7 @@
                 // burada balatayı ayıklıcaz sadece sağ ve sol gelicek
                 if( $Parca_Tipi->get_details("isim") == "Balata" ){
                     foreach( $Parca_Tipi->varyantlari_listele() as $varyant ){
-                        if( $varyant["isim"] == "Sağ" || $varyant["isim"] == "Sol" )  $DATA["varyantlar"][] = $varyant;
+                        if( $varyant["aciklama"] == "Sağ" || $varyant["aciklama"] == "Sol" )  $DATA["varyantlar"][] = $varyant;
                     }
                 } else {
                     $DATA["varyantlar"] = $Parca_Tipi->varyantlari_listele();
@@ -104,10 +104,10 @@
                                 foreach ($_POST["varyantlar"] as $varyant) {
                                     $Barkodsuz_Parca = new Barkodsuz_Parca();
                                     $Barkodsuz_Parca->ekle(array(
-                                        "isim"   => $varyant,
-                                        "miktar" => 0,
-                                        "tip"    => $Parca_Tipi->get_details("gid"),
-                                        "gcmod"  => $Barkodsuz_Parca::$GC
+                                        "aciklama"   => $varyant,
+                                        "miktar"     => 0,
+                                        "tip"        => $Parca_Tipi->get_details("gid"),
+                                        "gcmod"      => $Barkodsuz_Parca::$GC
                                     ));
                                 }
                             }

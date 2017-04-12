@@ -239,5 +239,96 @@ class Otobus extends Data_Out{
         return Popup_Form::init( $form_array );
     }
 
+    /**
+        Servis İstatistikleri
+     *      - İş emri formları
+     *      - En çok değişen parça tipi
+     *      - En çok servise gelen sürücü
+     *
+     *  Sefer İstatistikleri
+     *      - Toplam sefer
+     *      - Tamam seferler
+     *      - Zayi seferler
+     *      - Favori kapı kodu
+     *      - Favori sürücü
+     *      - Gitaş KM
+     *      - IETT KM
+     *      - Toplam süre
+
+     */
+    public function stats_init(){
+        $formlar = $this->is_emri_formlarini_listele();
+        $this->details["stats"]["is_emri_formlari"] = count( $formlar );
+
+        $girenler_temp = array();
+        $suruculer_temp = array();
+        foreach( $formlar as $form ){
+            $Form = new Is_Emri_Formu( $form["gid"] );
+            foreach( $Form->form_girenleri_listele(true) as $giren ){
+
+                if( isset($girenler_temp[$giren["stok_kodu"]] ) ){
+                    $girenler_temp[$giren["stok_kodu"]]++;
+                } else {
+                    $girenler_temp[$giren["stok_kodu"]] = 1;
+                }
+            }
+            if( isset($suruculer_temp[$Form->get_details("surucu")]) ){
+                $suruculer_temp[$Form->get_details("surucu")]++;
+            } else {
+                $suruculer_temp[$Form->get_details("surucu")] = 1;
+            }
+        }
+        Session::set("suruculer_test", $girenler_temp );
+
+        $temp_count = 0;
+        foreach( $suruculer_temp as $key => $count ){
+            if( $count > $temp_count ) {
+                $temp_count = $count;
+                $temp_item = $key;
+            }
+        }
+
+        if( $temp_count > 0 ){
+            $Surucu = new Personel($temp_item);
+            $this->details["stats"]["en_cok_servise_gelen_surucu"] = $Surucu->get_details("isim") . " ( " . $temp_count . " ) ";
+            $this->details["stats"]["en_cok_servise_gelen_surucu_gid"] = $temp_item;
+        } else {
+            $this->details["stats"]["en_cok_servise_gelen_surucu"] = Popup_Stats::$VERI_YOK;
+            $this->details["stats"]["en_cok_servise_gelen_surucu_gid"] = Popup_Stats::$VERI_YOK;
+        }
+        $temp_count = 0;
+        foreach( $girenler_temp as $key => $count ){
+            if( $count > $temp_count ) {
+                $temp_count = $count;
+                $temp_item = $key;
+            }
+        }
+        if( $temp_count > 0 ){
+            $Parca = Parca::get( $temp_item );
+            $Parca_Tipi = new Parca_Tipi( $Parca->get_details("tip") );
+            $this->details["stats"]["en_cok_degisen_parca_tipi"] = $Parca_Tipi->get_details("isim") . " - "  . $Parca->get_details("aciklama") . " ( " . $temp_count . " ) ";
+            $this->details["stats"]["en_cok_degisen_parca_tipi_gid"] = $temp_item;
+        } else {
+            $this->details["stats"]["en_cok_degisen_parca_tipi"] = Popup_Stats::$VERI_YOK;
+            $this->details["stats"]["en_cok_degisen_parca_tipi_gid"] = Popup_Stats::$VERI_YOK;
+        }
+    }
+
+    public function stats_html(){
+
+        $statdata = array(
+            array(
+                "header" => "SERVİS İSTATİSTİKLERİ",
+                "items"  => array(
+                    array( "key" => "İŞ EMRİ FORMLARI", "val" => $this->details["stats"]["is_emri_formlari"], "href" => URL_ISEMRI_FORMLARI . "?filter_plaka=" . $this->details["plaka"] ),
+                    array( "key" => "EN ÇOK DEĞİŞEN PARÇA", "val" => $this->details["stats"]["en_cok_degisen_parca_tipi"] ),
+                    array( "key" => "EN ÇOK SERVİSE GELEN SÜRÜCÜ", "val" => $this->details["stats"]["en_cok_servise_gelen_surucu"], "href" => URL_ISEMRI_FORMLARI . "?filter_plaka=" . $this->details["plaka"] . "&filter_surucu=" . $this->details["stats"]["en_cok_servise_gelen_surucu_gid"]  )
+                )
+            )
+        );
+        return Popup_Stats::init( $statdata );
+
+    }
+
 
 }

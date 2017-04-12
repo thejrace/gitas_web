@@ -92,6 +92,64 @@ html, body {
 	padding:0 10px;
 }
 
+.popup-stat {
+
+}
+
+.popup-stat .stat-section {
+	margin-bottom:10px;
+}
+.popup-stat .stat-section > span {
+	display:block;
+	text-align:center;
+	color:#ceb529;
+	font-family:'montserratbold';
+	margin:0 0 5px 0;
+	font-size:13px;
+}
+
+.popup-stat .stat-section > ul {
+
+}
+.popup-stat .stat-section > ul > li {
+	margin:5px 0;
+
+}
+
+.popup-stat .stat-section > ul > li > a {
+	display:block;
+	text-decoration:none;
+}
+.popup-stat .stat-section > ul > li > a:after {
+	clear:both;
+	content:"";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+.popup-stat .stat-section > ul > li > a > div {
+	float:left;
+	min-width: 250px;
+	font-size:11px;
+	border-top:1px solid #353535;
+	border-bottom:1px solid #353535;
+	padding:5px;
+}
+.popup-stat .stat-section > ul > li a .sol {
+	background:#282828;
+	color:#b7b7b7;
+	text-align: left;
+	border-left:1px solid #353535;
+	font-family:'montserratbold';
+}
+.popup-stat .stat-section > ul > li a .sag {
+	background:#252525;
+	color:#ffec4f;
+	text-align: right;
+	border-right:1px solid #353535;
+	border-left:1px solid #353535;
+	font-family: 'montserratmedium';
+}
 
 .ui-dialog {
 	box-shadow: 4px 4px 20px #1d1d1d,

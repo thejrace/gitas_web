@@ -30,6 +30,8 @@
 
 
     </div>
+
+
     <script type="text/javascript">
         $(document).ready(function(){
             Loader.on();
@@ -103,9 +105,19 @@
 
             });
 
-            $(document).on("click", "stats", function(){
-
-                
+            $(document).on("click", ".stats", function(){
+                var fid = $(this).parent().parent().parent().parent().attr("data-id");
+                Loader.on();
+                $.ajax({
+                    type: "POST",
+                    url:Gitas.AJAX_URL + "otobus.php",
+                    dataType: 'json',
+                    data: { req: 'stats', item_id:fid },
+                    success: function(res){
+                        Loader.off();
+                        Popup.on(res.data, fid + " İstatistikler");
+                    }
+                });
 
             });
 

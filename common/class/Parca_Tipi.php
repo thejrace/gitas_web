@@ -68,7 +68,7 @@ class Parca_Tipi extends Data_Out {
         if( $this->details["tip"] == self::$BARKODSUZ ){
             $query = $this->pdo->query("SELECT * FROM " . DBT_BARKODSUZ_PARCALAR . " WHERE tip = ?", array( $this->details["gid"]) )->results();
             foreach( $query as $data ){
-                $varyantlar[] = array( "stok_kodu" => $data["stok_kodu"], "isim" => $data["isim"] );
+                $varyantlar[] = array( "stok_kodu" => $data["stok_kodu"], "aciklama" => $data["aciklama"] );
             }
         }
         return $varyantlar;
@@ -81,7 +81,7 @@ class Parca_Tipi extends Data_Out {
             foreach( $query as $parca ) {
                 if( $parca["gcmod"] == 0 ) continue;
                 $data[] = array(
-                    "aciklama"  => $parca["isim"],
+                    "aciklama"  => $parca["aciklama"],
                     "miktar"    => $parca["miktar"] . " " . $this->details["miktar_olcu_birimi"],
                     "stok_kodu" => $parca["stok_kodu"]
                 );

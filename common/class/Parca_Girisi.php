@@ -57,7 +57,7 @@ class Parca_Girisi extends Data_Out {
                 // js output
                 $this->eklenenler[] = array(
                     "tip"       => $Parca_Tipi->get_details("isim"),
-                    "aciklama"  => $parca->get_details("isim"),
+                    "aciklama"  => $parca->get_details("aciklama"),
                     "adet"      => $parca->get_details("eklenecek_miktar") . " " . $Parca_Tipi->get_details("miktar_olcu_birimi"),
                     "firma"     => $Firma->get_details("isim") . " - ( Fatura No: ".$parca->get_details("fatura_no")." )"
                 );

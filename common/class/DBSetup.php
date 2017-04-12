@@ -44,7 +44,7 @@ class DBSetup{
             )',
             'barkodsuz_parcalar' => ' (
                 id                      int         AUTO_INCREMENT,
-                isim                    text,
+                aciklama                text,
                 stok_kodu               text        NOT NULL,
                 tip                     text        NOT NULL,
                 miktar                  int         DEFAULT 0,

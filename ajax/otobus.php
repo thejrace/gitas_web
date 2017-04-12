@@ -97,11 +97,16 @@
                     }
                     $TEXT = $Otobus->get_return_text();
                 }
-
-
-
             break;
 
+
+            case 'stats':
+
+                $Otobus = new Otobus( Input::get("item_id") );
+                $Otobus->stats_init();
+                $DATA = $Otobus->stats_html();
+
+            break;
 
         }
 

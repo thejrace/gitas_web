@@ -13,7 +13,7 @@ class Barkodsuz_Parca extends Data_Out {
                     $GC = 2;    // hem giriş hem çıkış
 
     public function __construct( $id = null ){
-        $db_keys = array( "id", "isim" ,"stok_kodu" );
+        $db_keys = array( "id", "aciklama" ,"stok_kodu" );
         parent::__construct( DBT_BARKODSUZ_PARCALAR, $db_keys, $id );
     }
 
@@ -21,6 +21,7 @@ class Barkodsuz_Parca extends Data_Out {
     public function set_gecici_data( $data ){
         $this->details = $data;
     }
+
 
     // details in uzerine yazma
     public function add_gecici_data( $data ){
@@ -37,7 +38,7 @@ class Barkodsuz_Parca extends Data_Out {
             return false;
         }
 
-        $Barkodlu_Parca_Kontrol = new Barkodsuz_Parca( $input["isim"] );
+        $Barkodlu_Parca_Kontrol = new Barkodsuz_Parca( $input["aciklama"] );
         if( $Barkodlu_Parca_Kontrol->exists() ){
             $this->return_text = "Bu parça zaten eklenmiş.";
             $this->ok = false;
@@ -45,8 +46,8 @@ class Barkodsuz_Parca extends Data_Out {
         }
 
         if( $this->pdo->insert( $this->table, array(
-            "isim"              => $input["isim"],
-            "stok_kodu"         => Gitas_Hash::hash_olustur( Gitas_Hash::$BARKODSUZ_PARCA, array( "parca_tipi" => $input["tip"], "isim" => $input["isim"] ) ),
+            "aciklama"          => $input["aciklama"],
+            "stok_kodu"         => Gitas_Hash::hash_olustur( Gitas_Hash::$BARKODSUZ_PARCA, array( "parca_tipi" => $input["tip"], "aciklama" => $input["aciklama"] ) ),
             "tip"               => $input["tip"],
             "miktar"            => $input["miktar"],
             "gcmod"             => $input["gcmod"]
@@ -78,7 +79,7 @@ class Barkodsuz_Parca extends Data_Out {
             array(
                 array(
                     "label" => "Açıklama",
-                    "value" => $this->details["isim"]
+                    "value" => $this->details["aciklama"]
                 )
             )
         );

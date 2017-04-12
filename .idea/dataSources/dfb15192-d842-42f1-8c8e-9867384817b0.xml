@@ -224,29 +224,29 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="73" parent="14" name="isim">
-      <Position>2</Position>
-      <DataType>text|0</DataType>
-    </column>
-    <column id="74" parent="14" name="stok_kodu">
+    <column id="73" parent="14" name="stok_kodu">
       <Position>3</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="75" parent="14" name="tip">
+    <column id="74" parent="14" name="tip">
       <Position>4</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="76" parent="14" name="miktar">
+    <column id="75" parent="14" name="miktar">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="77" parent="14" name="gcmod">
+    <column id="76" parent="14" name="gcmod">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="14" name="aciklama">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
     </column>
     <key id="78" parent="14" name="PRIMARY">
       <ColNames>id</ColNames>

@@ -8,6 +8,17 @@
 
     require 'inc/init.php';
 
+    // [klasorun koyulacagi klasör]> git clone [git url]
+
+    // ---- dosya upload ---
+    // git add [dosya_adi] / git add . ( tum dosyalari al )
+    // git commit -m "Obarey beybe"
+    // git push
+
+    // git pull ( repten degisiklikleri guncelle )
+    // git status ( guncellik kontrolu )
+
+    var_dump( Session::get("suruculer_test") );
 
     class Gitas_Test {
 

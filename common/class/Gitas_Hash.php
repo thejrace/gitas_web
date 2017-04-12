@@ -49,7 +49,7 @@ class Gitas_Hash{
             break;
 
             case self::$BARKODSUZ_PARCA:
-                $hash = $data["parca_tipi"] . self::$PF_BARKODSUZ_PARCA . self::turkce_sef($data["isim"]);
+                $hash = $data["parca_tipi"] . self::$PF_BARKODSUZ_PARCA . self::turkce_sef($data["aciklama"]);
             break;
 
             case self::$PARCA_TIPI:

@@ -17,6 +17,13 @@ class Barkodlu_Parca extends Data_Out {
         $this->details = $data;
     }
 
+    // details in uzerine yazma
+    public function add_gecici_data( $data ){
+        foreach( $data as $key => $val ){
+            $this->details[$key] = $val;
+        }
+    }
+
     public function ekle( $input ){
 
         $Parca_Tipi = new Parca_Tipi( $input["tip"] );

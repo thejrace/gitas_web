@@ -1,1 +1,2 @@
-# gitas_web
+# Gitaş Web App
+Obarey Inc.
