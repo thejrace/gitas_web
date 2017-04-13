@@ -1203,6 +1203,9 @@ var jwTab = function( options ){
         addClass( this.bullets[0], "selected" );
         addClass( this.divs[0], "active" );
         var this_ref = this;
+        if( hasClass(options.container, "float") ){
+            for( var j = 0; j < this.bullets.length; j++ ) css(this.bullets[j].parentNode, { width: ( 100/this.bullets.length ) + "%" } );
+        }
         add_event( this.bullets, "click", function(ev){
             this_ref.activate(this);
         });

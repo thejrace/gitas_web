@@ -69,7 +69,8 @@ var GitasDT_CSS = {
         "otobus",
         "warning1",
         "formgri",
-        "tickgri"
+        "tickgri",
+        "sepet"
 
 
     ],

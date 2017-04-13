@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ce5c6c3-4a4b-4b9e-883d-3d9bd190f498" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/class/Popup_Stats.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/dfb15192-d842-42f1-8c8e-9867384817b0.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/dfb15192-d842-42f1-8c8e-9867384817b0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/otobus.php" afterPath="$PROJECT_DIR$/ajax/otobus.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/parca_tipi.php" afterPath="$PROJECT_DIR$/ajax/parca_tipi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/Barkodlu_Parca.php" afterPath="$PROJECT_DIR$/common/class/Barkodlu_Parca.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/Barkodsuz_Parca.php" afterPath="$PROJECT_DIR$/common/class/Barkodsuz_Parca.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/DBSetup.php" afterPath="$PROJECT_DIR$/common/class/DBSetup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/Gitas_Hash.php" afterPath="$PROJECT_DIR$/common/class/Gitas_Hash.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/Is_Emri_Formu.php" afterPath="$PROJECT_DIR$/common/class/Is_Emri_Formu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/Otobus.php" afterPath="$PROJECT_DIR$/common/class/Otobus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/GitasDT_CSS.php" afterPath="$PROJECT_DIR$/common/class/GitasDT_CSS.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/Parca_Girisi.php" afterPath="$PROJECT_DIR$/common/class/Parca_Girisi.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/Parca_Tipi.php" afterPath="$PROJECT_DIR$/common/class/Parca_Tipi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/otobusler.php" afterPath="$PROJECT_DIR$/otobusler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parca_girisi.php" afterPath="$PROJECT_DIR$/parca_girisi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/Popup_Stats.php" afterPath="$PROJECT_DIR$/common/class/Popup_Stats.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/css/main.css" afterPath="$PROJECT_DIR$/res/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/js/common.js" afterPath="$PROJECT_DIR$/res/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/js/main.js" afterPath="$PROJECT_DIR$/res/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,35 +92,21 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="parca_girisleri" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="hederoy@127.0.0.1" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="otobusler" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="hederoy@127.0.0.1" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="otobus_markalar" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="hederoy@127.0.0.1" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="is_emri_formu_personel_detay" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -170,7 +148,7 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="barkodsuz_parcalar" />
+        <option name="myItemId" value="barkodsuz_parca_girisleri_icerik" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -192,50 +170,83 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Barkodsuz_Parca.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/class/Barkodsuz_Parca.php">
+      <file leaf-file-name="parca_tipi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parca_tipi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            <state relative-caret-position="761">
+              <caret line="165" column="15" lean-forward="true" selection-start-line="165" selection-start-column="15" selection-end-line="165" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parca.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/class/Parca.php">
+      <file leaf-file-name="parca_tipi.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ajax/parca_tipi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="649">
+              <caret line="163" column="71" lean-forward="false" selection-start-line="163" selection-start-column="71" selection-end-line="163" selection-end-column="71" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Otobus.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/class/Otobus.php">
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="306" column="43" lean-forward="false" selection-start-line="306" selection-start-column="43" selection-end-line="306" selection-end-column="43" />
+            <state relative-caret-position="467">
+              <caret line="538" column="44" lean-forward="false" selection-start-line="538" selection-start-column="44" selection-end-line="538" selection-end-column="44" />
               <folding>
-                <element signature="n#detay_html#0;n#Otobus#0;n#!!top" expanded="false" />
-                <element signature="n#ayarlar_html#0;n#Otobus#0;n#!!top" expanded="false" />
-                <marker date="1492003406984" expanded="true" signature="467:517" ph="SELECT * FRO... ${$this-&gt;table}" />
-                <marker date="1492003406984" expanded="true" signature="840:901" ph="SELECT * FRO... ${$this-&gt;table}" />
-                <marker date="1492003406984" expanded="true" signature="4600:4657" ph="SELECT * FRO... ${DBT_ISEMRI_FORMLARI}" />
+                <marker date="1492077572902" expanded="true" signature="21237:21304" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+                <marker date="1492077572902" expanded="true" signature="22473:22566" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+                <marker date="1492077572902" expanded="true" signature="22713:22780" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Popup_Stats.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common/class/Popup_Stats.php">
+      <file leaf-file-name="Parca_Tipi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/class/Parca_Tipi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="336">
+              <caret line="151" column="38" lean-forward="false" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
               <folding>
-                <marker date="1491998253167" expanded="true" signature="1069:1084" ph="..." />
+                <marker date="1492077572859" expanded="true" signature="2617:2675" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
+                <marker date="1492077572859" expanded="true" signature="3092:3150" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
+                <marker date="1492077572859" expanded="true" signature="3623:3724" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+                <marker date="1492077572859" expanded="true" signature="4600:4677" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCA_GIRISLERI}" />
+                <marker date="1492077572859" expanded="true" signature="5775:5832" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+                <marker date="1492077572859" expanded="true" signature="6927:6994" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+                <marker date="1492077572859" expanded="true" signature="8314:8327" ph="SELECT * FRO... " />
+                <marker date="1492077572859" expanded="true" signature="8314:8328" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+                <marker date="1492077572859" expanded="true" signature="8314:8405" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+                <marker date="1492077572859" expanded="true" signature="8314:8407" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+                <marker date="1492077572859" expanded="true" signature="8559:8626" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+                <marker date="1492077572859" expanded="true" signature="10194:10240" ph="DELETE FROM " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="72" column="15" lean-forward="false" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
+              <folding>
+                <marker date="1492070691423" expanded="true" signature="3888:3907" ph="..." />
+                <marker date="1492070691423" expanded="true" signature="5508:5527" ph="..." />
+                <marker date="1492070691423" expanded="true" signature="6040:6059" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stok.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stok.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1582">
+              <caret line="118" column="72" lean-forward="false" selection-start-line="117" selection-start-column="28" selection-end-line="118" selection-end-column="72" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -244,10 +255,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>revizyon_aciklamasi</find>
-      <find>personel</find>
-      <find>Obarey</find>
-      <find>tooltip</find>
       <find>content</find>
       <find>fli</find>
       <find>light</find>
@@ -274,6 +281,10 @@
       <find>col</find>
       <find>popup-form</find>
       <find>isim</find>
+      <find>jwTab</find>
+      <find>sepet</find>
+      <find>tab-bull</find>
+      <find>output</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -282,7 +293,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/common/template/barkodlu_form.php" />
         <option value="$PROJECT_DIR$/common/class/Satici_Firma.php" />
         <option value="$PROJECT_DIR$/ajax/satici_firma.php" />
         <option value="$PROJECT_DIR$/qr/index.php" />
@@ -300,8 +310,6 @@
         <option value="$PROJECT_DIR$/ajax/parca.php" />
         <option value="$PROJECT_DIR$/common/class/Template_Detay_Cont.php" />
         <option value="$PROJECT_DIR$/ajax/stok.php" />
-        <option value="$PROJECT_DIR$/res/js/common.js" />
-        <option value="$PROJECT_DIR$/common/class/GitasDT_CSS.php" />
         <option value="$PROJECT_DIR$/ajax/is_emri_formlari.php" />
         <option value="$PROJECT_DIR$/is_emri_formlari.php" />
         <option value="$PROJECT_DIR$/common/class/GET_Filter.php" />
@@ -312,27 +320,30 @@
         <option value="$PROJECT_DIR$/common/class/Popup_Info.php" />
         <option value="$PROJECT_DIR$/common/class/Common.php" />
         <option value="$PROJECT_DIR$/stok.php" />
-        <option value="$PROJECT_DIR$/res/js/main.js" />
         <option value="$PROJECT_DIR$/common/class/Popup_Form.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/ajax/otobus.php" />
         <option value="$PROJECT_DIR$/otobusler.php" />
-        <option value="$PROJECT_DIR$/common/class/Popup_Stats.php" />
         <option value="$PROJECT_DIR$/error.log" />
-        <option value="$PROJECT_DIR$/res/css/main.css" />
-        <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/common/class/Barkodlu_Parca.php" />
         <option value="$PROJECT_DIR$/common/class/Parca.php" />
         <option value="$PROJECT_DIR$/common/class/DBSetup.php" />
         <option value="$PROJECT_DIR$/common/class/Gitas_Hash.php" />
         <option value="$PROJECT_DIR$/common/class/Barkodsuz_Parca.php" />
-        <option value="$PROJECT_DIR$/common/class/Parca_Girisi.php" />
-        <option value="$PROJECT_DIR$/common/class/Parca_Tipi.php" />
-        <option value="$PROJECT_DIR$/ajax/parca_tipi.php" />
         <option value="$PROJECT_DIR$/parca_girisi.php" />
         <option value="$PROJECT_DIR$/is_emri_formu_2.php" />
         <option value="$PROJECT_DIR$/common/class/Is_Emri_Formu.php" />
         <option value="$PROJECT_DIR$/common/class/Otobus.php" />
+        <option value="$PROJECT_DIR$/res/js/common.js" />
+        <option value="$PROJECT_DIR$/common/class/Popup_Stats.php" />
+        <option value="$PROJECT_DIR$/res/js/main.js" />
+        <option value="$PROJECT_DIR$/common/class/GitasDT_CSS.php" />
+        <option value="$PROJECT_DIR$/res/css/main.css" />
+        <option value="$PROJECT_DIR$/common/class/Parca_Girisi.php" />
+        <option value="$PROJECT_DIR$/parca_tipi.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/common/class/Parca_Tipi.php" />
+        <option value="$PROJECT_DIR$/ajax/parca_tipi.php" />
       </list>
     </option>
   </component>
@@ -406,7 +417,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -416,6 +426,56 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gitas_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitas_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitas_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitas_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitas_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitas_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitas_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -453,6 +513,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -466,6 +527,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jeppe\PhpstormProjects\gitas_web" />
       <recent name="C:\Users\Jeppe\PhpstormProjects\gitasWeb" />
       <recent name="C:\Users\Jeppe\PhpstormProjects\gitasWeb\ajax" />
     </key>
@@ -599,12 +661,13 @@
       <workItem from="1491826517172" duration="86000" />
       <workItem from="1491920640238" duration="25466000" />
       <workItem from="1491987195272" duration="1190000" />
-      <workItem from="1491991078040" duration="9728000" />
+      <workItem from="1491991078040" duration="14847000" />
+      <workItem from="1492066909963" duration="9298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="373982000" />
+    <option name="totallyTimeSpent" value="388399000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -619,10 +682,10 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18976545" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19189766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5052083" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.108208954" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.117803834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49479166" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -653,7 +716,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/57c987d6/dfb15192-d842-42f1-8c8e-9867384817b0/hederoy.stok_firmalar" />
     <entry file="file://$PROJECT_DIR$/common/class/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-331">
@@ -698,13 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/parca_talep.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -726,32 +781,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/parca.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="41" column="50" lean-forward="false" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="1425" column="15" lean-forward="false" selection-start-line="1425" selection-start-column="15" selection-end-line="1425" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14">
           <caret line="68" column="133" lean-forward="false" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/GitasDT_CSS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,21 +793,6 @@
         <state relative-caret-position="294">
           <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/is_emri_formlari.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="69" column="29" lean-forward="false" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/is_emri_formlari.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -816,21 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="183" column="24" lean-forward="false" selection-start-line="183" selection-start-column="24" selection-end-line="183" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stok.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1582">
-          <caret line="118" column="72" lean-forward="false" selection-start-line="117" selection-start-column="28" selection-end-line="118" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/class/Common.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -844,19 +847,8 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="14">
             <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-            <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/otobus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="105" column="38" lean-forward="false" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
-          <folding>
-            <marker date="1491997039212" expanded="true" signature="1382:1396" ph="SELECT * FRO... ${DBT_OTOBUSLER}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -864,14 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="784">
           <caret line="80" column="56" lean-forward="false" selection-start-line="80" selection-start-column="56" selection-end-line="80" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="142" column="33" lean-forward="false" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -884,19 +868,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/error.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,14 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/otobusler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="117" column="67" lean-forward="false" selection-start-line="117" selection-start-column="67" selection-end-line="117" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/class/DBSetup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="518">
@@ -925,14 +892,6 @@
           <folding>
             <marker date="1492002316436" expanded="true" signature="13692:13719" ph="CREATE TABLE... ${$key}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/Parca.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -951,60 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/is_emri_formu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/stok.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="96" lean-forward="false" selection-start-line="34" selection-start-column="96" selection-end-line="34" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/parca_girisi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="85" column="24" lean-forward="false" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/class/Parca_Talebi.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/Parca_Girisi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="59" column="64" lean-forward="false" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
-          <folding>
-            <marker date="1492002535026" expanded="true" signature="857:904" ph="SELECT * FRO... ${$this-&gt;table}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/Barkodsuz_Parca.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/parca_tipi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="40" column="79" lean-forward="false" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
           <folding />
         </state>
       </provider>
@@ -1066,23 +975,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/Parca_Tipi.php">
+    <entry file="file://$PROJECT_DIR$/common/class/Barkodsuz_Parca.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="70" column="103" lean-forward="false" selection-start-line="70" selection-start-column="103" selection-end-line="70" selection-end-column="103" />
+          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/class/Parca.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16856">
+          <caret line="1206" column="89" lean-forward="false" selection-start-line="1206" selection-start-column="89" selection-end-line="1206" selection-end-column="89" />
           <folding>
-            <marker date="1492002894104" expanded="true" signature="2616:2674" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
-            <marker date="1492002894104" expanded="true" signature="3091:3149" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
-            <marker date="1492002894104" expanded="true" signature="3622:3723" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
-            <marker date="1492002894104" expanded="true" signature="5039:5085" ph="DELETE FROM " />
+            <marker date="1492026698096" expanded="true" signature="23614:23626" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/class/Popup_Stats.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <folding>
+            <marker date="1492027877771" expanded="true" signature="1132:1147" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stok.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1582">
+          <caret line="118" column="72" lean-forward="false" selection-start-line="117" selection-start-column="28" selection-end-line="118" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/otobusler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="31" column="10" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="31" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/parca_talep.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/parca_girisi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="868">
+          <caret line="85" column="24" lean-forward="false" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/parca.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="41" column="50" lean-forward="false" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/is_emri_formu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/stok.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="34" column="96" lean-forward="false" selection-start-line="34" selection-start-column="96" selection-end-line="34" selection-end-column="96" />
+          <folding>
+            <marker date="1491991018129" expanded="true" signature="320:334" ph="SELECT * FRO... ${DBT_PARCA_TIPLERI}" />
+            <marker date="1491991018129" expanded="true" signature="688:776" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+            <marker date="1491991018129" expanded="true" signature="971:1029" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/class/GitasDT_CSS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/class/Otobus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="306" column="43" lean-forward="false" selection-start-line="306" selection-start-column="43" selection-end-line="306" selection-end-column="43" />
+        <state relative-caret-position="719">
+          <caret line="328" column="15" lean-forward="false" selection-start-line="328" selection-start-column="15" selection-end-line="328" selection-end-column="46" />
           <folding>
             <element signature="n#detay_html#0;n#Otobus#0;n#!!top" expanded="false" />
             <element signature="n#ayarlar_html#0;n#Otobus#0;n#!!top" expanded="false" />
@@ -1093,13 +1093,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/Popup_Stats.php">
+    <entry file="file://$PROJECT_DIR$/ajax/otobus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="607">
+          <caret line="67" column="17" lean-forward="true" selection-start-line="50" selection-start-column="16" selection-end-line="67" selection-end-column="17" />
           <folding>
-            <marker date="1491998253167" expanded="true" signature="1069:1084" ph="..." />
+            <marker date="1491997039212" expanded="true" signature="1382:1396" ph="SELECT * FRO... ${DBT_OTOBUSLER}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/is_emri_formlari.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="46" selection-end-column="50" />
+          <folding>
+            <marker date="1491991018088" expanded="true" signature="448:496" ph="SELECT * FRO... ${DBT_ISEMRI_FORMLARI}" />
+            <marker date="1491991018088" expanded="true" signature="639:653" ph="SELECT * FRO... ${DBT_ISEMRI_FORMLARI}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/is_emri_formlari.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="52" column="54" lean-forward="true" selection-start-line="47" selection-start-column="20" selection-end-line="52" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="72" column="15" lean-forward="false" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
+          <folding>
+            <marker date="1492070691423" expanded="true" signature="3888:3907" ph="..." />
+            <marker date="1492070691423" expanded="true" signature="5508:5527" ph="..." />
+            <marker date="1492070691423" expanded="true" signature="6040:6059" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="175" column="22" lean-forward="false" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/class/Parca_Girisi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+          <folding>
+            <marker date="1492072961019" expanded="true" signature="857:904" ph="SELECT * FRO... ${$this-&gt;table}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="538" column="44" lean-forward="false" selection-start-line="538" selection-start-column="44" selection-end-line="538" selection-end-column="44" />
+          <folding>
+            <marker date="1492077572902" expanded="true" signature="21237:21304" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+            <marker date="1492077572902" expanded="true" signature="22473:22566" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+            <marker date="1492077572902" expanded="true" signature="22713:22780" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/class/Parca_Tipi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="151" column="38" lean-forward="false" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
+          <folding>
+            <marker date="1492077572859" expanded="true" signature="2617:2675" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
+            <marker date="1492077572859" expanded="true" signature="3092:3150" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
+            <marker date="1492077572859" expanded="true" signature="3623:3724" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+            <marker date="1492077572859" expanded="true" signature="4600:4677" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCA_GIRISLERI}" />
+            <marker date="1492077572859" expanded="true" signature="5775:5832" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+            <marker date="1492077572859" expanded="true" signature="6927:6994" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+            <marker date="1492077572859" expanded="true" signature="8314:8327" ph="SELECT * FRO... " />
+            <marker date="1492077572859" expanded="true" signature="8314:8328" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+            <marker date="1492077572859" expanded="true" signature="8314:8405" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+            <marker date="1492077572859" expanded="true" signature="8314:8407" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+            <marker date="1492077572859" expanded="true" signature="8559:8626" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+            <marker date="1492077572859" expanded="true" signature="10194:10240" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parca_tipi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="761">
+          <caret line="165" column="15" lean-forward="true" selection-start-line="165" selection-start-column="15" selection-end-line="165" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/parca_tipi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="163" column="71" lean-forward="false" selection-start-line="163" selection-start-column="71" selection-end-line="163" selection-end-column="71" />
+          <folding />
         </state>
       </provider>
     </entry>

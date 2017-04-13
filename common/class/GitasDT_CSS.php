@@ -20,6 +20,7 @@ class GitasDT_CSS {
         $ICO_WARNING1 = 2,
         $ICO_IEF_GRI = 3,
         $ICO_TICK_GRI = 4,
+        $ICO_SEPET = 5,
 
 
         // renk classlari

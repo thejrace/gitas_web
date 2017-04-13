@@ -116,6 +116,13 @@ html, body {
 
 }
 
+.popup-stat.offpopup {
+	text-align:center;
+}
+.popup-stat.offpopup .stat-section > ul {
+	display:inline-block;
+}
+
 .popup-stat .stat-section > ul > li > a {
 	display:block;
 	text-decoration:none;
@@ -149,6 +156,42 @@ html, body {
 	border-right:1px solid #353535;
 	border-left:1px solid #353535;
 	font-family: 'montserratmedium';
+}
+
+.tab-divs > li {
+	display:none;
+}
+.tab.full .tab-button {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	padding: 9px 0;
+	font-family: 'montserratbold';
+	background: #4a4a4a;
+	color: #d3d3d3;
+	font-size: 13px;
+	transition:all 0.3s;
+}
+.tab-item {
+	padding-top: 20px;
+}
+.tab.full .tab-button:hover {
+	background:#3a3a3a;
+}
+.tab.full .tab-button.selected {
+	background: #7b3275 !important;
+	color: #ffffff !important;
+}
+
+.tab.full.float > ul.tab-bullets > li {
+	float:left;
+}
+.tab.full.float > ul.tab-bullets:after{
+	clear:both;
+	visibility: hidden;
+	height:0;
+	content:"";
+	display:block;
 }
 
 .ui-dialog {

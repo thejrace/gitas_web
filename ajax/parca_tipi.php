@@ -122,6 +122,61 @@
             break;
 
 
+            case "girisleri_listele":
+
+                $Parca_Tipi = new Parca_Tipi( Input::get("patip") );
+                if( !$Parca_Tipi->exists() ){
+                    $OK = 0;
+                } else{
+                    foreach( $Parca_Tipi->get_girisler() as $giris_gid => $parca ){
+                        $right_content = array(
+                            "text" => $parca["tarih"]
+                        );
+                        $output = array(
+                            "data_id"   => $giris_gid,
+                            "ico"       => GitasDT_CSS::$ICO_SEPET,
+                            "bigtitle"  => $parca["miktar"] . " " . $Parca_Tipi->get_details("miktar_olcu_birimi"),
+                            "subtitle"  => $parca["giris_yapan"],
+                            "color"     => GitasDT_CSS::$C_YESIL,
+                            "font"      => GitasDT_CSS::$F_BOLD,
+                            "kompbut"   => true,
+                            "datarole"  => "girisdetay"
+                        );
+                        $output["right_content"] = $right_content;
+                        $DATA[] = $output;
+                    }
+                }
+
+            break;
+
+            case "cikislari_listele":
+
+                $Parca_Tipi = new Parca_Tipi( Input::get("patip") );
+                if( !$Parca_Tipi->exists() ){
+                    $OK = 0;
+                } else{
+                    foreach( $Parca_Tipi->get_cikislar() as $form_gid => $form ){
+                        $right_content = array(
+                            "text" => $form["tarih"]
+                        );
+                        $output = array(
+                            "data_id"   => $form_gid,
+                            "ico"       => GitasDT_CSS::$ICO_PARCA_TIPI,
+                            "bigtitle"  => $form["miktar"] . " " . $Parca_Tipi->get_details("miktar_olcu_birimi"),
+                            "subtitle"  => $form["plaka"],
+                            "color"     => GitasDT_CSS::$C_BEYAZ,
+                            "font"      => GitasDT_CSS::$F_BOLD,
+                            "kompbut"   => true,
+                            "datarole"  => "cikisdetay"
+                        );
+                        $output["right_content"] = $right_content;
+                        $DATA[] = $output;
+                    }
+                }
+
+            break;
+
+
         }
 
         $output = json_encode(array(

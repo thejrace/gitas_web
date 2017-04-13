@@ -91,6 +91,7 @@ class Parca_Girisi extends Data_Out {
 
     }
 
+    // parça giriş esnasinda veri aldigimiz metod
     public function get_eklenenler(){
         return $this->eklenenler;
     }

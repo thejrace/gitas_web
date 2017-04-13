@@ -510,6 +510,8 @@
 
 
 
+
+
      $db_setup = new DBSetup();
     //$db_setup->tablolari_olustur();
     //$db_setup->parca_tipi_init();
@@ -533,9 +535,51 @@
     //$GTest->satici_firma_test();
 
 
-
-
-
-
+$parca_tipi = "GTSPATIPBALATA";
+$Parca_Tipi = new Parca_Tipi( $parca_tipi );
+$output = array();
+if( $Parca_Tipi->get_details("tip") == Parca_Tipi::$BARKODSUZ ){
+    foreach( $Parca_Tipi->varyantlari_listele() as $varyant ){
+        $Parca = new Barkodlu_Parca( $varyant["stok_kodu"] );
+        $query = DB::getInstance()->query("SELECT * FROM " . DBT_ISEMRI_FORMU_GIRENLER . " WHERE stok_kodu = ?", array( $varyant["stok_kodu"] ) )->results();
+        foreach( $query as $cikis ){
+            if( $Parca->get_details("tip") == $Parca_Tipi->get_details("gid") ){
+                if( isset( $output[ $cikis["form_gid"] ] ) ){
+                    $output[ $cikis["form_gid"] ]["miktar"]++;
+                } else {
+                    $Form = new Is_Emri_Formu( $cikis["form_gid"]  );
+                    $output[ $cikis["form_gid"] ] = array(
+                        "miktar"        => $cikis["miktar"],
+                        "plaka"         => $Form->get_details("plaka"),
+                        "tarih"         => $Form->get_details("tarih")
+                    );
+                }
+            }
+        }
+    }
+} else {
+    // barkodsuz parçalarda varyant olmadigi icin, barkodlu parçalar tablosundan parça tipinin
+    // kullanildi = 1 VEYA revize = 1 kosuluna uyani aliyoruz
+    // revize = 1 kosulunun sebebi; parca revize olduktan sonra kullanildi = 0 olacak iş emri formunda listelenebilmesi için.
+    // o yuzden revize = 1 ise demek ki parça kullanılmış, bu sebepten çıkışlar listelemesi yaparken dikkate aliyoruz
+    $query = DB::getInstance()->query("SELECT * FROM " . DBT_BARKODLU_PARCALAR . " WHERE tip = ? && ( kullanildi = ? || revize = ? )", array( $Parca_Tipi->get_details("gid") , 1, 1 ) )->results();
+    foreach( $query as $parca ){
+        $query_cikis = DB::getInstance()->query("SELECT * FROM " . DBT_ISEMRI_FORMU_GIRENLER . " WHERE stok_kodu = ?", array( $parca["stok_kodu"] ) )->results();
+        if( count($query_cikis) > 0 ){
+            if( isset( $output[ $query_cikis[0]["form_gid"] ] ) ){
+                $output[ $query_cikis[0]["form_gid"] ]["miktar"]++;
+            } else {
+                $Form = new Is_Emri_Formu( $query_cikis[0]["form_gid"]  );
+                $output[ $query_cikis[0]["form_gid"] ] = array(
+                    "miktar"        => 1,
+                    "plaka"         => $Form->get_details("plaka"),
+                    "tarih"         => $Form->get_details("tarih")
+                );
+            }
+        }
+    }
+}
+echo '<pre>';
+print_r( $output );
 
 

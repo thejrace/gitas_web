@@ -8,7 +8,8 @@
  */
 class Popup_Stats{
     public static $VERI_YOK = "Veri Yok";
-    public static function init( $data ){
+    public static $OFF_POPUP = "offpopup";
+    public static function init( $data, $tip = "" ){
         $body = "";
         foreach( $data as $section ){
             $item_body = "";
@@ -30,7 +31,7 @@ class Popup_Stats{
                 .    '</div>';
         }
         return
-         '<div class="popup-stat">'
+         '<div class="popup-stat '.$tip.'">'
         .    $body
         .'</div>';
     }

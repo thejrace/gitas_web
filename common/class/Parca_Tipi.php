@@ -27,6 +27,7 @@ class Parca_Tipi extends Data_Out {
                     $LITRE      = "Litre",
                     $KG         = "Kilogram";
 
+
     public function __construct( $id = null ){
         $db_keys = array( "id", "gid", "isim" );
         parent::__construct( DBT_PARCA_TIPLERI, $db_keys, $id );
@@ -100,6 +101,96 @@ class Parca_Tipi extends Data_Out {
         }
         return $data;
     }
+
+    // yapilmis parça girişinin detaylarini alirken kullandigimiz metod
+    // parça giriş içeriklerini listelemez sadece miktar, tarih, gid
+    public function get_girisler(){
+        $output = array();
+        if( $this->details["tip"] == Parca_Tipi::$BARKODSUZ ){
+            foreach( $this->varyantlari_listele() as $varyant ){
+                $query = $this->pdo->query("SELECT * FROM " . DBT_BARKODSUZ_PARCA_GIRISLERI . " WHERE parca_stok_kodu = ?", array( $varyant["stok_kodu"] ) )->results();
+                $Parca = new Barkodsuz_Parca( $varyant["stok_kodu"] );
+                foreach( $query as $giris ){
+                    if( $Parca->get_details("tip") == $this->details["gid"] ){
+                        if( isset( $output[ $giris["parca_giris_gid"] ] ) ){
+                            $output[ $giris["parca_giris_gid"] ]["miktar"]++;
+                        } else {
+                            $Parca_Giris = new Parca_Girisi( $giris["parca_giris_gid"] );
+                            $Personel = new Personel( $Parca_Giris->get_details("giris_yapan") );
+                            $output[ $giris["parca_giris_gid"] ] = array(
+                                "miktar"        => $giris["miktar"],
+                                "giris_yapan"   => $Personel->get_details("isim"),
+                                "tarih"         => $Parca_Giris->get_details("tarih")
+                            );
+                        }
+                    }
+                }
+            }
+        } else{
+            $query = $this->pdo->query("SELECT * FROM " . DBT_BARKODLU_PARCALAR . " WHERE tip = ?", array( $this->details["gid"] ) )->results();
+            foreach( $query as $giris ){
+                if( isset( $output[ $giris["parca_giris_id"] ] ) ){
+                    $output[ $giris["parca_giris_id"] ]["miktar"]++;
+                } else {
+                    $Parca_Giris = new Parca_Girisi( $giris["parca_giris_id"] );
+                    $Personel = new Personel( $Parca_Giris->get_details("giris_yapan") );
+                    $output[ $giris["parca_giris_id"] ] = array(
+                        "miktar"        => 1,
+                        "giris_yapan"   => $Personel->get_details("isim"),
+                        "tarih"         => $Parca_Giris->get_details("tarih")
+                    );
+                }
+            }
+        }
+        return $output;
+    }
+
+    public function get_cikislar(){
+        $output = array();
+        if( $this->details["tip"] == Parca_Tipi::$BARKODSUZ ){
+            foreach( $this->varyantlari_listele() as $varyant ){
+                $Parca = new Barkodsuz_Parca( $varyant["stok_kodu"] );
+                $query = DB::getInstance()->query("SELECT * FROM " . DBT_ISEMRI_FORMU_GIRENLER . " WHERE stok_kodu = ?", array( $varyant["stok_kodu"] ) )->results();
+                foreach( $query as $cikis ){
+                    if( $Parca->get_details("tip") == $this->details["gid"] ){
+                        if( isset( $output[ $cikis["form_gid"] ] ) ){
+                            $output[ $cikis["form_gid"] ]["miktar"]++;
+                        } else {
+                            $Form = new Is_Emri_Formu( $cikis["form_gid"]  );
+                            $output[ $cikis["form_gid"] ] = array(
+                                "miktar"        => $cikis["miktar"],
+                                "plaka"         => $Form->get_details("plaka"),
+                                "tarih"         => $Form->get_details("tarih")
+                            );
+                        }
+                    }
+                }
+            }
+        } else {
+            // barkodsuz parçalarda varyant olmadigi icin, barkodlu parçalar tablosundan parça tipinin
+            // kullanildi = 1 VEYA revize = 1 kosuluna uyani aliyoruz
+            // revize = 1 kosulunun sebebi; parca revize olduktan sonra kullanildi = 0 olacak iş emri formunda listelenebilmesi için.
+            // o yuzden revize = 1 ise demek ki parça kullanılmış, bu sebepten çıkışlar listelemesi yaparken dikkate aliyoruz
+            $query = $this->pdo->query("SELECT * FROM " . DBT_BARKODLU_PARCALAR . " WHERE tip = ? && ( kullanildi = ? || revize = ? )", array( $this->details["gid"], 1, 1 ) )->results();
+            foreach( $query as $parca ){
+                $query_cikis = DB::getInstance()->query("SELECT * FROM " . DBT_ISEMRI_FORMU_GIRENLER . " WHERE stok_kodu = ?", array( $parca["stok_kodu"] ) )->results();
+                if( count($query_cikis) > 0 ){
+                    if( isset( $output[ $query_cikis[0]["form_gid"] ] ) ){
+                        $output[ $query_cikis[0]["form_gid"] ]["miktar"]++;
+                    } else {
+                        $Form = new Is_Emri_Formu( $query_cikis[0]["form_gid"]  );
+                        $output[ $query_cikis[0]["form_gid"] ] = array(
+                            "miktar"        => 1,
+                            "plaka"         => $Form->get_details("plaka"),
+                            "tarih"         => $Form->get_details("tarih")
+                        );
+                    }
+                }
+            }
+        }
+        return $output;
+    }
+
 
     public function duzenle( $input ){
         $this->pdo->query("UPDATE " . $this->table . " SET kategori = ?, miktar_olcu_birimi = ?, ideal_degisim_sikligi_tarih_alt = ?, ideal_degisim_sikligi_tarih_ust = ?, ideal_degisim_sikligi_alt = ?, ideal_degisim_sikligi_ust = ?, kritik_seviye_limiti = ? WHERE gid = ?", array(
