@@ -1,6 +1,17 @@
 var Gitas = {};
 Gitas.MAIN_URL = "http://localhost/gitasWeb/";
 Gitas.AJAX_URL = Gitas.MAIN_URL + "ajax/";
+Gitas.AJAX_REQ = {
+    IS_EMRI_FORMLARI: Gitas.AJAX_URL + "is_emri_formlari.php",
+    IS_EMRI_FORMU: Gitas.AJAX_URL + "is_emri_formu.php",
+    OTOBUS: Gitas.AJAX_URL + "otobus.php",
+    PARCA: Gitas.AJAX_URL + "parca.php",
+    PARCA_GIRISI: Gitas.AJAX_URL + "parca_girisi.php",
+    PARCA_TALEP: Gitas.AJAX_URL + "parca_talep.php",
+    PARCA_TIPI: Gitas.AJAX_URL + "parca_tipi.php",
+    SATICI_FIRMA: Gitas.AJAX_URL + "satici_firma.php",
+    STOK: Gitas.AJAX_URL + "stok.php"
+};
 
 var GPopup = function( options ){
     this.ison = false;
@@ -62,6 +73,72 @@ var Loader = {
     }
 };
 
+var GitasREQ = {
+    default_req: function( url, data, cb ){
+        Loader.on();
+        $.ajax({
+            type: "POST",
+            url:url,
+            dataType: 'json',
+            data: data,
+            success: function(res){
+                Loader.off();
+                if( typeof cb == 'function' ) cb( res );
+            },
+            error: function( jqXHR, textStatus, errorThrown ){
+                console.log(textStatus);
+                console.log(errorThrown);
+            }
+        });
+    },
+    // tekli isemri formu goruntuleme
+    is_emri_formu_detay: function( item_id, cb ){
+        this.default_req( Gitas.AJAX_REQ.IS_EMRI_FORMLARI, { req:"detay_al", form_id:item_id  }, cb );
+    },
+    // tum is emri formlarini listeleme
+    is_emri_formlari_dt: function( filter, cb ){
+        this.default_req( Gitas.AJAX_REQ.IS_EMRI_FORMLARI, { req:"veri_al", filter:filter }, cb );
+    },
+    otobusler_dt: function( cb ){
+        this.default_req( Gitas.AJAX_REQ.OTOBUS, { req:"veri_al" }, cb );
+
+    },
+    otobus_detay: function( item_id, cb ){
+        this.default_req( Gitas.AJAX_REQ.OTOBUS, { req:"detay_al", item_id: item_id }, cb );
+    },
+    // ayarlar formunu al
+    otobus_ayarlar: function( item_id, cb ){
+        this.default_req( Gitas.AJAX_REQ.OTOBUS, { req:"ayarlar", item_id: item_id }, cb );
+    },
+    // ayarlar formunu gonder
+    otobus_ayarlar_submit: function( data, cb ){
+        this.default_req( Gitas.AJAX_REQ.OTOBUS, data, cb );
+    },
+    otobus_istatistik: function( item_id, cb ){
+        this.default_req( Gitas.AJAX_REQ.OTOBUS, { req:"stats", item_id: item_id }, cb );
+    },
+    parca_tipi_ekle: function( data, cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, data, cb );
+    },
+    // parca giris formu
+    parca_giris_form: function( data, cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_GIRISI, data, cb );
+    },
+    parca_giris_detay: function( item_id, cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_GIRISI, { req:"detay_al", item_id: item_id }, cb );
+    },
+    // parca tipi istatistik
+    parca_tipi_istatistik: function( req, patip, cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req:req, patip:patip }, cb );
+    },
+    parca_tipi_select: function( val, cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req: "parca_tipi_select", parca_tipi: val }, cb );
+    },
+    satici_firma_ekle: function( data, cb ){
+        this.default_req( Gitas.AJAX_REQ.SATICI_FIRMA, data, cb );
+    }
+};
+
 var GitasDT_CSS = {
 
     ICOS: [
@@ -70,7 +147,8 @@ var GitasDT_CSS = {
         "warning1",
         "formgri",
         "tickgri",
-        "sepet"
+        "sepet",
+        "surucubeyaz"
 
 
     ],

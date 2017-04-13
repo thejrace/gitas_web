@@ -49,6 +49,11 @@
 	define("MAIN_URL", "http://localhost/gitasWeb/");
 
     define("URL_ISEMRI_FORMLARI", MAIN_URL . "is_emri_formlari.php");
+    define("URL_ISEMRI_FORMU", MAIN_URL . "is_emri_formu_2.php");
+    define("URL_OTOBUSLER", MAIN_URL . "otobusler.php");
+    define("URL_PARCA_GIRISI", MAIN_URL . "parca_girisi.php");
+    define("URL_PARCA_TIPI", MAIN_URL . "parca_tipi.php");
+    define("URL_STOK", MAIN_URL . "stok.php");
 
 
 	define( "DIR_RES", MAIN_DIR . "res/"  );

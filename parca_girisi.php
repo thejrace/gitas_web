@@ -264,25 +264,18 @@
                 var form = this, notf = $(this).parent().find(".form-notf"), select = $("#parca_tipi");
                 if( FormValidation.check( form ) ){
                     var data = $(this).serialize();
-                    console.log(data);
-                    $.ajax({
-                        type: "POST",
-                        url:Gitas.AJAX_URL + "parca_tipi.php",
-                        dataType: 'json',
-                        data: data,
-                        success: function(res){
-                            if( res.ok ){
-                                select.append("<option value='"+res.data.stok_kodu+"'>"+res.data.isim+"</option>");
-                                $AH("parca_tipi").selectedIndex = $AH("parca_tipi").options.length - 1;
-                                form.reset();
-                                $(".parca-tipi-varyant-cont").html("");
-                                select.trigger("change");
-                            } else {
-                                FormValidation.show_serverside_errors( res.inputret );
-                            }
-                            popup_form_error( $(form), res.ok, res.text);
-                            console.log(res);
+                    GitasREQ.parca_tipi_ekle( data, function(res){
+                        if( res.ok ){
+                            select.append("<option value='"+res.data.stok_kodu+"'>"+res.data.isim+"</option>");
+                            $AH("parca_tipi").selectedIndex = $AH("parca_tipi").options.length - 1;
+                            form.reset();
+                            $(".parca-tipi-varyant-cont").html("");
+                            select.trigger("change");
+                        } else {
+                            FormValidation.show_serverside_errors( res.inputret );
                         }
+                        popup_form_error( $(form), res.ok, res.text);
+                        console.log(res);
                     });
                 }
                 event.preventDefault();
@@ -319,47 +312,37 @@
                 if( FormValidation.check( $AH("parca_ekle") ) ){
                     var data = $(this).serialize();
                     console.log(serialize( $AH("parca_ekle") ));
-                    Loader.on();
-                    $.ajax({
-                        type: "POST",
-                        url:Gitas.AJAX_URL + "parca_girisi.php",
-                        dataType: 'json',
-                        data: data,
-                        success: function(res){
-                            Loader.off();
-                            if( res.ok ){
-                                var parca;
-                                for( var j = 0; j < res.data.eklenenler.length; j++ ){
-                                    parca = res.data.eklenenler[j];
-                                    if( parca.stok_kodu != undefined ){
-                                        $(".eklenenler").prepend('<li class="clearfix">'+
-                                            '<div class="content">'+
-                                            '<span class="col-ico"><i class="dtico parca"></i></span>'+
-                                            '<span class="col-bigtitle">'+parca.tip+' - '+parca.aciklama+' - '+parca.firma+'</span>'+
-                                            '<span class="col-subtitle">'+parca.adet+'</span>'+
+                    GitasREQ.parca_giris_form( data, function(res){
+                        if( res.ok ){
+                            var parca;
+                            for( var j = 0; j < res.data.eklenenler.length; j++ ){
+                                parca = res.data.eklenenler[j];
+                                if( parca.stok_kodu != undefined ){
+                                    $(".eklenenler").prepend('<li class="clearfix">'+
+                                        '<div class="content">'+
+                                        '<span class="col-ico"><i class="dtico parca"></i></span>'+
+                                        '<span class="col-bigtitle">'+parca.tip+' - '+parca.aciklama+' - '+parca.firma+'</span>'+
+                                        '<span class="col-subtitle">'+parca.adet+'</span>'+
                                         '</div>'+
                                         '<div class="right-content">'+
-                                            '<span class="col-ico"><i class="dtico barkodsari" title="'+parca.stok_kodu+'"></i></span>'+
-                                            '</div>'+
-                                            '</li>');
-                                    } else {
-                                        $('.eklenenler').prepend('<li class="clearfix">'+
-                                            '<div class="content">'+
-                                            '<span class="col-ico"><i class="dtico parca"></i></span>'+
-                                            '<span class="col-bigtitle">'+parca.tip+' - '+parca.aciklama+' - '+parca.firma+'</span>'+
-                                            '<span class="col-subtitle">'+parca.adet+'</span>'+
+                                        '<span class="col-ico"><i class="dtico barkodsari" title="'+parca.stok_kodu+'"></i></span>'+
                                         '</div>'+
                                         '</li>');
-                                    }
+                                } else {
+                                    $('.eklenenler').prepend('<li class="clearfix">'+
+                                        '<div class="content">'+
+                                        '<span class="col-ico"><i class="dtico parca"></i></span>'+
+                                        '<span class="col-bigtitle">'+parca.tip+' - '+parca.aciklama+' - '+parca.firma+'</span>'+
+                                        '<span class="col-subtitle">'+parca.adet+'</span>'+
+                                        '</div>'+
+                                        '</li>');
                                 }
-
-                            } else {
-
                             }
-                            console.log(res);
-                        }
-                    });
+                        } else {
 
+                        }
+                        console.log(res);
+                    });
                 }
                 event.preventDefault();
 
@@ -382,25 +365,16 @@
                 var form = this, notf = $(this).parent().find(".form-notf"), select = $("#satici_firma");
                 if( FormValidation.check( form ) ){
                     var data = $(this).serialize();
-                    //console.log(data);
-                    Loader.on();
-                    $.ajax({
-                        type: "POST",
-                        url:Gitas.AJAX_URL + "satici_firma.php",
-                        dataType: 'json',
-                        data: data,
-                        success: function(res){
-                            if( res.ok ){
-                                form.reset();
-                                select.append("<option value='"+res.data.gid+"'>"+res.data.firma_adi+"</option>");
-                                select.get(0).selectedIndex = $AH("satici_firma").options.length - 1;
-                            } else {
-                                FormValidation.show_serverside_errors( res.inputret );
-                            }
-                            popup_form_error($(form), res.ok, res.text);
-                            console.log(res);
-                            Loader.off();
+                    GitasREQ.satici_firma_ekle( data, function(res){
+                        if( res.ok ){
+                            form.reset();
+                            select.append("<option value='"+res.data.gid+"'>"+res.data.firma_adi+"</option>");
+                            select.get(0).selectedIndex = $AH("satici_firma").options.length - 1;
+                        } else {
+                            FormValidation.show_serverside_errors( res.inputret );
                         }
+                        popup_form_error($(form), res.ok, res.text);
+                        console.log(res);
                     });
                 }
                 event.preventDefault();
@@ -414,35 +388,24 @@
                     varyant_append.html("");
                     return;
                 }
-                Loader.on();
-                $.ajax({
-                    type: "POST",
-                    url:Gitas.AJAX_URL + "parca_tipi.php",
-                    dataType: 'json',
-                    data: { req: "parca_tipi_select", parca_tipi: val },
-                    success: function(res){
-                        Loader.off();
-                        console.log(res);
-                        varyant_append.html("");
-                        var html;
-                        if( res.data.tip == "1"){
-                            html ="<div class='binput-container'><label for='aciklama'>Açıklama</label><input type='text' class='req' name='aciklama' id='aciklama'></div>";
-                            varyant_append.append( html );
-                            dinamik.append(TEMPLATE_BARKODLU);
-                        } else {
-                            html ="<div class='binput-container'><label for='aciklama'>Açıklama</label><select class='select_no_zero uzun' name='aciklama' id='aciklama'><option value='0'>Seçiniz..</option>";
-                            for( var x = 0; x < res.data.varyantlar.length; x++ ){
-                                html += "<option value='"+res.data.varyantlar[x].stok_kodu+"'>"+res.data.varyantlar[x].aciklama+"</option>";
-                            }
-                            html += "</select></div>";
-                            varyant_append.append( html );
-                            remove_elem( garanti.get(0) );
 
+                GitasREQ.parca_tipi_select( val, function(res){
+                    console.log(res);
+                    varyant_append.html("");
+                    var html;
+                    if( res.data.tip == "1"){
+                        html ="<div class='binput-container'><label for='aciklama'>Açıklama</label><input type='text' class='req' name='aciklama' id='aciklama'></div>";
+                        varyant_append.append( html );
+                        dinamik.append(TEMPLATE_BARKODLU);
+                    } else {
+                        html ="<div class='binput-container'><label for='aciklama'>Açıklama</label><select class='select_no_zero uzun' name='aciklama' id='aciklama'><option value='0'>Seçiniz..</option>";
+                        for( var x = 0; x < res.data.varyantlar.length; x++ ){
+                            html += "<option value='"+res.data.varyantlar[x].stok_kodu+"'>"+res.data.varyantlar[x].aciklama+"</option>";
                         }
-                    },
-                    error: function( jqXHR, textStatus, errorThrown ){
-                        console.log(textStatus);
-                        console.log(errorThrown);
+                        html += "</select></div>";
+                        varyant_append.append( html );
+                        remove_elem( garanti.get(0) );
+
                     }
                 });
             });

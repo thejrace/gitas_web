@@ -88,12 +88,29 @@ class Parca_Girisi extends Data_Out {
                 }
             }
         }
-
     }
 
     // parça giriş esnasinda veri aldigimiz metod
     public function get_eklenenler(){
         return $this->eklenenler;
+    }
+
+    public function detay_html(){
+
+        $statdata = array(
+            array(
+                "header" => "GİRİŞ DETAYLARI",
+                "items"  => array(
+                    array( "key" => "GİRİŞ YAPAN", "val" => $this->details["giris_yapan"]  ),
+                    array( "key" => "TARİH", "val" => $this->details["tarih"] ),
+
+                )
+            )
+        );
+        return Popup_Stats::init( $statdata );
+
+
+
     }
 
 }

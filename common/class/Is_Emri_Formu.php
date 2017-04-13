@@ -433,18 +433,28 @@ class Is_Emri_Formu extends Data_Out{
 
 
 
+        $genel_info = array(
+            array(
+                "header" => "FORM DETAYLARI",
+                "items"  => array(
+                    array( "key" => "PLAKA", "val" => $this->details["plaka"]  ),
+                    array( "key" => "KAPI NO", "val" => $this->details["aktif_kapi_no"] ),
+                    array( "key" => "SÜRÜCÜ", "val" => $Surucu->get_details("isim") ),
+                    array( "key" => "GELİŞ KM", "val" => $this->details["gelis_km"] ),
+                    array( "key" => "GELİŞ TARİH", "val" => $this->details["gelis_tarih"] ),
+                    array( "key" => "ÇIKIŞ TARİH", "val" => $this->details["cikis_tarih"] ),
+                    array( "key" => "ŞİKAYET", "val" => $this->details["sikayet"] ),
+                    array( "key" => "ARIZA TESPİT", "val" => $this->details["ariza_tespit"] ),
+                    array( "key" => "YAPILAN ONARIM", "val" => $this->details["yapilan_onarim"] ),
+                    array( "key" => "ARAÇ YIKANDI", "val" => Common::intevha($this->details["arac_yikama"]) ),
+                    array( "key" => "KALİBRASYON YAPILDI", "val" => Common::intevha($this->details["kalibrasyon_yapildi"]) ),
+                    array( "key" => "GİRİŞ YAPAN", "val" => $Yapan->get_details("isim") )
+                )
+            )
+        );
+
         return '<div class="detay-popup">'
-            . '<div class="input-row"><div class="input-col">'  . new Template_Detay_Cont( "Plaka / Kapı No", $this->details["plaka"] . " / " . $this->details["aktif_kapi_no"] ) . '</div>'
-            . '<div class="input-row"><div class="input-col">'  . new Template_Detay_Cont( "Geliş KM", $this->details["gelis_km"] ) . '</div>'
-            . '<div class="input-col">'  . new Template_Detay_Cont( "Giriş Yapan", $Yapan->get_details("isim") ) . '</div>'
-            . '<div class="input-col">'  . new Template_Detay_Cont( "Sürücü", $Surucu->get_details("isim") ) . '</div> </div>'
-            . new Template_Detay_Cont( "Geliş Tarih / Çıkış Tarih ", $this->details["gelis_tarih"] . " / " . $this->details["cikis_tarih"])
-
-
-            . new Template_Detay_Cont( "Şikayet", $this->details["sikayet"] )
-            . new Template_Detay_Cont( "Arıza Tespit", $this->details["ariza_tespit"] )
-            . new Template_Detay_Cont( "Yapılan Onarım", $this->details["yapilan_onarim"] )
-            . new Template_Detay_Cont( "Araç Yıkama / Kalibrasyon Yapıldı", Common::intevha($this->details["arac_yikama"]) . " / " . Common::intevha($this->details["kalibrasyon_yapildi"]) )
+            . Popup_Stats::init( $genel_info, Popup_Stats::$OFF_POPUP )
             . '
             <div class="input-container au ">
                 <label>Giren Parçalar</label>

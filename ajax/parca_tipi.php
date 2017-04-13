@@ -177,6 +177,52 @@
             break;
 
 
+            case "otobus_istatistik":
+
+                $Parca_Tipi = new Parca_Tipi( Input::get("patip") );
+                if( !$Parca_Tipi->exists() ){
+                    $OK = 0;
+                } else{
+                    foreach( $Parca_Tipi->otobus_istatistik() as $plaka => $miktar ){
+                        $output = array(
+                            "data_id"   => $plaka,
+                            "ico"       => GitasDT_CSS::$ICO_OTOBUS,
+                            "bigtitle"  => $miktar . " " . $Parca_Tipi->get_details("miktar_olcu_birimi"),
+                            "subtitle"  => $plaka,
+                            "color"     => GitasDT_CSS::$C_BEYAZ,
+                            "font"      => GitasDT_CSS::$F_BOLD,
+                            "kompbut"   => true,
+                            "datarole"  => "otobusdetay"
+                        );
+                        $DATA[] = $output;
+                    }
+                }
+
+            break;
+
+            case "surucu_istatistik":
+                $Parca_Tipi = new Parca_Tipi( Input::get("patip") );
+                if( !$Parca_Tipi->exists() ){
+                    $OK = 0;
+                } else{
+                    foreach( $Parca_Tipi->surucu_istatistik() as $surucu => $miktar ){
+                        $Surucu = new Personel( $surucu );
+                        $output = array(
+                            "data_id"   => $surucu,
+                            "ico"       => GitasDT_CSS::$ICO_SURUCUBEYAZ,
+                            "bigtitle"  => $miktar . " " . $Parca_Tipi->get_details("miktar_olcu_birimi"),
+                            "subtitle"  => $Surucu->get_details("isim"),
+                            "color"     => GitasDT_CSS::$C_BEYAZ,
+                            "font"      => GitasDT_CSS::$F_BOLD,
+                            "kompbut"   => true,
+                            "datarole"  => "surucudetay"
+                        );
+                        $DATA[] = $output;
+                    }
+                }
+            break;
+
+
         }
 
         $output = json_encode(array(

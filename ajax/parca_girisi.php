@@ -27,11 +27,19 @@
         switch( Input::get("req") ){
 
 
+            case "detay_al":
+                $Parca_Girisi = new Parca_Girisi( Input::get("item_id") );
+                if( !$Parca_Girisi->exists() ){
+                    $OK = 0;
+                } else {
+                    $DATA = $Parca_Girisi->detay_html();
+                }
+
+            break;
+
+
             //http://localhost/gitasWeb/qr/index.php?dosya_isim=OBAREY6&data=GTSPATIPKALIPERBLCCzPOO7h8X4fs2Zr7xY6XoCUj6172CLrspX5rscL&level=H&size=4&pgid=OOOOOOO
-
             case "parca_girisi":
-
-
                 $Validation = new Validation( new InputErrorHandler );
                 // Formu kontrol et
                 $Validation->check_v2( Input::escape($_POST), $INPUT_LIST );

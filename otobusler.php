@@ -34,22 +34,15 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            Loader.on();
-            $.ajax({
-                type: "POST",
-                url:Gitas.AJAX_URL + "otobus.php",
-                dataType: 'json',
-                data: { req:"veri_al" },
-                success: function(res){
-                    Loader.off();
-                    var html = "";
-                    for( var j = 0; j < res.data.length; j++ ){
-                        html += init_row( res.data[j] );
-                    }
-                    $(".main-tbody").html(html);
-                    $('table#main-table').DataTable();
-                }
+
+            GitasREQ.otobusler_dt( function(res){
+                var html = "";
+                for( var j = 0; j < res.data.length; j++ ) html += init_row( res.data[j] );
+                $(".main-tbody").html(html);
+                $('table#main-table').DataTable();
             });
+
+
 
             $(document).on("click", ".parca", function(){
                 var fid = $(this).parent().parent().parent().parent().attr("data-id");
@@ -58,47 +51,23 @@
 
             $(document).on("click", ".buyutec", function(){
                 var fid = $(this).parent().parent().parent().parent().attr("data-id");
-                Loader.on();
-                $.ajax({
-                    type: "POST",
-                    url:Gitas.AJAX_URL + "otobus.php",
-                    dataType: 'json',
-                    data: { req:"detay_al", item_id:fid },
-                    success: function(res){
-                        Loader.off();
-                        Popup.on( res.data, fid +" Detay Görüntüle");
-                    }
+                GitasREQ.otobus_detay( fid, function(res){
+                    Popup.on( res.data, fid +" Detay Görüntüle");
                 });
             });
 
             $(document).on("click", ".ayarlar", function(){
                 var fid = $(this).parent().parent().parent().parent().attr("data-id");
-                Loader.on();
-                $.ajax({
-                    type: "POST",
-                    url:Gitas.AJAX_URL + "otobus.php",
-                    dataType: 'json',
-                    data: { req:"ayarlar", item_id:fid },
-                    success: function(res){
-                        Loader.off();
-                        Popup.on( res.data, fid +" Ayarlar");
-                    }
+                GitasREQ.otobus_ayarlar( fid, function(res){
+                    Popup.on( res.data, fid +" Ayarlar");
                 });
             });
 
             $(document).on("submit", "#otobus_ayarlar", function(event){
                 if( FormValidation.check(this) ){
                     var _this = this;
-                    Loader.on();
-                    $.ajax({
-                        type: "POST",
-                        url:Gitas.AJAX_URL + "otobus.php",
-                        dataType: 'json',
-                        data: $(_this).serialize(),
-                        success: function(res){
-                            Loader.off();
-                            popup_form_error($(_this), res.ok, res.text);
-                        }
+                    GitasREQ.otobus_ayarlar_submit($(_this).serialize(), function(res){
+                        popup_form_error($(_this), res.ok, res.text);
                     });
                 }
                 event.preventDefault();
@@ -107,18 +76,9 @@
 
             $(document).on("click", ".stats", function(){
                 var fid = $(this).parent().parent().parent().parent().attr("data-id");
-                Loader.on();
-                $.ajax({
-                    type: "POST",
-                    url:Gitas.AJAX_URL + "otobus.php",
-                    dataType: 'json',
-                    data: { req: 'stats', item_id:fid },
-                    success: function(res){
-                        Loader.off();
-                        Popup.on(res.data, fid + " İstatistikler");
-                    }
+                GitasREQ.otobus_istatistik( fid, function(res){
+                    Popup.on(res.data, fid + " İstatistikler");
                 });
-
             });
 
         });

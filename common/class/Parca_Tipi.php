@@ -142,15 +142,16 @@ class Parca_Tipi extends Data_Out {
                 }
             }
         }
-        return $output;
+        return array_reverse( $output, true );
     }
 
+    // burada cikislar otobuse girenler anlaminda
     public function get_cikislar(){
         $output = array();
         if( $this->details["tip"] == Parca_Tipi::$BARKODSUZ ){
             foreach( $this->varyantlari_listele() as $varyant ){
                 $Parca = new Barkodsuz_Parca( $varyant["stok_kodu"] );
-                $query = DB::getInstance()->query("SELECT * FROM " . DBT_ISEMRI_FORMU_GIRENLER . " WHERE stok_kodu = ?", array( $varyant["stok_kodu"] ) )->results();
+                $query = $this->pdo->query("SELECT * FROM " . DBT_ISEMRI_FORMU_GIRENLER . " WHERE stok_kodu = ?", array( $varyant["stok_kodu"] ) )->results();
                 foreach( $query as $cikis ){
                     if( $Parca->get_details("tip") == $this->details["gid"] ){
                         if( isset( $output[ $cikis["form_gid"] ] ) ){
@@ -160,7 +161,8 @@ class Parca_Tipi extends Data_Out {
                             $output[ $cikis["form_gid"] ] = array(
                                 "miktar"        => $cikis["miktar"],
                                 "plaka"         => $Form->get_details("plaka"),
-                                "tarih"         => $Form->get_details("tarih")
+                                "tarih"         => $Form->get_details("tarih"),
+                                "surucu"        => $Form->get_details("surucu")
                             );
                         }
                     }
@@ -173,7 +175,7 @@ class Parca_Tipi extends Data_Out {
             // o yuzden revize = 1 ise demek ki parça kullanılmış, bu sebepten çıkışlar listelemesi yaparken dikkate aliyoruz
             $query = $this->pdo->query("SELECT * FROM " . DBT_BARKODLU_PARCALAR . " WHERE tip = ? && ( kullanildi = ? || revize = ? )", array( $this->details["gid"], 1, 1 ) )->results();
             foreach( $query as $parca ){
-                $query_cikis = DB::getInstance()->query("SELECT * FROM " . DBT_ISEMRI_FORMU_GIRENLER . " WHERE stok_kodu = ?", array( $parca["stok_kodu"] ) )->results();
+                $query_cikis = $this->pdo->query("SELECT * FROM " . DBT_ISEMRI_FORMU_GIRENLER . " WHERE stok_kodu = ?", array( $parca["stok_kodu"] ) )->results();
                 if( count($query_cikis) > 0 ){
                     if( isset( $output[ $query_cikis[0]["form_gid"] ] ) ){
                         $output[ $query_cikis[0]["form_gid"] ]["miktar"]++;
@@ -182,13 +184,34 @@ class Parca_Tipi extends Data_Out {
                         $output[ $query_cikis[0]["form_gid"] ] = array(
                             "miktar"        => 1,
                             "plaka"         => $Form->get_details("plaka"),
-                            "tarih"         => $Form->get_details("tarih")
+                            "tarih"         => $Form->get_details("tarih"),
+                            "surucu"        => $Form->get_details("surucu")
                         );
                     }
                 }
             }
         }
+        return array_reverse( $output, true );
+    }
+
+    private function bazli_istatistik( $baz ){
+        $output = array();
+        foreach( $this->get_cikislar() as $form_id => $form_data ){
+            if( isset( $output[$form_data[$baz]] ) ){
+                $output[$form_data[$baz]]++;
+            } else {
+                $output[$form_data[$baz]] = 1;
+            }
+        }
         return $output;
+    }
+
+    public function otobus_istatistik(){
+        return $this->bazli_istatistik("plaka");
+    }
+
+    public function surucu_istatistik(){
+        return $this->bazli_istatistik("surucu");
     }
 
 

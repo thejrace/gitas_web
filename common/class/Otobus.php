@@ -140,41 +140,20 @@ class Otobus extends Data_Out{
     }
 
     public function detay_html(){
-        $detay_array = array(
+        $statdata = array(
             array(
-                array(
-                    "label" => "Plaka",
-                    "value" => $this->details["plaka"]
-                ),
-                array(
-                    "label" => "Ruhsat Kapı Kodu",
-                    "value" => $this->details["ruhsat_kapi_kodu"]
-                ),
-                array(
-                    "label" => "Aktif Kapı Kodu",
-                    "value" => $this->details["aktif_kapi_kodu"]
-                )
-            ),
-            array(
-                array(
-                    "label" => "Marka / Model ( Model Yılı )",
-                    "value" => $this->details["marka"] . " " . $this->details["model"] . " ( " . $this->details["model_yili"] . " )"
-                )
-            ),
-            array(
-                array(
-                    "label" => "Sahip",
-                    "value" => $this->details["sahip"]
-                )
-            ),
-            array(
-                array(
-                    "label" => "OGS",
-                    "value" => $this->details["ogs"]
+                "header" => "OTOBÜS DETAYLARI",
+                "items"  => array(
+                    array( "key" => "PLAKA", "val" => $this->details["plaka"]  ),
+                    array( "key" => "RUHSAT KAPI KODU", "val" => $this->details["ruhsat_kapi_kodu"] ),
+                    array( "key" => "AKTİF KAPI KODU", "val" => $this->details["aktif_kapi_kodu"] ),
+                    array( "key" => "MARKA / MODEL ( MODEL YILI )", "val" => $this->details["marka"] . " " . $this->details["model"] . " ( " . $this->details["model_yili"] . " )" ),
+                    array( "key" => "SAHİP", "val" => $this->details["sahip"] ),
+                    array( "key" => "OGS", "val" => $this->details["ogs"] )
                 )
             )
         );
-        return Popup_Info::init( $detay_array );
+        return Popup_Stats::init( $statdata );
     }
 
     public function ayarlar_html(){
@@ -259,7 +238,6 @@ class Otobus extends Data_Out{
     public function stats_init(){
         $formlar = $this->is_emri_formlarini_listele();
         $this->details["stats"]["is_emri_formlari"] = count( $formlar );
-
         $girenler_temp = array();
         $suruculer_temp = array();
         foreach( $formlar as $form ){
@@ -278,8 +256,6 @@ class Otobus extends Data_Out{
                 $suruculer_temp[$Form->get_details("surucu")] = 1;
             }
         }
-        Session::set("suruculer_test", $girenler_temp );
-
         $temp_count = 0;
         foreach( $suruculer_temp as $key => $count ){
             if( $count > $temp_count ) {
@@ -287,7 +263,6 @@ class Otobus extends Data_Out{
                 $temp_item = $key;
             }
         }
-
         if( $temp_count > 0 ){
             $Surucu = new Personel($temp_item);
             $this->details["stats"]["en_cok_servise_gelen_surucu"] = $Surucu->get_details("isim") . " ( " . $temp_count . " ) ";
