@@ -89,46 +89,21 @@ class Barkodlu_Parca extends Data_Out {
             $Firma = new Satici_Firma( $this->details["satici_firma"] );
             $sfirma = $Firma->get_details("isim");
         }
-
-        $detay_array = array(
+        $statdata = array(
             array(
-                array(
-                    "label" => "Parça Tipi",
-                    "value" => $Parca_Tipi->get_details("isim")
-                )
-            ),
-            array(
-                array(
-                    "label" => "Stok Kodu",
-                    "value" => $this->details["stok_kodu"]
-                )
-            ),
-            array(
-                array(
-                    "label" => "Açıklama",
-                    "value" => $this->details["aciklama"]
-                )
-            ),
-            array(
-                array(
-                    "label" => "Stoğa Giriş Tarihi",
-                    "value" => $pgiris
-                )
-            ),
-            array(
-                array(
-                    "label" => "Fatura No / Alınan Firma",
-                    "value" => $this->details["fatura_no"] . " / " . $sfirma
-                )
-            ),
-            array(
-                array(
-                    "label" => "Garanti",
-                    "value" => $this->details["garanti_suresi"]
+                "header" => "PARÇA DETAYLARI",
+                "items"  => array(
+                    array( "key" => "PARÇA TİPİ", "val" => $Parca_Tipi->get_details("isim")  ),
+                    array( "key" => "STOK KODU", "val" => $this->details["stok_kodu"] ),
+                    array( "key" => "AÇIKLAMA", "val" => $this->details["aciklama"] ),
+                    array( "key" => "STOĞA GİRİŞ TARİHİ", "val" => $pgiris ),
+                    array( "key" => "FATURA NO", "val" => $this->details["fatura_no"] ),
+                    array( "key" => "ALINAN FİRMA", "val" => $sfirma ),
+                    array( "key" => "GARANTİ", "val" => $this->details["garanti_suresi"] ),
                 )
             )
         );
-        return Popup_Info::init( $detay_array );
+        return Popup_Stats::init( $statdata );
     }
 
     public function sil(){

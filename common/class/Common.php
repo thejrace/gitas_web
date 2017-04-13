@@ -227,7 +227,6 @@
 			*/
 		}
 
-
 		public static function array_sort_by_column($arr, $col, $dir = SORT_ASC) {
 		    $sort_col = array();
 		    foreach ($arr as $key=> $row) {
@@ -299,6 +298,10 @@
 		    $returnstr = $fonktmp;
 		    return $returnstr;
 		}
+
+		public static function compare_dates( $x, $y ){
+            return $x - $y;
+        }
 
 		// stringleri alfabetik siralama
 		// usort fonksiyonu

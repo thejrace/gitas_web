@@ -32,6 +32,7 @@
                 if( !$Parca_Girisi->exists() ){
                     $OK = 0;
                 } else {
+                    $Parca_Girisi->giris_icerik_listele();
                     $DATA = $Parca_Girisi->detay_html();
                 }
 

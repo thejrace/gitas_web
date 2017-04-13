@@ -535,19 +535,7 @@
     //$GTest->satici_firma_test();
 
 
-$parca_tipi = "GTSPATIPBALATA";
-$Parca_Tipi = new Parca_Tipi( $parca_tipi );
-$baz = "plaka";
-$output = array();
-    $output = array();
-    foreach( $Parca_Tipi->get_cikislar() as $form_id => $form_data ){
-        if( isset( $output[$form_data[$baz]] ) ){
-            $output[$form_data[$baz]]++;
-        } else {
-            $output[$form_data[$baz]] = 1;
-        }
-    }
-    print_r($output);
+
 
 
 

@@ -62,28 +62,18 @@ class Barkodsuz_Parca extends Data_Out {
 
     public function detay_html(){
         $Parca_Tipi = new Parca_Tipi( $this->details["tip"] );
-
-        $detay_array = array(
+        $statdata = array(
             array(
-                array(
-                    "label" => "Parça Tipi",
-                    "value" => $Parca_Tipi->get_details("isim")
-                )
-            ),
-            array(
-                array(
-                    "label" => "Stok Kodu",
-                    "value" => $this->details["stok_kodu"]
-                )
-            ),
-            array(
-                array(
-                    "label" => "Açıklama",
-                    "value" => $this->details["aciklama"]
+                "header" => "PARÇA DETAYLARI",
+                "items"  => array(
+                    array( "key" => "PARÇA TİPİ", "val" => $Parca_Tipi->get_details("isim")  ),
+                    array( "key" => "STOK KODU", "val" => $this->details["stok_kodu"] ),
+                    array( "key" => "AÇIKLAMA", "val" => $this->details["aciklama"] ),
+                    array( "key" => "STOK MİKTARI", "val" => $this->details["miktar"] )
                 )
             )
         );
-        return Popup_Info::init( $detay_array );
+        return Popup_Stats::init( $statdata );
     }
 
     private function miktar_duzenle( $input ){

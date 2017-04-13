@@ -158,6 +158,10 @@ html, body {
 	border-right:1px solid #353535;
 	border-left:1px solid #353535;
 	font-family: 'montserratmedium';
+	white-space: pre-wrap;      /* CSS3 */
+	white-space: -moz-pre-wrap; /* Firefox */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	word-wrap: break-word;      /* IE */
 }
 
 .tab-divs > li {
@@ -1233,6 +1237,64 @@ table.obarey-table .giren-parca-sil {
 .detay-popup .input-row {
 	margin:0 !important;
 }
+
+.parca-degisim-plan {
+
+}
+
+.parca-degisim-plan .parca-section:nth-child(odd) {
+
+}
+.parca-degisim-plan .parca-section:nth-child(even) {
+	background: #333333;
+	padding-top: 12px;
+}
+.parca-degisim-plan .parca-section > span {
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	font-family: 'montserratbold';
+	padding-bottom: 10px;
+	color:#ceb529;
+}
+
+.parca-degisim-plan .parca-section > ul > li{
+	padding: 10px;
+	margin: 10px 0;
+	/*border-bottom: 1px solid #2f2f2f;*/
+}
+
+
+.parca-degisim-plan .parca-section > ul > li .ust{
+
+}
+
+.parca-degisim-plan .parca-section > ul > li .ust div{
+	padding:3px 0;
+}
+.parca-degisim-plan .parca-section > ul > li .alt li{
+	padding: 2px 0;
+	font-size: 12px;
+}
+
+
+.parca-degisim-plan .parca-section > ul > li .ust .sag {
+	font-size: 12px;
+	display: inline-block;
+	font-family: 'montserratmedium';
+}
+.parca-degisim-plan .parca-section > ul > li .ust .sag.ok{
+	color:#00dd1c;
+}
+.parca-degisim-plan .parca-section > ul > li .ust .sag.bok{
+	color: #ff6c6c;
+}
+
+.parca-degisim-plan .parca-section > ul > li .ust .sol {
+	font-size: 14px;
+	font-family: 'montserratmedium';
+}
+
 .flight {
 	font-family: 'montserratlight' !important;
 }

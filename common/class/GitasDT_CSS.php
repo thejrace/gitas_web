@@ -12,7 +12,7 @@ class GitasDT_CSS {
         // ico setleri
         $ICOSET_PARCA_TIPI = 0,
         $ICOSET_OTOBUS = 1,
-        $ICOSET_TAKVIM = 2,
+        $ICOSET_PATIP_OTOBUS_ISTATISTIK = 2,
 
         // tekli icolar
         $ICO_PARCA_TIPI = 0,

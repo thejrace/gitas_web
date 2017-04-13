@@ -101,7 +101,6 @@ var GitasREQ = {
     },
     otobusler_dt: function( cb ){
         this.default_req( Gitas.AJAX_REQ.OTOBUS, { req:"veri_al" }, cb );
-
     },
     otobus_detay: function( item_id, cb ){
         this.default_req( Gitas.AJAX_REQ.OTOBUS, { req:"detay_al", item_id: item_id }, cb );
@@ -134,6 +133,24 @@ var GitasREQ = {
     parca_tipi_select: function( val, cb ){
         this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req: "parca_tipi_select", parca_tipi: val }, cb );
     },
+    parca_tipi_ayarlar: function( patip, cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req:"parca_tipi_ayarlar", parca_tipi:patip }, cb );
+    },
+    parca_tipi_ayarlar_submit: function( data, cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, data, cb );
+    },
+    parca_tipi_dt: function( cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req:"veri_al" }, cb );
+    },
+    parca_tipi_genislet: function( patip, cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req:"parca_veri_al", parca_tipi:patip }, cb );
+    },
+    parca_tipi_otobus_degisim_plan: function( patip, plaka, cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req:"otobus_degisim_plan", patip:patip, plaka:plaka }, cb );
+    },
+    parca_detay: function( sk, cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA, { req:"parca_detay", stok_kodu:sk }, cb );
+    },
     satici_firma_ekle: function( data, cb ){
         this.default_req( Gitas.AJAX_REQ.SATICI_FIRMA, data, cb );
     }
@@ -154,7 +171,8 @@ var GitasDT_CSS = {
     ],
     ICO_SETS: [
         [ "stats", "talep", "ayarlar", "arti" ], // parça tipi,
-        [ "surucusari", "stats", "parca", "buyutec", "ayarlar" ] // otobus
+        [ "surucusari", "stats", "parca", "buyutec", "ayarlar" ], // otobus
+        [ "arti" ]
     ],
     COLOR_SETS: [
         "", // beyaz

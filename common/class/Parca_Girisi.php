@@ -46,11 +46,11 @@ class Parca_Girisi extends Data_Out {
 
                 $parca->stok_ekle( $parca->get_details("eklenecek_miktar") );
                 $this->pdo->insert( DBT_BARKODSUZ_PARCA_GIRISLERI, array(
-                    "parca_giris_gid" => $this->details["gid"],
-                    "parca_stok_kodu" => $parca->get_details("stok_kodu"),
-                    "miktar"          => $parca->get_details("eklenecek_miktar"),
-                    "satici_firma"    => $parca->get_details("satici_firma"),
-                    "fatura_no"       => $parca->get_details("fatura_no")
+                    "parca_giris_gid"   => $this->details["gid"],
+                    "stok_kodu"         => $parca->get_details("stok_kodu"),
+                    "miktar"            => $parca->get_details("eklenecek_miktar"),
+                    "satici_firma"      => $parca->get_details("satici_firma"),
+                    "fatura_no"         => $parca->get_details("fatura_no")
                 ));
                 $Parca_Tipi = new Parca_Tipi ( $parca->get_details("tip") );
                 $Firma = new Satici_Firma( $parca->get_details("satici_firma") );
@@ -95,22 +95,76 @@ class Parca_Girisi extends Data_Out {
         return $this->eklenenler;
     }
 
-    public function detay_html(){
+    private function icerik_listele( $tip ){
+        if( $tip == Parca_Tipi::$BARKODSUZ ){
+            $query = $this->pdo->query("SELECT * FROM " . DBT_BARKODSUZ_PARCA_GIRISLERI . " WHERE parca_giris_gid = ?", array( $this->details["gid"] ) )->results();
+        } else {
+            $query = $this->pdo->query("SELECT * FROM " . DBT_BARKODLU_PARCALAR . " WHERE parca_giris_id = ?", array( $this->details["gid"]) )->results();
+            $miktar = 1;
+        }
+        foreach( $query as $parca ){
+            $Firma = new Satici_Firma( $parca["satici_firma"] );
+            $Parca = Parca::get( $parca["stok_kodu"] );
+            $Parca_Tipi = new Parca_Tipi( $Parca->get_details("tip"));
+            if( isset($parca["miktar"] ) ) $miktar = $parca["miktar"];
+            $data = array(
+                "stok_kodu"     => $parca["stok_kodu"],
+                "parca_tipi"    => $Parca_Tipi->get_details("isim"),
+                "aciklama"      => $Parca->get_details("aciklama"),
+                "fatura_no"     => $parca["fatura_no"],
+                "satici_firma"  => $Firma->get_details("isim"),
+                "miktar"        => $miktar
+            );
+            if( $tip == Parca_Tipi::$BARKODLU ) $data["garanti_suresi"] = $parca["garanti_suresi"];
+            $data["miktar"] .= " " . $Parca_Tipi->get_details("miktar_olcu_birimi");
+            $this->details["giris_icerik"][] = $data;
+        }
+    }
 
+    public function giris_icerik_listele(){
+        $this->icerik_listele(Parca_Tipi::$BARKODSUZ);
+        $this->icerik_listele(Parca_Tipi::$BARKODLU);
+    }
+
+    public function detay_html(){
+        $Giris_Yapan = new Personel( $this->details["giris_yapan"] );
         $statdata = array(
             array(
                 "header" => "GİRİŞ DETAYLARI",
                 "items"  => array(
-                    array( "key" => "GİRİŞ YAPAN", "val" => $this->details["giris_yapan"]  ),
+                    array( "key" => "GİRİŞ YAPAN", "val" => $Giris_Yapan->get_details("isim")  ),
                     array( "key" => "TARİH", "val" => $this->details["tarih"] ),
-
                 )
             )
         );
-        return Popup_Stats::init( $statdata );
+        $icerik_html = "";
+        foreach( $this->details["giris_icerik"] as $parca ){
+                $icerik_html .=  '<tr>'
+                                .    '<td>'.$parca["parca_tipi"].'</td>'
+                                .    '<td>'.$parca["aciklama"].'</td>'
+                                .    '<td>'.$parca["miktar"].'</td>'
+                                .    '<td title="'.$parca["stok_kodu"].'">'.substr($parca["stok_kodu"], 0, 25 ).'</td>'
+                                .    '<td>'.$parca["fatura_no"].'</td>'
+                                .    '<td>'.$parca["satici_firma"].'</td>'
+                                . '</tr>';
 
-
-
+        }
+        return Popup_Stats::init( $statdata )
+        .'<table class="obarey-table">'
+        .   '<thead>'
+        .       '<tr>'
+        .           '<td>Parça Tipi</td>'
+        .           '<td>Açıklama</td>'
+        .           '<td>Miktar</td>'
+        .           '<td>Stok Kodu</td>'
+        .           '<td>Fatura No</td>'
+        .           '<td>Satıcı Firma</td>'
+        .       '</tr>'
+        .   '</thead>'
+        .   '<tbody>'
+        .       $icerik_html
+        .   '</tbody>'
+        .'</table>';
     }
 
 }
