@@ -42,10 +42,13 @@
     	<div id="wrapper">
             <div class="header">
                 <div id="container" class="clearfix">
-                    
-
-              
-
+                    <div class="test-header-nav" style="text-align:center; padding-top:20px">
+                        <a href="<?php echo URL_ISEMRI_FORMLARI ?>" class="mnbtn gri">İŞ EMRİ FORMLARI</a>
+                        <a href="<?php echo URL_ISEMRI_FORMU ?>" class="mnbtn gri">İŞ EMRİ FORMU YAZ</a>
+                        <a href="<?php echo URL_OTOBUSLER ?>" class="mnbtn gri">OTOBÜSLER</a>
+                        <a href="<?php echo URL_STOK ?>" class="mnbtn gri">STOK</a>
+                        <a href="<?php echo URL_PARCA_GIRISI ?>" class="mnbtn gri">PARÇA GİRİŞİ</a>
+                    </div>
                 </div>
             </div>
 

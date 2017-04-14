@@ -217,9 +217,13 @@ class Parca_Tipi extends Data_Out {
                     $Giren_Parca = Parca::get($giren["stok_kodu"]);
                     // eger cikan parcayla varyantin stok kodu ayniysa işlem yapiyoruz
                     if( $Giren_Parca->get_details("stok_kodu") == $varyant["stok_kodu"] ){
+                        $Surucu = new Personel(  $Form->get_details("surucu") );
                         $output[$varyant["aciklama"]][] = array(
-                            "tarih" => $Form->get_details("tarih"),
-                            "km"    => $Form->get_details("gelis_km")
+                            "tarih"     => $Form->get_details("tarih"),
+                            "km"        => $Form->get_details("gelis_km"),
+                            "surucu"    => $Surucu->get_details("isim"),
+                            "ekleme"    => $giren["ekleme"],
+                            "miktar"    => $giren["miktar"] . " " . $this->details["miktar_olcu_birimi"]
                         );
                     }
                 }
@@ -239,9 +243,11 @@ class Parca_Tipi extends Data_Out {
                 $Giren_Parca = Parca::get($giren["stok_kodu"]);
                 // barkodluda parça tipinden yakalıyoruz
                 if( $Giren_Parca->get_details("tip") == $this->details["gid"] ){
+                    $Surucu = new Personel(  $Form->get_details("surucu") );
                     $output[] = array(
-                        "tarih" => $Form->get_details("tarih"),
-                        "km"    => $Form->get_details("gelis_km")
+                        "tarih"     => $Form->get_details("tarih"),
+                        "km"        => $Form->get_details("gelis_km"),
+                        "surucu"    => $Surucu->get_details("isim")
                     );
                 }
             }
@@ -287,6 +293,15 @@ class Parca_Tipi extends Data_Out {
     public function sil( $input ){
         $this->pdo->query("DELETE FROM " . $this->table . " WHERE gid = ?", array( $this->details["gid"] ) );
         $this->return_text = "Parça tipi silindi.";
+    }
+
+    public static function kategori_convert( $kat ){
+        if( $kat == self::$MEKANIK ) return "Mekanik";
+        if( $kat == self::$ELEKTRONIK ) return "Elektronik";
+        if( $kat == self::$SARF ) return "Sarf";
+        if( $kat == self::$IC_TRIM ) return "İç Trim";
+        if( $kat == self::$DIS_TRIM ) return "Dış Trim";
+        return "Veri Yok";
     }
 
     public function get_duzenle_form(){

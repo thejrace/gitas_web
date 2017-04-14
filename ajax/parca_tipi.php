@@ -265,11 +265,7 @@
                             "bigtitle"  => $miktar . " " . $Parca_Tipi->get_details("miktar_olcu_birimi"),
                             "subtitle"  => $Surucu->get_details("isim"),
                             "color"     => GitasDT_CSS::$C_BEYAZ,
-                            "font"      => GitasDT_CSS::$F_BOLD,
-                            "icoset"    => GitasDT_CSS::$ICOSET_PATIP_OTOBUS_ISTATISTIK,
-                            "kompbut"   => true,
-                            "datarole"  => "surucudetay",
-                            "part2"     => true
+                            "font"      => GitasDT_CSS::$F_BOLD
                         );
                         $DATA[] = $output;
                     }

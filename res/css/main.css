@@ -1241,13 +1241,15 @@ table.obarey-table .giren-parca-sil {
 .parca-degisim-plan {
 
 }
-
+.parca-degisim-plan .parca-section {
+	padding-top: 12px;
+}
 .parca-degisim-plan .parca-section:nth-child(odd) {
 
 }
 .parca-degisim-plan .parca-section:nth-child(even) {
 	background: #333333;
-	padding-top: 12px;
+
 }
 .parca-degisim-plan .parca-section > span {
 	display: block;

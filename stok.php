@@ -76,6 +76,13 @@
                 });
             });
 
+            $(document).on("click", ".stats", function(){
+                var _this = $(this),
+                    parent = _this.parent().parent().parent().parent().parent(),
+                    ptip = parent.attr("data-id");
+                window.open( "<?php echo URL_PARCA_TIPI ?>?psk="+ptip, '_blank');
+            });
+
             $(document).on("submit", "#patip_duzenle", function(event){
                 var form = this;
                 if( FormValidation.check(this) ){

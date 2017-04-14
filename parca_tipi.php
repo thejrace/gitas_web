@@ -11,16 +11,26 @@
     $Parca_Tipi = new Parca_Tipi(Input::get("psk"));
     if( !$Parca_Tipi->exists() ) exit;
 
+    if( $Parca_Tipi->get_details("tip") == Parca_Tipi::$BARKODSUZ ){
+        $varyantlar = array();
+        foreach( $Parca_Tipi->varyantlari_listele() as $varyant ) $varyantlar[] = $varyant["aciklama"];
+        $varyant_str = implode( " - ", $varyantlar );
+    } else {
+        $varyant_str = "Barkodlu";
+    }
+
+
     $statdata = array(
         array(
-            "header"   => "İSTATİSTİKLER - DETAYLAR",
+            "header"   => "DETAYLAR",
             "items"    => array(
-                array( "key" => "Toplam Değişim", "val" => 15 ),
-                array( "key" => "Parça Kullanım Sırası", "val" => 7 ),
-                array( "key" => "En Çok Değişen", "val" => "34 YG 3831" ),
-                array( "key" => "İdeal Değişim Yüzdesi", "val" => "%69" ),
-                array( "key" => "İdeal Değişim KM", "val" => "34500  - 40000"  ),
-                array( "key" => "İdefal Değişim Ay", "val" => "14 - 16" )
+                array( "key" => "GID", "val" => $Parca_Tipi->get_details("gid" ) ),
+                array( "key" => "Kategori", "val" => Parca_Tipi::kategori_convert($Parca_Tipi->get_details("kategori") ) ),
+                array( "key" => "Miktar Ölçü Birimi", "val" => $Parca_Tipi->get_details("miktar_olcu_birimi" ) ),
+                array( "key" => "Kritik Seviye Limiti", "val" => $Parca_Tipi->get_details("kritik_seviye_limiti" ) ),
+                array( "key" => "İdeal Değişim KM ( Alt - Üst )", "val" =>  $Parca_Tipi->get_details("ideal_degisim_sikligi_alt") . " - " . $Parca_Tipi->get_details("ideal_degisim_sikligi_ust")  ),
+                array( "key" => "İdefal Değişim Ay ( Alt - Üst )", "val" => $Parca_Tipi->get_details("ideal_degisim_sikligi_tarih_alt") . " - " . $Parca_Tipi->get_details("ideal_degisim_sikligi_tarih_ust") ),
+                array( "key" => "Varyantlar", "val" => $varyant_str )
             )
         )
     );
@@ -31,11 +41,9 @@
 
 
     <div class="section">
-
         <div class="info-header">
             <?php echo Popup_Stats::init( $statdata, Popup_Stats::$OFF_POPUP ); ?>
         </div>
-
         <div class="tab full float parca-tab">
             <ul class="tab-bullets clearfix">
                 <li><button type="button" class="tab-button mortabbtn girisler-init" data-alindi="false"> GİRİŞLER</button></li>
@@ -102,7 +110,6 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-
                                 </tbody>
                             </table>
                         </div>
@@ -110,91 +117,9 @@
                 </li>
             </ul>
         </div>
-
     </div>
 
-
-    <script type="text/template" id="otobus_degisim_plan_tema">
-
-        <div class="parca-degisim-plan">
-
-            <div class="parca-section">
-                <span>Sağ Ön</span>
-                <ul>
-                    <li>
-                        <div class="ust">
-                            <div class="sol">4. Değişim</div>
-                            <div class="sag bok">İdeal değişim aralığında değil! ( Erken )</div>
-                        </div>
-                        <ul class="alt">
-
-                            <li>Tarih: 2017-04-13 14:54</li>
-                            <li>Geçen Süre: 9 Ay 25 Gün</li>
-                            <li>KM: 8383123</li>
-                            <li>Fark: 3493</li>
-
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="ust">
-                            <div class="sol">3. Değişim</div>
-                            <div class="sag ok">İdeal değişim aralığında!</div>
-                        </div>
-                        <ul class="alt">
-
-                            <li>Tarih: 2017-04-13 14:54</li>
-                            <li>Geçen Süre: 9 Ay 25 Gün</li>
-                            <li>KM: 8383123</li>
-                            <li>Fark: 3493</li>
-
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="parca-section">
-                <span>Sağ Arka</span>
-                <ul>
-                    <li>
-                        <div class="ust">
-                            <div class="sol">4. Değişim</div>
-                            <div class="sag bok">İdeal değişim aralığında değil! ( Erken )</div>
-                        </div>
-                        <ul class="alt">
-
-                            <li>Tarih: 2017-04-13 14:54</li>
-                            <li>Geçen Süre: 9 Ay 25 Gün</li>
-                            <li>KM: 8383123</li>
-                            <li>Fark: 3493</li>
-
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="ust">
-                            <div class="sol">3. Değişim</div>
-                            <div class="sag ok">İdeal değişim aralığında!</div>
-                        </div>
-                        <ul class="alt">
-
-                            <li>Tarih: 2017-04-13 14:54</li>
-                            <li>Geçen Süre: 9 Ay 25 Gün</li>
-                            <li>KM: 8383123</li>
-                            <li>Fark: 3493</li>
-
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-    </script>
-
-
     <script type="text/javascript">
-
-
-        var PATIP = "<?php echo $Parca_Tipi->get_details("gid" ) ?>";
 
         var Parca_Tipi = {
             GID: "<?php echo $Parca_Tipi->get_details("gid" ) ?>",
@@ -206,7 +131,7 @@
 
         function table_init( btn, req, table ){
             if( btn.attr("data-alindi") == "false" ){
-                GitasREQ.parca_tipi_istatistik( req, PATIP, function(res){
+                GitasREQ.parca_tipi_istatistik( req, Parca_Tipi.GID, function(res){
                     var html = "";
                     for( var j = 0; j < res.data.length; j++ ){
                         html += init_row( res.data[j] );
@@ -234,20 +159,22 @@
                     '<div class="parca-section">'+
                     '<span></span>'+
                     '<ul>';
-                var km_fark = 0, ay_fark = 0, degisim_uyari_html = "", tarih_1, tarih_2;
+                var km_fark = 0, ay_fark = 0, degisim_uyari_html = "", tarih_1, tarih_2, degisim, sonraki_degisim;
                 for( var x = 0; x < this.data.length; x++ ){
+                    degisim = this.data[x];
+                    sonraki_degisim = undefined;
+                    if( this.data[x+1] != undefined ) sonraki_degisim = this.data[x+1];
                     km_fark = 0;
-                    ay_fark = 0;
                     degisim_uyari_html = "";
-                    if( this.data[x+1] != undefined ) {
-                        km_fark = this.data[x].km - this.data[x+1].km;
+                    if( sonraki_degisim != undefined ) {
+                        km_fark = degisim.km - sonraki_degisim.km;
                         if( km_fark >= Parca_Tipi.IDEAL_DEGISIM_KM_UST && km_fark <= Parca_Tipi.IDEAL_DEGISIM_KM_ALT ){
                             degisim_uyari_html = '<div class="sag ok">İdeal değişim aralığında!</div>';
                         } else {
                             degisim_uyari_html = '<div class="sag bok">İdeal değişim aralığında değil!</div>';
                         }
-                        tarih_1 = new Date( this.data[x].tarih);
-                        tarih_2 = new Date( this.data[x+1].tarih);
+                        tarih_1 = new Date( degisim.tarih);
+                        tarih_2 = new Date( sonraki_degisim.tarih);
                         ay_fark = (( tarih_1.getTime() - tarih_2.getTime() ) / 1000 / 12960000).toFixed(3); // ay
                         // km sinirlarin icindeyse ama tarih degilse kontrol ediyoruz
                         if( !(ay_fark >= Parca_Tipi.IDEAL_DEGISIM_TARIH_UST && ay_fark >= Parca_Tipi.IDEAL_DEGISIM_TARIH_ALT) ){
@@ -260,9 +187,9 @@
                         degisim_uyari_html +
                         '</div>'+
                         '<ul class="alt">'+
-                        '<li>Tarih: '+this.data[x].tarih+'</li>'+
+                        '<li>Tarih: '+degisim.tarih+'</li>'+
                         '<li>Geçen Süre: '+ay_fark+' Ay</li>'+
-                        '<li>KM: '+this.data[x].km+'</li>'+
+                        '<li>KM: '+degisim.km+'</li>'+
                         '<li>Fark: '+km_fark+'</li>'+
                         '</ul>'+
                         '</li>';
@@ -274,27 +201,34 @@
                 for( var aciklama in this.data ){
                     // barkodlu - barkodsuz ayrim yaptigimiz elemani iplemiyoruz
                     if( aciklama == 'barkodsuz' ) continue;
-                    html += '<div class="parca-section">'+
-                            '<span class="parca-section-toggle">'+aciklama+'</span>'+
+                    html += '<div class="parca-section parca-section-toggle">'+
+                            '<span>'+aciklama+'</span>'+
                             '<ul class="hidden">';
-                    var km_fark = 0, ay_fark = 0, degisim_uyari_html = "", tarih_1, tarih_2;
+                    var km_fark = 0, ay_fark = 0, degisim_uyari_html = "", tarih_1, tarih_2, degisim, sonraki_degisim;
                     for( var x = 0; x < this.data[aciklama].length; x++ ){
+                        degisim = this.data[aciklama][x];
+                        sonraki_degisim = undefined;
+                        if( this.data[aciklama][x+1] != undefined ) sonraki_degisim = this.data[aciklama][x+1];
                         km_fark = 0;
                         degisim_uyari_html = "";
-                        if( this.data[aciklama][x+1] != undefined ) {
-                            km_fark = this.data[aciklama][x].km - this.data[aciklama][x+1].km;
+                        if( sonraki_degisim != undefined && degisim.ekleme == 0 ) {
+                            km_fark = degisim.km - sonraki_degisim.km;
                             if( km_fark >= Parca_Tipi.IDEAL_DEGISIM_KM_UST && km_fark <= Parca_Tipi.IDEAL_DEGISIM_KM_ALT ){
                                 degisim_uyari_html = '<div class="sag ok">İdeal değişim aralığında!</div>';
                             } else {
                                 degisim_uyari_html = '<div class="sag bok">İdeal değişim aralığında değil!</div>';
                             }
-                            tarih_1 = new Date( this.data[aciklama][x].tarih);
-                            tarih_2 = new Date( this.data[aciklama][x+1].tarih);
+                            tarih_1 = new Date( degisim.tarih);
+                            tarih_2 = new Date( sonraki_degisim.tarih);
                             ay_fark = (( tarih_1.getTime() - tarih_2.getTime() ) / 1000 / 12960000).toFixed(3); // ay
                             // km sinirlarin icindeyse ama tarih degilse kontrol ediyoruz
                             if( !(ay_fark >= Parca_Tipi.IDEAL_DEGISIM_TARIH_UST && ay_fark >= Parca_Tipi.IDEAL_DEGISIM_TARIH_ALT) ){
                                 degisim_uyari_html = '<div class="sag bok">İdeal değişim aralığında değil!</div>';
                             }
+                        } else if( degisim.ekleme == 1 ){
+                            degisim_uyari_html = '<div class="sag csari">Ekleme yapılmış!</div>';
+                        } else {
+                            degisim_uyari_html = "";
                         }
                         html += '<li>'+
                             '<div class="ust">'+
@@ -302,19 +236,17 @@
                         degisim_uyari_html +
                         '</div>'+
                         '<ul class="alt hidden">'+
-                            '<li>Tarih: '+this.data[aciklama][x].tarih+'</li>'+
+                            '<li class="cacikmavi">Miktar: '+degisim.miktar+'</li>'+
+                            '<li>Tarih: '+degisim.tarih+'</li>'+
                             '<li>Geçen Süre: '+ay_fark+' Ay</li>'+
-                            '<li>KM: '+this.data[aciklama][x].km+'</li>'+
-                            '<li>Fark: '+km_fark+'</li>'+
+                            '<li>KM: '+degisim.km+'</li>'+
+                            '<li class="fbold fs12">Fark: '+km_fark+'</li>'+
                         '</ul>'+
                         '</li>';
                     }
                     html += '</ul></div>';
                 }
                 return html;
-            },
-            template: function(){
-
             }
         };
 
@@ -361,7 +293,7 @@
                 if( part2.attr("veri-alindi") == "true" ){
                     part2.toggleClass("hidden");
                 } else {
-                    GitasREQ.parca_tipi_otobus_degisim_plan( PATIP, plaka, function(res){
+                    GitasREQ.parca_tipi_otobus_degisim_plan( Parca_Tipi.GID, plaka, function(res){
                         console.log(res);
                         part2.html(Degisim_Plan.init( res.data ) );
                         part2.fadeIn();
@@ -372,7 +304,7 @@
             });
 
             $(document).on("click", ".parca-section-toggle", function(){
-                $(this).parent().find("ul").toggleClass("hidden");
+                $(this).find("ul").toggleClass("hidden");
             });
 
         });
