@@ -5,6 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/dfb15192-d842-42f1-8c8e-9867384817b0.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/dfb15192-d842-42f1-8c8e-9867384817b0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,8 +55,13 @@
       <file leaf-file-name="Parca_Tipi.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/class/Parca_Tipi.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="454">
               <caret line="271" column="23" lean-forward="true" selection-start-line="271" selection-start-column="23" selection-end-line="271" selection-end-column="23" />
+=======
+            <state relative-caret-position="649">
+              <caret line="195" column="21" lean-forward="true" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="21" />
+>>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
               <folding>
                 <marker date="1492957180796" expanded="true" signature="2617:2675" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
                 <marker date="1492957180796" expanded="true" signature="3092:3150" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
@@ -106,8 +112,13 @@
       <file leaf-file-name="yazdirma_tema_is_emri_formu.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yazdirma_tema_is_emri_formu.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="440">
               <caret line="118" column="29" lean-forward="false" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="29" />
+=======
+            <state relative-caret-position="686">
+              <caret line="129" column="37" lean-forward="true" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
+>>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
               </folding>
@@ -242,9 +253,9 @@
         <option value="$PROJECT_DIR$/res/css/ief.css" />
         <option value="$PROJECT_DIR$/inc/defs.php" />
         <option value="$PROJECT_DIR$/common/class/Is_Emri_Formu.php" />
-        <option value="$PROJECT_DIR$/yazdirma_tema_is_emri_formu.php" />
         <option value="$PROJECT_DIR$/common/class/Gitas_Hash.php" />
         <option value="$PROJECT_DIR$/common/class/Parca_Tipi.php" />
+        <option value="$PROJECT_DIR$/yazdirma_tema_is_emri_formu.php" />
       </list>
     </option>
   </component>
@@ -405,7 +416,11 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.40/mysql-connector-java-5.1.40-bin.jar" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -549,13 +564,21 @@
       <workItem from="1492066909963" duration="28093000" />
       <workItem from="1492156402830" duration="6580000" />
       <workItem from="1492199896916" duration="13000" />
+<<<<<<< HEAD
       <workItem from="1492937221353" duration="12357000" />
       <workItem from="1492956879656" duration="987000" />
+=======
+      <workItem from="1492937221353" duration="13561000" />
+>>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="427131000" />
+=======
+    <option name="totallyTimeSpent" value="427348000" />
+>>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -955,6 +978,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/common/class/Parca_Tipi.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
@@ -974,6 +998,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/class/Is_Emri_Formu.php">
+=======
+    <entry file="file://$PROJECT_DIR$/is_emri_formlari.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/defs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/class/Gitas_Hash.php">
+>>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
           <caret line="513" column="116" lean-forward="false" selection-start-line="513" selection-start-column="116" selection-end-line="513" selection-end-column="125" />
@@ -1005,8 +1048,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yazdirma_tema_is_emri_formu.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="440">
           <caret line="118" column="29" lean-forward="false" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="29" />
+=======
+        <state relative-caret-position="649">
+          <caret line="195" column="21" lean-forward="true" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="21" />
+>>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yazdirma_tema_is_emri_formu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="129" column="37" lean-forward="true" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
           </folding>

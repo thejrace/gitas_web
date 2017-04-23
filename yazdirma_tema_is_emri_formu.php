@@ -101,15 +101,6 @@
         }
 
 
-        var ekleme_tt  = $(".on-sayfa").find(".buyutec");
-        $(".arka-sayfa").find(".buyutec").hide();
-        console.log(ekleme_tt);
-        for( var j = 0; j < ekleme_tt.length; j++ ){
-            item = $(ekleme_tt[j]);
-            item.hide();
-            item.parent().html( item.attr("ttdata"));
-        }
-
 
         $("#on-arka").click(function(){
             if( aktif_sayfa == 1 ){
@@ -139,6 +130,14 @@
             $(tds[2]).append( " / " + $(tds[3]).html() );
             $(tds[3]).html("");
             console.log();
+        }
+
+        var ekleme_tt  = $(".on-sayfa").find(".buyutec");
+        $(".arka-sayfa").find(".buyutec").hide();
+        for( var j = 0; j < ekleme_tt.length; j++ ){
+            item = $(ekleme_tt[j]);
+            item.hide();
+            item.parent().html( item.attr("ttdata"));
         }
 
     });
