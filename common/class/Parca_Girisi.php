@@ -164,7 +164,7 @@ class Parca_Girisi extends Data_Out {
         .   '<tbody>'
         .       $icerik_html
         .   '</tbody>'
-        .'</table>';
+        .'</table> <a href="'.URL_YAZDIRMA_TEMA_PARCA_GIRISI.'?pargid='.$this->details["gid"].'" target="_blank" class="mnbtn mor yazdirbtn">BARKODLARI YAZDIR</a>';
     }
 
 }

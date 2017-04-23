@@ -43,7 +43,7 @@
                     html += init_row( res.data[j] );
                 }
                 $(".main-tbody").html(html);
-                $('table#main-table').DataTable();
+                $('table#main-table').DataTable({ "order": [] });
             });
 
 

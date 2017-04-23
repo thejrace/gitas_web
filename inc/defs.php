@@ -43,7 +43,7 @@
 	define("DBT_OTOBUSLER", "otobusler");
 	define("DBT_OTOBUS_MARKALAR", "otobus_markalar");
 	define("DBT_OTOBUS_MODELLER", "otobus_modeller");
-	define("DBT_YAZDIRILACAKLAR", "yazdirilicaklar");
+
 
 
 
@@ -56,13 +56,15 @@
     define("URL_PARCA_TIPI", MAIN_URL . "parca_tipi.php");
     define("URL_STOK", MAIN_URL . "stok.php");
     define("URL_YAZDIRMA_TEMA_IEF", MAIN_URL . "yazdirma_tema_is_emri_formu.php");
+    define("URL_YAZDIRMA_TEMA_IEF_CIKANLAR", MAIN_URL . "yazdirma_tema_is_emri_formu_cikanlar.php");
+    define("URL_YAZDIRMA_TEMA_PARCA_GIRISI", MAIN_URL . "yazdirma_tema_parca_girisi.php");
 
 
 	define( "DIR_RES", MAIN_DIR . "res/"  );
 	define( "DIR_RES_IMG", DIR_RES . "img/" );
-	define( "DIR_YAZDIRILACAKLAR", MAIN_DIR . "yazdirilacaklar/");
-	define( "DIR_YAZDIRILACAKLAR_IEF", MAIN_DIR . "is_emri_formlari/");
-	define( "DIR_YAZDIRILACAKLAR_PG", MAIN_DIR . "parca_girisleri/");
+	define( "DIR_QR_TEMP", MAIN_DIR . "qr/temp/");
+
+	define( "URL_QR_TEMP", MAIN_URL . "qr/temp/");
 	define( "URL_RES", MAIN_URL . "res/" );
 	define( "URL_RES_IMG", URL_RES . "img/" );
 	define( "URL_RES_CSS", URL_RES . "css/" );

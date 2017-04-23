@@ -512,6 +512,7 @@ class Is_Emri_Formu extends Data_Out{
                 </table>
             </div>
             <a href="'.URL_YAZDIRMA_TEMA_IEF.'?form_gid='.$this->details["gid"].'" target="_blank" class="mnbtn mor yazdirbtn">YAZDIR</a>
+            <a href="'.URL_YAZDIRMA_TEMA_IEF_CIKANLAR.'?form_gid='.$this->details["gid"].'" target="_blank" class="mnbtn mor yazdirbtn">ÇIKANLAR BARKOD YAZDIR</a>
             
             </div>';
     }

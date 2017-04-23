@@ -19,9 +19,9 @@
 
                 if( Input::get("filter") != "" ){
                     $FILTER_DATA = GET_Filter::sql(Input::get("filter"));
-                    $query = DB::getInstance()->query("SELECT * FROM " . DBT_ISEMRI_FORMLARI . " WHERE " . $FILTER_DATA["params"], $FILTER_DATA["vals"] )->results();
+                    $query = DB::getInstance()->query("SELECT * FROM " . DBT_ISEMRI_FORMLARI . " WHERE " . $FILTER_DATA["params"], $FILTER_DATA["vals"] . " ORDER BY tarih DESC")->results();
                 } else {
-                    $query = DB::getInstance()->query("SELECT * FROM " . DBT_ISEMRI_FORMLARI )->results();
+                    $query = DB::getInstance()->query("SELECT * FROM " . DBT_ISEMRI_FORMLARI . " ORDER BY tarih DESC" )->results();
                 }
                 foreach( $query as $form ){
                     if( $form["durum"] == Is_Emri_Formu::$TASLAK ){

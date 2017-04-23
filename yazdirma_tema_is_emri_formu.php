@@ -140,7 +140,6 @@
             item.parent().html( item.attr("ttdata"));
         }
 
-        console.log("githuuuuub   puuuuussh obarey beybe");
 
     });
 

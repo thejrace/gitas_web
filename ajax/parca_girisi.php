@@ -27,6 +27,27 @@
         switch( Input::get("req") ){
 
 
+            case "veri_al":
+
+                $query = DB::getInstance()->query("SELECT * FROM " . DBT_PARCA_GIRISLERI . " ORDER BY tarih DESC")->results();
+                foreach( $query as $giris ){
+                    $Giris_Yapan = new Personel( $giris["giris_yapan"] );
+                    $output = array(
+                        "data_id"   => $giris["gid"],
+                        "ico"       => GitasDT_CSS::$ICO_SEPET, // js de tanimli
+                        "bigtitle"  => $giris["tarih"],
+                        "subtitle"  => $Giris_Yapan->get_details("isim"),
+                        "color"     => GitasDT_CSS::$C_BEYAZ,
+                        "font"      => GitasDT_CSS::$F_BOLD,
+                        "kompbut"   => true,
+                        "datarole"  => "girisdetay"
+                    );
+                    $DATA[] = $output;
+                }
+
+            break;
+
+
             case "detay_al":
                 $Parca_Girisi = new Parca_Girisi( Input::get("item_id") );
                 if( !$Parca_Girisi->exists() ){
@@ -35,11 +56,9 @@
                     $Parca_Girisi->giris_icerik_listele();
                     $DATA = $Parca_Girisi->detay_html();
                 }
-
             break;
 
 
-            //http://localhost/gitasWeb/qr/index.php?dosya_isim=OBAREY6&data=GTSPATIPKALIPERBLCCzPOO7h8X4fs2Zr7xY6XoCUj6172CLrspX5rscL&level=H&size=4&pgid=OOOOOOO
             case "parca_girisi":
                 $Validation = new Validation( new InputErrorHandler );
                 // Formu kontrol et

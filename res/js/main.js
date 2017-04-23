@@ -126,6 +126,9 @@ var GitasREQ = {
     parca_giris_detay: function( item_id, cb ){
         this.default_req( Gitas.AJAX_REQ.PARCA_GIRISI, { req:"detay_al", item_id: item_id }, cb );
     },
+    parca_giris_dt: function( cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_GIRISI, { req:"veri_al" }, cb );
+    },
     // parca tipi istatistik
     parca_tipi_istatistik: function( req, patip, cb ){
         this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req:req, patip:patip }, cb );
