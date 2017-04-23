@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ce5c6c3-4a4b-4b9e-883d-3d9bd190f498" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/dfb15192-d842-42f1-8c8e-9867384817b0.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/dfb15192-d842-42f1-8c8e-9867384817b0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,112 +48,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Parca_Tipi.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/class/Parca_Tipi.php">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="454">
-              <caret line="271" column="23" lean-forward="true" selection-start-line="271" selection-start-column="23" selection-end-line="271" selection-end-column="23" />
-=======
-            <state relative-caret-position="649">
-              <caret line="195" column="21" lean-forward="true" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="21" />
->>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
-              <folding>
-                <marker date="1492957180796" expanded="true" signature="2617:2675" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
-                <marker date="1492957180796" expanded="true" signature="3092:3150" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
-                <marker date="1492957180796" expanded="true" signature="3623:3724" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
-                <marker date="1492957180796" expanded="true" signature="4600:4671" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCA_GIRISLERI}" />
-                <marker date="1492957180796" expanded="true" signature="5880:5937" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
-                <marker date="1492957180796" expanded="true" signature="7222:7289" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
-                <marker date="1492957180796" expanded="true" signature="8689:8782" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
-                <marker date="1492957180796" expanded="true" signature="8927:8994" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
-                <marker date="1492957180796" expanded="true" signature="14273:14319" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Is_Emri_Formu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/class/Is_Emri_Formu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="513" column="116" lean-forward="false" selection-start-line="513" selection-start-column="116" selection-end-line="513" selection-end-column="125" />
-              <folding>
-                <element signature="n#ekle#0;n#Is_Emri_Formu#0;n#!!top" expanded="false" />
-                <element signature="n#kaydi_geri_al#0;n#Is_Emri_Formu#0;n#!!top" expanded="false" />
-                <element signature="n#form_giren_icerik_ekle#0;n#Is_Emri_Formu#0;n#!!top" expanded="false" />
-                <element signature="n#form_cikan_icerik_ekle#0;n#Is_Emri_Formu#0;n#!!top" expanded="false" />
-                <element signature="n#form_girenleri_listele#0;n#Is_Emri_Formu#0;n#!!top" expanded="false" />
-                <marker date="1492956608560" expanded="true" signature="24482:26674" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="24617:25197" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="24708:25178" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="24736:25053" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="24765:25024" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="25081:25153" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="25256:25873" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="25347:25854" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="25375:25729" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="25404:25700" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="25757:25829" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="25932:26504" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="26023:26485" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="26051:26360" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="26080:26331" ph="..." />
-                <marker date="1492956608560" expanded="true" signature="26388:26460" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yazdirma_tema_is_emri_formu.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/yazdirma_tema_is_emri_formu.php">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="440">
-              <caret line="118" column="29" lean-forward="false" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="29" />
-=======
-            <state relative-caret-position="686">
-              <caret line="129" column="37" lean-forward="true" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
->>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
-              <folding>
-                <element signature="e#6#87#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ief.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/css/ief.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="109" column="1" lean-forward="false" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="defs.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inc/defs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gitas_Hash.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/class/Gitas_Hash.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -328,6 +220,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -406,8 +300,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,11 +308,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.40/mysql-connector-java-5.1.40-bin.jar" />
-=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
->>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -524,61 +412,16 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7ce5c6c3-4a4b-4b9e-883d-3d9bd190f498" name="Default" comment="" />
-      <created>1488725531942</created>
+      <created>1492958395634</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1488725531942</updated>
-      <workItem from="1488725535535" duration="15293000" />
-      <workItem from="1488790723580" duration="5113000" />
-      <workItem from="1488798406544" duration="23344000" />
-      <workItem from="1488889271760" duration="20350000" />
-      <workItem from="1489010797091" duration="226000" />
-      <workItem from="1489013193528" duration="28000" />
-      <workItem from="1489013476238" duration="261000" />
-      <workItem from="1490034233986" duration="6033000" />
-      <workItem from="1490091915913" duration="23302000" />
-      <workItem from="1490379865071" duration="3275000" />
-      <workItem from="1490437958435" duration="6610000" />
-      <workItem from="1490451461519" duration="599000" />
-      <workItem from="1490520422626" duration="2830000" />
-      <workItem from="1490603694182" duration="28967000" />
-      <workItem from="1490729491117" duration="599000" />
-      <workItem from="1490794032725" duration="17642000" />
-      <workItem from="1490866392352" duration="31727000" />
-      <workItem from="1490950836516" duration="33988000" />
-      <workItem from="1491121874681" duration="11770000" />
-      <workItem from="1491156695832" duration="3229000" />
-      <workItem from="1491227979946" duration="591000" />
-      <workItem from="1491246315393" duration="9882000" />
-      <workItem from="1491291338954" duration="634000" />
-      <workItem from="1491320960248" duration="7846000" />
-      <workItem from="1491384693609" duration="31472000" />
-      <workItem from="1491466256059" duration="17348000" />
-      <workItem from="1491493672794" duration="10992000" />
-      <workItem from="1491557247118" duration="888000" />
-      <workItem from="1491733205435" duration="22673000" />
-      <workItem from="1491826517172" duration="86000" />
-      <workItem from="1491920640238" duration="25466000" />
-      <workItem from="1491987195272" duration="1190000" />
-      <workItem from="1491991078040" duration="14847000" />
-      <workItem from="1492066909963" duration="28093000" />
-      <workItem from="1492156402830" duration="6580000" />
-      <workItem from="1492199896916" duration="13000" />
-<<<<<<< HEAD
-      <workItem from="1492937221353" duration="12357000" />
-      <workItem from="1492956879656" duration="987000" />
-=======
-      <workItem from="1492937221353" duration="13561000" />
->>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
+      <updated>1492958395634</updated>
+      <workItem from="1492958397478" duration="13000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="427131000" />
-=======
-    <option name="totallyTimeSpent" value="427348000" />
->>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
+    <option name="totallyTimeSpent" value="427144000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -591,27 +434,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15300146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1522694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.5080527" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.4919473" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32101372" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39915523" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.4919473" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32101372" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39915523" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -627,13 +470,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/css/datatables.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="133" column="18" lean-forward="false" selection-start-line="133" selection-start-column="18" selection-end-line="133" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/css/jquery.datetimepicker.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -946,14 +782,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/class/Yazdirma.php" />
     <entry file="file://$PROJECT_DIR$/yazdirilacaklar/is_emri_formlari/IEF_TEST.php" />
-    <entry file="file://$PROJECT_DIR$/res/css/ief.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="109" column="1" lean-forward="false" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/is_emri_formlari.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -962,27 +790,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/defs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/Gitas_Hash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/common/class/Parca_Tipi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="271" column="23" lean-forward="true" selection-start-line="271" selection-start-column="23" selection-end-line="271" selection-end-column="23" />
+        <state relative-caret-position="3523">
+          <caret line="271" column="23" lean-forward="false" selection-start-line="271" selection-start-column="23" selection-end-line="271" selection-end-column="23" />
           <folding>
             <marker date="1492957180796" expanded="true" signature="2617:2675" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
             <marker date="1492957180796" expanded="true" signature="3092:3150" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCALAR}" />
@@ -998,27 +809,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/class/Is_Emri_Formu.php">
-=======
-    <entry file="file://$PROJECT_DIR$/is_emri_formlari.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/defs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/Gitas_Hash.php">
->>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
+        <state relative-caret-position="2873">
           <caret line="513" column="116" lean-forward="false" selection-start-line="513" selection-start-column="116" selection-end-line="513" selection-end-column="125" />
           <folding>
             <element signature="n#ekle#0;n#Is_Emri_Formu#0;n#!!top" expanded="false" />
@@ -1048,13 +840,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yazdirma_tema_is_emri_formu.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="440">
-          <caret line="118" column="29" lean-forward="false" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="29" />
-=======
         <state relative-caret-position="649">
           <caret line="195" column="21" lean-forward="true" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="21" />
->>>>>>> 1f7a5e55d5f641a1f607fbab41c411f42ba1fe05
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
           </folding>
@@ -1063,10 +850,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yazdirma_tema_is_emri_formu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
-          <caret line="129" column="37" lean-forward="true" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
+        <state relative-caret-position="988">
+          <caret line="129" column="37" lean-forward="false" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/css/ief.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="109" column="1" lean-forward="false" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/defs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/class/Gitas_Hash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <marker date="1492956608544" expanded="true" signature="1634:1697" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
+            <marker date="1492956608544" expanded="true" signature="2423:2478" ph="SELECT * FRO... ${DBT_PARCA_GIRISLERI}" />
+            <marker date="1492956608544" expanded="true" signature="2916:2971" ph="SELECT * FRO... ${DBT_ISEMRI_FORMLARI}" />
+            <marker date="1492956608544" expanded="true" signature="3778:3833" ph="SELECT * FRO... ${DBT_PARCA_TALEPLERI}" />
+            <marker date="1492956608544" expanded="true" signature="4235:4293" ph="SELECT * FRO... ${DBT_REVIZYON_TALEPLERI}" />
+            <marker date="1492956608544" expanded="true" signature="4693:4747" ph="SELECT * FRO... ${DBT_STOK_FIRMARLAR}" />
           </folding>
         </state>
       </provider>
