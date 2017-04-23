@@ -81,6 +81,7 @@ class Gitas_Hash{
 
             break;
 
+
             case self::$MESAJ:
 
             break;

@@ -345,6 +345,7 @@ class Is_Emri_Formu extends Data_Out{
         return $this->pdo->query("SELECT * FROM " . DBT_ISEMRI_FORMU_PERSONEL_DETAY . " WHERE form_gid = ?", array( $this->details["gid"]))->results();
     }
 
+
     public function detay_html(){
         $Surucu = new Personel($this->details["surucu"]);
         $Yapan = new Personel($this->details["giris_yapan"]);
@@ -367,7 +368,7 @@ class Is_Emri_Formu extends Data_Out{
                     <td>'.$cikan["miktar"].' '.$Parca_Tipi->get_details("miktar_olcu_birimi").'</td>
                     <td title="'.$cikan["stok_kodu"].'">'.substr($cikan["stok_kodu"], 0, 25).'...</td>
                     <td>'.$durum.'</td>
-                    <td><button type="button" class="mtbtn minitableico buyutec" onmouseover="Obarey_Tooltip(\'text\', \''.$tooltip_data.'\', this, event)" data-id="'.$cikan["stok_kodu"].'"></button></td>
+                    <td><button type="button" class="mtbtn minitableico buyutec"  onmouseover="Obarey_Tooltip(\'text\', \''.$tooltip_data.'\', this, event)" data-id="'.$cikan["stok_kodu"].'"></button></td>
                     </tr>';
             } else if( $cikan["durum"] == Parca_Tipi::$CIKMADI_STOK ){
                 $cikanlar_html .= '<tr>
@@ -414,7 +415,7 @@ class Is_Emri_Formu extends Data_Out{
                     <td>'.$parca_adi.'</td>
                     <td>'.$giren["miktar"].' '.$Parca_Tipi->get_details("miktar_olcu_birimi").'</td>
                     <td title="'.$giren["stok_kodu"].'">'.substr($giren["stok_kodu"], 0, 25).'...</td>
-                    <td><button type="button" onmouseover="Obarey_Tooltip(\'text\', \''.$tooltip_data.'\', this, event)" class="mtbtn minitableico buyutec"></button></td>
+                    <td><button type="button" ttdata="'.$tooltip_data.'"  onmouseover="Obarey_Tooltip(\'text\', \''.$tooltip_data.'\', this, event)" class="mtbtn minitableico buyutec"></button></td>
                     </tr>';
         }
 
@@ -426,7 +427,7 @@ class Is_Emri_Formu extends Data_Out{
                             <td>'.substr($personel["is_tanimi"],0, 35).'</td>
                             <td>'.$personel["baslama"].'</td>
                             <td>'.$personel["bitis"].'</td>
-                            <td><button type="button" onmouseover="Obarey_Tooltip(\'text\', \''.$personel["is_tanimi"].'\', this, event)" class="mtbtn minitableico buyutec"></button></td>
+                            <td><button type="button" ttdata="'.$tooltip_data.'"  onmouseover="Obarey_Tooltip(\'text\', \''.$personel["is_tanimi"].'\', this, event)" class="mtbtn minitableico buyutec"></button></td>
                         </tr>';
 
         }
@@ -510,7 +511,7 @@ class Is_Emri_Formu extends Data_Out{
                     </tbody>
                 </table>
             </div>
-            
+            <a href="'.URL_YAZDIRMA_TEMA_IEF.'?form_gid='.$this->details["gid"].'" target="_blank" class="mnbtn mor yazdirbtn">YAZDIR</a>
             
             </div>';
     }

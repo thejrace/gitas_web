@@ -116,12 +116,15 @@ class Parca_Tipi extends Data_Out {
                             $output[ $giris["parca_giris_gid"] ]["miktar"]++;
                         } else {
                             $Parca_Giris = new Parca_Girisi( $giris["parca_giris_gid"] );
-                            $Personel = new Personel( $Parca_Giris->get_details("giris_yapan") );
-                            $output[ $giris["parca_giris_gid"] ] = array(
-                                "miktar"        => $giris["miktar"],
-                                "giris_yapan"   => $Personel->get_details("isim"),
-                                "tarih"         => $Parca_Giris->get_details("tarih")
-                            );
+                            if($Parca_Giris->exists()){
+                                $Personel = new Personel( $Parca_Giris->get_details("giris_yapan") );
+                                $output[ $giris["parca_giris_gid"] ] = array(
+                                    "miktar"        => $giris["miktar"],
+                                    "giris_yapan"   => $Personel->get_details("isim"),
+                                    "tarih"         => $Parca_Giris->get_details("tarih")
+                                );
+                            }
+
                         }
                     }
                 }
@@ -133,12 +136,14 @@ class Parca_Tipi extends Data_Out {
                     $output[ $giris["parca_giris_id"] ]["miktar"]++;
                 } else {
                     $Parca_Giris = new Parca_Girisi( $giris["parca_giris_id"] );
-                    $Personel = new Personel( $Parca_Giris->get_details("giris_yapan") );
-                    $output[ $giris["parca_giris_id"] ] = array(
-                        "miktar"        => 1,
-                        "giris_yapan"   => $Personel->get_details("isim"),
-                        "tarih"         => $Parca_Giris->get_details("tarih")
-                    );
+                    if($Parca_Giris->exists()){
+                        $Personel = new Personel( $Parca_Giris->get_details("giris_yapan") );
+                        $output[ $giris["parca_giris_id"] ] = array(
+                            "miktar"        => 1,
+                            "giris_yapan"   => $Personel->get_details("isim"),
+                            "tarih"         => $Parca_Giris->get_details("tarih")
+                        );
+                    }
                 }
             }
         }
@@ -158,7 +163,7 @@ class Parca_Tipi extends Data_Out {
                         if( isset( $output[ $cikis["form_gid"] ] ) ){
                             $output[ $cikis["form_gid"] ]["miktar"]++;
                         } else {
-                            $Form = new Is_Emri_Formu( $cikis["form_gid"]  );
+                            $Form = new Is_Emri_Formu( $cikis["form_gid"] );
                             $output[ $cikis["form_gid"] ] = array(
                                 "miktar"        => $cikis["miktar"],
                                 "plaka"         => $Form->get_details("plaka"),

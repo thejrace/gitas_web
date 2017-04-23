@@ -1,0 +1,110 @@
+html, body {
+    margin:0;
+    padding:0;
+    font-size:12px;
+}
+.ileri-geri-cont {
+    text-align:center;
+    padding:10px;
+}
+.on-sayfa,
+.arka-sayfa {
+    width:904px;
+    height:1067px;
+    position:relative;
+}
+.arka-sayfa {
+    display:none;
+}
+.tarih-row,
+.ief-gid,
+.ief-barkod,
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.personel-detay{
+    position:absolute;
+
+}
+.row-1 .sag,
+.row-1 .sol {
+    float:left;
+}
+.row-1 .sol {
+     width:175px;
+}
+.row-1 .sol div {
+    padding:1px 0;
+}
+.row-1 .sag {
+    width:450px;
+    background:green;
+    height:135px;
+}
+.tarih-row {
+    top:144px;
+    left:696px;
+}
+.ief-gid {
+    top:164px;
+    left:600px;
+}
+.row-1 {
+    left:192px;
+}
+.row-2, .row-3, .row-4{
+    left:80px;
+    width:745px;
+}
+.row-1 {
+    background:red;
+    top:204px;
+}
+.row-2{
+    background:yellow;
+    top:401px;
+    height:93px;
+}
+.row-3{
+    background:violet;
+    top:528px;
+    height:154px;
+}
+.row-4 {
+    background:orange;
+    top:709px;
+    height:300px;
+}
+table {
+    width:95%;
+}
+table tbody td,
+table thead td {
+    text-align:center;
+}
+table thead td {
+    padding:1px 2px;
+    text-transform: uppercase;
+}
+.stok-kodu-td {
+    font-size:10px;
+
+}
+.input-container > label {
+    display: block;
+    font-size: 13px;
+    margin-top: 5px;
+    padding-left: 8px;
+    text-transform: uppercase;
+}
+
+.personel-detay {
+    left:34px;
+    top:240px;
+    background:lightgreen;
+    width:750px;
+}
+.personel-detay tbody tr td {
+    /*width:230px;*/
+}
