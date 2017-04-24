@@ -355,8 +355,12 @@ class Is_Emri_Formu extends Data_Out{
             $Parca = Parca::get( $cikan["stok_kodu"] );
 
             $Parca_Tipi = new Parca_Tipi( $Parca->get_details("tip") );
-            $Satici_Firma = new Satici_Firma( $Parca->get_details("satici_firma"));
-            $tooltip_data = 'Fatura No: ' . $Parca->get_details("fatura_no") . '<br> Satıcı Firma: ' . $Satici_Firma->get_details("isim");
+            $tooltip_data = "";
+            if( $Parca->get_details("satici_firma") != "0" ){
+                $Satici_Firma = new Satici_Firma( $Parca->get_details("satici_firma"));
+                $tooltip_data = 'Fatura No: ' . $Parca->get_details("fatura_no") . '<br> Satıcı Firma: ' . $Satici_Firma->get_details("isim");
+            }
+
             if( $cikan["durum"] == Parca_Tipi::$REVIZE || $cikan["durum"] == Parca_Tipi::$HURDA ){
                 $durum = "Hurda";
                 if( $cikan["durum"] == Parca_Tipi::$REVIZE ){
