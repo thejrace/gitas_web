@@ -52,3 +52,7 @@
 
     });
 </script>
+
+<?php
+
+require 'inc/footer.php';

@@ -1313,6 +1313,59 @@ table.obarey-table .giren-parca-sil {
 	text-align:center;
 }
 
+.teklifler-cont {
+
+}
+.teklifler-cont .teklif {
+	padding:10px 0;
+	text-align:center;
+	margin-bottom:2px;
+}
+.teklifler-cont .teklif:nth-child(odd){
+	background:#272727;
+}
+.teklifler-cont .teklif:nth-child(even){
+	background:#2a2a2a;
+}
+.teklifler-cont .teklif > span {
+	font-family:'montserratbold';
+	font-size:14px;
+	color:#fcd035;
+	text-align:center;
+	padding:5px;
+	display:block;
+	border-bottom:1px solid #3f3f3f;
+}
+.teklifler-cont .teklif ul {
+	text-align: center;
+}
+
+.teklifler-cont .teklif ul li{
+	font-size: 13px;
+	padding: 5px;
+}
+
+.teklifler-cont .teklif .aciklama {
+
+}
+.teklifler-cont .teklif .aciklama > label {
+	display:block;
+	text-align:center;
+	font-family:'montserratbold';
+	font-size:12px;
+	color:#fcd035;
+	margin-top:10px;
+}
+.teklifler-cont .teklif .aciklama span {
+	display:block;
+	text-align:center;
+	font-size:13px;
+	margin:10px 0;
+}
+.talep-ust-bar{
+	text-align:center;
+	padding:10px 0;
+}
 .flight {
 	font-family: 'montserratlight' !important;
 }

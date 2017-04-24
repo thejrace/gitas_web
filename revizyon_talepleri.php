@@ -153,8 +153,11 @@
         });
 
         $(document).on("click", ".buyutec", function(){
+            window.open( "<?php echo URL_REVIZYON_TALEBI ?>?talep_gid="+$(this).parent().parent().parent().parent().attr("data-id") );
+        });
 
-
+        $(document).on("click", "[data-role='revtamamdetay']", function(){
+            window.open( "<?php echo URL_REVIZYON_TALEBI ?>?talep_gid="+$(this).attr("data-id") );
         });
 
         $(document).on("submit", "#teklif_ekle", function(ev){
@@ -216,3 +219,8 @@
     });
 
 </script>
+
+
+<?php
+
+require 'inc/footer.php';

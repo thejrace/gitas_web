@@ -55,6 +55,7 @@
     define("URL_PARCA_GIRISI", MAIN_URL . "parca_girisi.php");
     define("URL_PARCA_GIRISLERI", MAIN_URL . "parca_girisleri.php");
     define("URL_REVIZYON_TALEPLERI", MAIN_URL . "revizyon_talepleri.php");
+    define("URL_REVIZYON_TALEBI", MAIN_URL . "revizyon_talebi.php");
     define("URL_PARCA_TIPI", MAIN_URL . "parca_tipi.php");
     define("URL_STOK", MAIN_URL . "stok.php");
     define("URL_YAZDIRMA_TEMA_IEF", MAIN_URL . "yazdirma_tema_is_emri_formu.php");

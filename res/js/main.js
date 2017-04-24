@@ -169,6 +169,12 @@ var GitasREQ = {
     revizyon_teklif_ekle: function( data, cb ){
         this.default_req( Gitas.AJAX_REQ.REVIZYON_TALEPLERI, data, cb );
     },
+    revizyon_teklif_onayla: function( tid, cb ){
+        this.default_req( Gitas.AJAX_REQ.REVIZYON_TALEPLERI, { req:'teklif_onayla', teklif_gid:tid }, cb );
+    },
+    revizyon_talep_tamamla: function( tid, cb ){
+        this.default_req( Gitas.AJAX_REQ.REVIZYON_TALEPLERI, { req:'talep_tamamla', talep_gid:tid }, cb );
+    },
     giris: function( data, cb ){
         this.default_req( "", data, cb );
     }

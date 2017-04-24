@@ -48,13 +48,29 @@ require '../inc/init.php';
                             $output["right_content"] = array("text" => $talep["tamamlanma_tarihi"]);
                             $output["kompbut"] = true;
                             $output["datarole"] = "revtamamdetay";
-                        } else {
-                            // teklif onayi bekleniyor
+                        } else if( $talep["durum"] == Revizyon_Talebi::$TEKLIF_ONAYI_BEKLENIYOR ){
                             $output["ico"] = GitasDT_CSS::$ICO_IEF_YESIL;
                             $output["icoset"] = GitasDT_CSS::$ICOSET_REVIZYON_TALEP;
                             $output["subtitle"] = "Teklif onayı bekleniyor.";
+                        } else {
+                            // parçalar bekleniyor
+                            $output["ico"] = GitasDT_CSS::$ICO_IEF_YESIL;
+                            $output["kompbut"] = true;
+                            $output["datarole"] = "revtamamdetay";
+                            $output["subtitle"] = "Onaylandı. Parça bekleniyor.";
                         }
                         $DATA[] = $output;
+                    }
+                }
+            break;
+
+            case "talep_tamamla":
+                if( in_array( Aktiviteler::REVIZYON_TALEP_ONAYLAMA, $KULLANICI_IZINLER ) ) {
+                    $RevTalep = new Revizyon_Talebi(Input::get("talep_gid"));
+                    if (!$RevTalep->exists()) {
+                        $Ok = 0;
+                    } else {
+                        $RevTalep->durum_guncelle(Revizyon_Talebi::$TAMAMLANDI);
                     }
                 }
             break;
@@ -72,10 +88,18 @@ require '../inc/init.php';
                 }
             break;
 
-            case "talep_inceleme":
-                if( in_array( Aktiviteler::REVIZYON_TALEP_INCELEME, $KULLANICI_IZINLER ) ) {
-
+            case "teklif_onayla":
+                if( in_array( Aktiviteler::REVIZYON_TALEP_ONAYLAMA, $KULLANICI_IZINLER ) ) {
+                    $Teklif = new Revizyon_Talep_Teklifi(Input::get("teklif_gid"));
+                    if (!$Teklif->exists()) {
+                        $Ok = 0;
+                    } else {
+                        $Teklif->onayla();
+                        $Talep = new Revizyon_Talebi( $Teklif->get_details("talep_gid") );
+                        $Talep->durum_guncelle( Revizyon_Talebi::$PARCA_BEKLENIYOR );
+                    }
                 }
+
             break;
 
             case "barkod_arama":
