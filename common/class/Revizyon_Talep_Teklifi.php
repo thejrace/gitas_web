@@ -17,7 +17,7 @@ class Revizyon_Talep_Teklifi extends Data_Out {
 
         $ekle = $this->pdo->insert( $this->table, array(
             "talep_gid"             => $input["talep_gid"],
-            "firma"                 => $input["firma"],
+            "firma"                 => $input["satici_firma"],
             "aciklama"              => $input["aciklama"],
             "duzenleyen_personel"   => Active_User::get_details("id"),
             "durum"                 => Durum_Kodlari::$AKTIF,

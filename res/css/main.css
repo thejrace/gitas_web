@@ -57,6 +57,8 @@ html, body {
 	font-family:'montserratlight';
 }
 
+
+
 .popup-form .notf {
 
 }
@@ -204,6 +206,8 @@ html, body {
 	box-shadow: 4px 4px 20px #1d1d1d,
 				-4px -4px 20px #1d1d1d;
 	border: 1px solid #443142;
+	z-index: 10001;
+
 }
 
 .ui-dialog-titlebar {
@@ -1295,6 +1299,18 @@ table.obarey-table .giren-parca-sil {
 .parca-degisim-plan .parca-section > ul > li .ust .sol {
 	font-size: 14px;
 	font-family: 'montserratmedium';
+}
+
+.barkod-arama {
+	padding:15px;
+}
+#barkod-arama {
+	display: block;
+	width: 300px;
+	font-size: 13px;
+	padding: 5px;
+	margin: 0 auto;
+	text-align:center;
 }
 
 .flight {

@@ -1,3 +1,11 @@
+<?php
+
+    if( isset($AKTIVITE_KOD ) ){
+        if( !in_array($AKTIVITE_KOD, $KULLANICI_IZINLER ) ) header("Location: index.php");
+    }
+
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -28,6 +36,13 @@
 	</head>
 	<body>
 
+
+        <script type="text/javascript">
+
+            GitasDT_CSS.ICO_SETS = <?php echo GitasDT_CSS::js_out( Active_User::get_details("seviye") ) ?>;
+
+        </script>
+
 		<div id="popup-overlay"></div>
     	<div id="popup" ></div>
         <div id="loader">
@@ -47,6 +62,8 @@
                         <a href="<?php echo URL_ISEMRI_FORMU ?>" class="mnbtn gri">İŞ EMRİ FORMU YAZ</a>
                         <a href="<?php echo URL_OTOBUSLER ?>" class="mnbtn gri">OTOBÜSLER</a>
                         <a href="<?php echo URL_STOK ?>" class="mnbtn gri">STOK</a>
+                        <a href="<?php echo URL_REVIZYON_TALEPLERI ?>" class="mnbtn gri">REVİZYON TALEPLERİ</a>
+                        <a href="<?php echo URL_PARCA_GIRISLERI ?>" class="mnbtn gri">PARÇA GİRİŞLERİ</a>
                         <a href="<?php echo URL_PARCA_GIRISI ?>" class="mnbtn gri">PARÇA GİRİŞİ</a>
                     </div>
                 </div>
@@ -57,9 +74,3 @@
             
           
   
-
-        <script type="text/javascript">
-
-         
-
-        </script>

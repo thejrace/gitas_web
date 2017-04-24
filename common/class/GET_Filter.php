@@ -34,7 +34,7 @@ class GET_Filter {
                 $FILTER_ARRAY[] = substr($key, 7)."=".$val;
             }
         }
-        if( count($FILTER_ARRAY) ) return "";
+        if( count($FILTER_ARRAY) == 0 ) return "";
         return implode("&", $FILTER_ARRAY);
     }
 }

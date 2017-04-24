@@ -17,6 +17,7 @@
 			Session::destroy( "au_id" );
 			Session::destroy( "au_isim" );
 			Session::destroy( "au_eposta" );
+			Session::destroy( "au_seviye" );
 		}
 
 		private function destroy_cookie(){

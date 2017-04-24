@@ -8,6 +8,10 @@
  */
 class Revizyon_Talebi extends Data_Out {
 
+    public static   $TAMAMLANDI = 1,
+                    $AKTIF = 2,
+                    $TEKLIF_ONAYI_BEKLENIYOR = 3;
+
     public function __construct( $id = null ){
         $db_keys = array( "id", "gid" );
         parent::__construct( DBT_REVIZYON_TALEPLERI, $db_keys, $id );
@@ -22,7 +26,7 @@ class Revizyon_Talebi extends Data_Out {
             "stok_kodu"             => $input["stok_kodu"],
             "aciklama"              => $input["aciklama"],
             "duzenleyen_personel"   => Active_User::get_details("id"),
-            "durum"                 => Durum_Kodlari::$AKTIF,
+            "durum"                 => self::$AKTIF,
             "tarih"                 => Common::get_current_datetime()
         ));
 
@@ -40,8 +44,12 @@ class Revizyon_Talebi extends Data_Out {
             $this->return_text = $Teklif->get_return_text();
             return false;
         }
-        $this->return_text = $this->return_text = $Teklif->get_return_text();
+        $this->return_text = $Teklif->get_return_text();
         return true;
+    }
+
+    public function tamamla(){
+
     }
 
 }

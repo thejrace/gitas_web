@@ -2,6 +2,7 @@
     require 'inc/init.php';
 
     $TITLE = "İş Emri Formu Oluştur";
+    $AKTIVITE_KOD = Aktiviteler::IS_EMRI_FORMU_EKLEME;
 
     $KISAYOL_PARCALAR = array(
         "Balata" => array(

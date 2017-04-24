@@ -13,6 +13,7 @@ class GitasDT_CSS {
         $ICOSET_PARCA_TIPI = 0,
         $ICOSET_OTOBUS = 1,
         $ICOSET_PATIP_OTOBUS_ISTATISTIK = 2,
+        $ICOSET_REVIZYON_TALEP = 3,
 
         // tekli icolar
         $ICO_PARCA_TIPI = 0,
@@ -22,6 +23,7 @@ class GitasDT_CSS {
         $ICO_TICK_GRI = 4,
         $ICO_SEPET = 5,
         $ICO_SURUCUBEYAZ = 6,
+        $ICO_IEF_YESIL = 7,
 
 
         // renk classlari
@@ -39,4 +41,31 @@ class GitasDT_CSS {
         $F_REGULAR = 1,
         $F_SEMIBOLD = 2,
         $F_BOLD = 3;
+
+    public static function js_out( $seviye ){
+
+        if( $seviye == Personel::$ADMIN ){
+            return  '[[ "stats", "talep", "ayarlar", "arti" ], // parça tipi,
+                    [ "surucusari", "stats", "parca", "buyutec", "ayarlar" ], 
+                    [ "arti" ],
+                    [ "sepet", "buyutec" ]]';
+        } else if( $seviye == Personel::$MUHASEBE ){
+            return  '[[ "stats", "talep", "ayarlar", "arti" ], // parça tipi,
+                    [ "surucusari", "stats", "parca", "buyutec", "ayarlar" ], 
+                    [ "arti" ],
+                    [ "sepet", "buyutec" ]]';
+        } else if( $seviye == Personel::$SERVIS ){
+            return  '[[ "stats", "talep", "arti" ], // parça tipi,
+                    [ "stats", "parca", "buyutec" ], // otobus
+                    [ "arti" ],
+                    [ "buyutec" ]]';
+        } else if( $seviye == Personel::$SURUCU ){
+            return  '[[ ], // parça tipi,
+                    [  ], // otobus
+                    [],
+                    [ ]]';
+        }
+
+    }
+
 }

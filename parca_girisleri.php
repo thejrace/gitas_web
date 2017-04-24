@@ -6,10 +6,11 @@
  * Time: 11:59
  */
 
-require 'inc/init.php';
+    require 'inc/init.php';
 
-$TITLE = "Parça Girişleri";
-require 'inc/header.php';
+    $TITLE = "Parça Girişleri";
+    $AKTIVITE_KOD = Aktiviteler::PARCA_GIRISLERI_DT;
+    require 'inc/header.php';
 ?>
 
 <div class="dtable">
@@ -46,7 +47,6 @@ require 'inc/header.php';
 
         $(document).on("click", "[data-role='girisdetay']", function(){
            GitasREQ.parca_giris_detay( $(this).attr("data-id"), function(res){ Popup.on(res.data, "Form Detay"); } );
-
         });
 
 

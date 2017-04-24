@@ -18,6 +18,7 @@
     $PGID = $Parca_Giris->get_details("gid");
 
     $TITLE = "Parça Girişi";
+    $AKTIVITE_KOD = Aktiviteler::PARCA_GIRISI;
     require 'inc/header.php';
 ?>
 

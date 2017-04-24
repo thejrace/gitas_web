@@ -92,7 +92,7 @@ class Gitas_Hash{
 
             case self::$PARCA_TALEP:
                 do {
-                    $hash = self::$PF_PARCA_TALEP . $data["parca_tipi"] . Common::generate_random_string( 40 );
+                    $hash =  self::$PF_GITAS . self::$PF_PARCA_TALEP . $data["parca_tipi"] . Common::generate_random_string( 40 );
                     $check_query = DB::getInstance()->query("SELECT * FROM " . DBT_PARCA_TALEPLERI . " WHERE gid = ?", array( $hash ) )->results();
                 } while ( count( $check_query )  > 0 );
             break;
@@ -104,7 +104,7 @@ class Gitas_Hash{
             case self::$REVIZYON_TALEP:
 
                 do {
-                    $hash = self::$PF_REVIZYON_TALEP . $data["form_id"] . Common::generate_random_string( 40 );
+                    $hash =  self::$PF_GITAS .  self::$PF_REVIZYON_TALEP . $data["form_id"] . Common::generate_random_string( 40 );
                     $check_query = DB::getInstance()->query("SELECT * FROM " . DBT_REVIZYON_TALEPLERI . " WHERE gid = ?", array( $hash ) )->results();
                 } while ( count( $check_query )  > 0 );
 
@@ -116,7 +116,7 @@ class Gitas_Hash{
 
             case self::$STOK_FIRMA:
                 do {
-                    $hash = self::$PF_SATICI_FRIMA . $data["vergi_no"] . Common::generate_random_string( 40 );
+                    $hash =  self::$PF_GITAS . self::$PF_SATICI_FRIMA . $data["vergi_no"] . Common::generate_random_string( 40 );
                     $check_query = DB::getInstance()->query("SELECT * FROM " . DBT_STOK_FIRMARLAR . " WHERE gid = ?", array( $hash ) )->results();
                 } while ( count( $check_query )  > 0 );
 

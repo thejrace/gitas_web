@@ -25,25 +25,26 @@
 
 
             case "parca_talep":
-
-                $Validation = new Validation( new InputErrorHandler );
-                // Formu kontrol et
-                $Validation->check_v2( Input::escape($_POST), $INPUT_LIST );
-                if( $Validation->failed() ){
-                    $OK = 0;
-                    $input_output = $Validation->errors()->js_format();
-                } else {
-                    $Parca_Talebi = new Parca_Talebi();
-                    $Parca_Talebi->ekle(array(
-                        "form_gid"              => Input::get("form_id"),
-                        "parca_tipi"            => Input::get("parca_tipi"),
-                        "adet"                  => Input::get("miktar"),
-                        "aciklama"              => Input::get("aciklama")
-                    ));
-                    if( !$Parca_Talebi->is_ok() ){
-                        $Ok = 0;
+                if( in_array( Aktiviteler::PARCA_TALEP_EKLEME, $KULLANICI_IZINLER ) ) {
+                    $Validation = new Validation(new InputErrorHandler);
+                    // Formu kontrol et
+                    $Validation->check_v2(Input::escape($_POST), $INPUT_LIST);
+                    if ($Validation->failed()) {
+                        $OK = 0;
+                        $input_output = $Validation->errors()->js_format();
+                    } else {
+                        $Parca_Talebi = new Parca_Talebi();
+                        $Parca_Talebi->ekle(array(
+                            "form_gid" => Input::get("form_id"),
+                            "parca_tipi" => Input::get("parca_tipi"),
+                            "adet" => Input::get("miktar"),
+                            "aciklama" => Input::get("aciklama")
+                        ));
+                        if (!$Parca_Talebi->is_ok()) {
+                            $Ok = 0;
+                        }
+                        $TEXT = $Parca_Talebi->get_return_text();
                     }
-                    $TEXT = $Parca_Talebi->get_return_text();
                 }
 
             break;

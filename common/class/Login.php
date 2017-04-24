@@ -15,7 +15,8 @@
                 Active_User::init(array(
                     "id"        => $user_id,
                     "eposta"    => $Personel->get_details("eposta"),
-                    "isim"      => $Personel->get_details("isim")
+                    "isim"      => $Personel->get_details("isim"),
+                    "seviye"    => $Personel->get_details("seviye")
                 ));
             }
 		}
@@ -64,7 +65,8 @@
 			Active_User::init( array(
 				"id"              => $user_id,
 				"eposta"          => $input["eposta"],
-				"isim"            => $Personel->get_details("isim")
+				"isim"            => $Personel->get_details("isim"),
+                "seviye"          => $Personel->get_details("seviye")
 			));
 
 			Active_User::aktivite_kaydet( array( 'aktivite' => Aktivite::$PERS_GIRIS ) );

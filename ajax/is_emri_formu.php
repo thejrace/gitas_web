@@ -59,32 +59,32 @@ if( $_POST ){
 
         case "is_emri_formu_ekle":
 
-            $INPUT = json_decode($_POST["FORMDATA"], true);
+            if( in_array( Aktiviteler::IS_EMRI_FORMU_EKLEME, $KULLANICI_IZINLER ) ) {
+                $INPUT = json_decode($_POST["FORMDATA"], true);
 
-            $form_detaylar_input = array(
-                "plaka"             => $INPUT["plaka"],
-                "aktif_kapi_no"     => $INPUT["aktif_kapi_no"],
-                "gelis_km"          => $INPUT["gelis_km"],
-                "surucu"            => $INPUT["surucu"],
-                "gelis_tarih"       => $INPUT["gelis_tarih"],
-                "cikis_tarih"       => $INPUT["cikis_tarih"],
-                "sikayet"           => $INPUT["sikayet"],
-                "ariza_tespit"      => $INPUT["ariza_tespit"],
-                "yapilan_onarim"    => $INPUT["onarim"],
-                "durum"             => $INPUT["durum"]
-            );
+                $form_detaylar_input = array(
+                    "plaka"             => $INPUT["plaka"],
+                    "aktif_kapi_no"     => $INPUT["aktif_kapi_no"],
+                    "gelis_km"          => $INPUT["gelis_km"],
+                    "surucu"            => $INPUT["surucu"],
+                    "gelis_tarih"       => $INPUT["gelis_tarih"],
+                    "cikis_tarih"       => $INPUT["cikis_tarih"],
+                    "sikayet"           => $INPUT["sikayet"],
+                    "ariza_tespit"      => $INPUT["ariza_tespit"],
+                    "yapilan_onarim"    => $INPUT["onarim"],
+                    "durum"             => $INPUT["durum"]
+                );
 
-            ( isset($INPUT["kalibrasyon_yapildi"] ) ) ? $form_detaylar_input["kalibrasyon_yapildi"] = 1 : $form_detaylar_input["kalibrasyon_yapildi"] = 0;
-            ( isset($INPUT["arac_yikama"] ) ) ? $form_detaylar_input["arac_yikama"] = 1 : $form_detaylar_input["arac_yikama"] = 0;
+                ( isset($INPUT["kalibrasyon_yapildi"] ) ) ? $form_detaylar_input["kalibrasyon_yapildi"] = 1 : $form_detaylar_input["kalibrasyon_yapildi"] = 0;
+                ( isset($INPUT["arac_yikama"] ) ) ? $form_detaylar_input["arac_yikama"] = 1 : $form_detaylar_input["arac_yikama"] = 0;
 
-            $Form = new Is_Emri_Formu();
-            $Form->ekle( $form_detaylar_input, $INPUT["personel_detay"], $INPUT["girenler"], $INPUT["cikanlar"] );
-            if( !$Form->is_ok() ){
-                $OK = 0;
+                $Form = new Is_Emri_Formu();
+                $Form->ekle( $form_detaylar_input, $INPUT["personel_detay"], $INPUT["girenler"], $INPUT["cikanlar"] );
+                if( !$Form->is_ok() ){
+                    $OK = 0;
+                }
+                $TEXT = $Form->get_return_text();
             }
-            $TEXT = $Form->get_return_text();
-
-
 
         break;
 

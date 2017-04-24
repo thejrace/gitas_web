@@ -9,6 +9,7 @@
     require 'inc/init.php';
 
     $TITLE = "Stok";
+    $AKTIVITE_KOD = Aktiviteler::STOK_DT;
     require 'inc/header.php';
 ?>
 

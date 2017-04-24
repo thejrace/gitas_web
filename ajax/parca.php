@@ -30,16 +30,17 @@
         switch( Input::get("req") ){
 
             case 'parca_detay':
-
-                $Parca = new Barkodlu_Parca( Input::get("stok_kodu") );
-                if( !$Parca->exists() ){
-                    $Parca = new Barkodsuz_Parca( Input::get("stok_kodu") );
-                    if( !$Parca->exists() ){
-                        $OK = 0;
+                if( in_array( Aktiviteler::PARCA_TIPI_ALT_STOK_DETAY, $KULLANICI_IZINLER ) ) {
+                    $Parca = new Barkodlu_Parca(Input::get("stok_kodu"));
+                    if (!$Parca->exists()) {
+                        $Parca = new Barkodsuz_Parca(Input::get("stok_kodu"));
+                        if (!$Parca->exists()) {
+                            $OK = 0;
+                        }
                     }
+                    $DATA = $Parca->detay_html();
+                    $TEXT = $Parca->get_return_text();
                 }
-                $DATA = $Parca->detay_html();
-                $TEXT = $Parca->get_return_text();
 
             break;
 

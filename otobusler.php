@@ -9,6 +9,7 @@
     require 'inc/init.php';
 
     $TITLE = "Otobüsler";
+    $AKTIVITE_KOD = Aktiviteler::OTOBUSLER_DT;
     require 'inc/header.php';
 ?>
 

@@ -36,6 +36,7 @@
     );
 
     $TITLE = $Parca_Tipi->get_details("isim") . " Parça Tipi Detayları";
+    $AKTIVITE_KOD = Aktiviteler::PARCA_TIPI_ISTATISTIK;
     require 'inc/header.php';
 ?>
 

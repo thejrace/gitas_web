@@ -10,7 +10,8 @@ Gitas.AJAX_REQ = {
     PARCA_TALEP: Gitas.AJAX_URL + "parca_talep.php",
     PARCA_TIPI: Gitas.AJAX_URL + "parca_tipi.php",
     SATICI_FIRMA: Gitas.AJAX_URL + "satici_firma.php",
-    STOK: Gitas.AJAX_URL + "stok.php"
+    STOK: Gitas.AJAX_URL + "stok.php",
+    REVIZYON_TALEPLERI: Gitas.AJAX_URL + "revizyon_talepleri.php"
 };
 
 var GPopup = function( options ){
@@ -83,7 +84,9 @@ var GitasREQ = {
             data: data,
             success: function(res){
                 Loader.off();
+                console.log(res);
                 if( typeof cb == 'function' ) cb( res );
+
             },
             error: function( jqXHR, textStatus, errorThrown ){
                 console.log(textStatus);
@@ -93,7 +96,7 @@ var GitasREQ = {
     },
     // tekli isemri formu goruntuleme
     is_emri_formu_detay: function( item_id, cb ){
-        this.default_req( Gitas.AJAX_REQ.IS_EMRI_FORMLARI, { req:"detay_al", form_id:item_id  }, cb );
+        this.default_req( Gitas.AJAX_REQ.IS_EMRI_FORMLARI, { req:"detay_al", form_id:item_id }, cb );
     },
     // tum is emri formlarini listeleme
     is_emri_formlari_dt: function( filter, cb ){
@@ -156,6 +159,18 @@ var GitasREQ = {
     },
     satici_firma_ekle: function( data, cb ){
         this.default_req( Gitas.AJAX_REQ.SATICI_FIRMA, data, cb );
+    },
+    revizyon_talepleri_dt: function( cb ){
+        this.default_req( Gitas.AJAX_REQ.REVIZYON_TALEPLERI, { req:"veri_al" }, cb );
+    },
+    revizyon_barkod_arama: function( sk, cb ){
+        this.default_req( Gitas.AJAX_REQ.REVIZYON_TALEPLERI, { req:"barkod_arama", stok_kodu: sk }, cb );
+    },
+    revizyon_teklif_ekle: function( data, cb ){
+        this.default_req( Gitas.AJAX_REQ.REVIZYON_TALEPLERI, data, cb );
+    },
+    giris: function( data, cb ){
+        this.default_req( "", data, cb );
     }
 };
 
@@ -168,15 +183,10 @@ var GitasDT_CSS = {
         "formgri",
         "tickgri",
         "sepet",
-        "surucubeyaz"
-
-
+        "surucubeyaz",
+        "formyesil"
     ],
-    ICO_SETS: [
-        [ "stats", "talep", "ayarlar", "arti" ], // parça tipi,
-        [ "surucusari", "stats", "parca", "buyutec", "ayarlar" ], // otobus
-        [ "arti" ]
-    ],
+    ICO_SETS: [],
     COLOR_SETS: [
         "", // beyaz
         "ckirmizi",

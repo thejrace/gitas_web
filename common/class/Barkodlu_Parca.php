@@ -106,6 +106,14 @@ class Barkodlu_Parca extends Data_Out {
         return Popup_Stats::init( $statdata );
     }
 
+    public function revizyon_taleplerini_listele(){
+        $output = array();
+        foreach( $this->pdo->query("SELECT * FROM " . DBT_REVIZYON_TALEPLERI . " WHERE stok_kodu = ?", array( $this->details["stok_kodu"]))->results() as $talep ){
+            $output[] = $talep["gid"];
+        }
+        return $output;
+    }
+
     public function sil(){
         $this->pdo->query("DELETE FROM " . $this->table ." WHERE stok_kodu = ?", array( $this->details["stok_kodu"] ) );
     }
