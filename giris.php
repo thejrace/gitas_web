@@ -86,7 +86,6 @@
         <span>Lütfen bekleyin...</span>
     </div>
 
-
 </div>
 
 <div id="wrapper">
@@ -95,7 +94,7 @@
 
         </div>
     </div>
-    <div class="page-header">Giriş Yap</div>
+    <div class="page-header">Giriş Yape</div>
     <div id="container">
         <div class="giris-form">
             <div class="form">

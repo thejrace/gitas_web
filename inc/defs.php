@@ -8,7 +8,7 @@
 
 	// define("MAIN_DIR", "/home/ahsaphobby.net/httpdocs/granit/");
 	// define("MAIN_DIR", realpath(dirname(__FILE__)));
-	define("MAIN_DIR", $_SERVER["DOCUMENT_ROOT"] . "/gitasWeb/");
+	define("MAIN_DIR", $_SERVER["DOCUMENT_ROOT"] . "/gitas_web/");
 
 	define("COMMON_DIR", MAIN_DIR . "common/");
 	define("CLASS_DIR", COMMON_DIR . "class/");

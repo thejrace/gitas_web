@@ -1,5 +1,5 @@
 var Gitas = {};
-Gitas.MAIN_URL = "http://localhost/gitasWeb/";
+Gitas.MAIN_URL = "http://localhost/gitas_web/";
 Gitas.AJAX_URL = Gitas.MAIN_URL + "ajax/";
 Gitas.AJAX_REQ = {
     IS_EMRI_FORMLARI: Gitas.AJAX_URL + "is_emri_formlari.php",
