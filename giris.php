@@ -21,6 +21,7 @@
         if( !$Login->action(array( "eposta" => Input::get("eposta"), "pass" => Input::get("pass"), "remember_me" => true ) ) ){
             $OK = 0;
         }
+        $TEXT = $Login->get_return_text();
 
         $output = json_encode(array(
             "ok"        => $OK,

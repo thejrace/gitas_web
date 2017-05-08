@@ -13,8 +13,8 @@
     if( !$Giris->exists() ) exit;
     $Giris->giris_icerik_listele();
     foreach( $Giris->get_details("giris_icerik") as $giris ){
-        $Parca = Parca::get( $giris["stok_kodu"] );
-        $Parca_Tipi = new Parca_Tipi( $Parca->get_details("tip"));
+        $Parca = new Parca( $giris["stok_kodu"] );
+        $Parca_Tipi = new Parca_Tipi( $Parca->get_details("parca_tipi"));
         if( $Parca_Tipi->get_details("tip") == Parca_Tipi::$BARKODLU ){
             $GIRENLER[] = QR_Output::olustur( $giris["stok_kodu"], $Parca_Tipi->get_details("isim"), $Parca->get_details("aciklama") );
         }

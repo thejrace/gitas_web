@@ -1,0 +1,159 @@
+[08-May-2017 15:32:55 Europe/Berlin] PHP Notice:  Undefined index: isim in C:\xampp\htdocs\gitas_web\common\class\Data_Out.php on line 36
+[08-May-2017 15:32:55 Europe/Berlin] PHP Notice:  Undefined index: isim in C:\xampp\htdocs\gitas_web\common\class\Data_Out.php on line 36
+[08-May-2017 15:33:41 Europe/Berlin] PHP Notice:  Undefined index: [VY] in C:\xampp\htdocs\gitas_web\inc\init.php on line 123
+[08-May-2017 15:33:41 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:33:42 Europe/Berlin] PHP Notice:  Undefined index: [VY] in C:\xampp\htdocs\gitas_web\inc\init.php on line 123
+[08-May-2017 15:33:42 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:34:41 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:34:43 Europe/Berlin] PHP Notice:  Undefined variable: KULLANICI_IZINLER in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:34:43 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:34:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:34:49 Europe/Berlin] PHP Notice:  Undefined variable: KULLANICI_IZINLER in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:34:49 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:34:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:34:49 Europe/Berlin] PHP Notice:  Undefined variable: KULLANICI_IZINLER in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:34:49 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:34:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:34:50 Europe/Berlin] PHP Notice:  Undefined variable: KULLANICI_IZINLER in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:34:50 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:34:50 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:34:51 Europe/Berlin] PHP Notice:  Undefined variable: KULLANICI_IZINLER in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:34:51 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:34:51 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:34:57 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:35:38 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:35:40 Europe/Berlin] PHP Notice:  Undefined variable: KULLANICI_IZINLER in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:35:40 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\gitas_web\inc\header.php on line 4
+[08-May-2017 15:35:40 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:35:53 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:36:31 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:36:35 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:36:42 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\gitas_web\inc\init.php on line 123
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:37:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:00 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:00 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:00 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:00 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:00 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:00 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:00 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:00 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:00 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:01 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:38:49 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:41 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:41 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:41 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:41 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:41 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:41 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:41 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:41 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:41 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:41 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:39:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 15:41:42 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\gitas_web\inc\init.php on line 124
+[08-May-2017 15:42:25 Europe/Berlin] PHP Notice:  Undefined index:  in C:\xampp\htdocs\gitas_web\inc\init.php on line 124
+[08-May-2017 15:54:55 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[08-May-2017 16:13:57 Europe/Berlin] PHP Fatal error:  Call to undefined method Parca::get() in C:\xampp\htdocs\gitas_web\yazdirma_tema_parca_girisi.php on line 16
+[08-May-2017 16:25:23 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 16:25:23 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 16:25:23 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 16:25:23 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 16:25:23 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 16:25:23 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 16:25:23 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 16:25:23 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 16:25:23 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 16:25:23 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 16:25:23 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 16:25:23 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLOigpUEnIS1Ysk8q6lbxCwUFuXwGEeKTBtN9jenOd.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\qr\qrimage.php on line 43
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecreatefrompng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLOigpUEnIS1Ysk8q6lbxCwUFuXwGEeKTBtN9jenOd.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLOigpUEnIS1Ysk8q6lbxCwUFuXwGEeKTBtN9jenOd.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 37
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLCKIkfAc5b77s25NVTG6slDmwuaq5VZDBKkP4xUmV.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\qr\qrimage.php on line 43
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecreatefrompng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLCKIkfAc5b77s25NVTG6slDmwuaq5VZDBKkP4xUmV.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLCKIkfAc5b77s25NVTG6slDmwuaq5VZDBKkP4xUmV.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 37
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLoV4aV7jfcIU8PodjTp4J0tPRfNjGc6TEZCpKb3br.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\qr\qrimage.php on line 43
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecreatefrompng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLoV4aV7jfcIU8PodjTp4J0tPRfNjGc6TEZCpKb3br.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLoV4aV7jfcIU8PodjTp4J0tPRfNjGc6TEZCpKb3br.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 37
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLSC4HG2qYFx5fsPoZ69bafbOgWb6dOQrvWoC7Uy1v.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\qr\qrimage.php on line 43
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecreatefrompng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLSC4HG2qYFx5fsPoZ69bafbOgWb6dOQrvWoC7Uy1v.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLSC4HG2qYFx5fsPoZ69bafbOgWb6dOQrvWoC7Uy1v.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 37
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLPxtEh4k0mmpxF85JiCbyPv4sn3yqvWZVlpfVtbDS.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\qr\qrimage.php on line 43
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecreatefrompng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLPxtEh4k0mmpxF85JiCbyPv4sn3yqvWZVlpfVtbDS.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLPxtEh4k0mmpxF85JiCbyPv4sn3yqvWZVlpfVtbDS.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 37
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLYs1MsYK50VELd34hbAQBucldfao42akDYq1TCFMj.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\qr\qrimage.php on line 43
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecreatefrompng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLYs1MsYK50VELd34hbAQBucldfao42akDYq1TCFMj.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLYs1MsYK50VELd34hbAQBucldfao42akDYq1TCFMj.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 37
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBL57tQYtrYmZwEQl4nwMU5Z1oglgnTafcpybGN6Mcx.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\qr\qrimage.php on line 43
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecreatefrompng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBL57tQYtrYmZwEQl4nwMU5Z1oglgnTafcpybGN6Mcx.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBL57tQYtrYmZwEQl4nwMU5Z1oglgnTafcpybGN6Mcx.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 37
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLUgzAzmapbhNZjKQM5Z7K5HYoo7gDCWkZQq0oGfDk.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\qr\qrimage.php on line 43
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecreatefrompng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLUgzAzmapbhNZjKQM5Z7K5HYoo7gDCWkZQq0oGfDk.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPKALIPERBLUgzAzmapbhNZjKQM5Z7K5HYoo7gDCWkZQq0oGfDk.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 37
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPTEST4BLt7BUIp5QQpH2I72eFXcByWLUHvQmYC0EHMn2JVxc.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\qr\qrimage.php on line 43
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecreatefrompng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPTEST4BLt7BUIp5QQpH2I72eFXcByWLUHvQmYC0EHMn2JVxc.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPTEST4BLt7BUIp5QQpH2I72eFXcByWLUHvQmYC0EHMn2JVxc.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 37
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPTEST4BLpyzozB5iAyaagooIXzT8w3faijx28kmrlyOBOYvf.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\qr\qrimage.php on line 43
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecreatefrompng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPTEST4BLpyzozB5iAyaagooIXzT8w3faijx28kmrlyOBOYvf.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
+[08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPTEST4BLpyzozB5iAyaagooIXzT8w3faijx28kmrlyOBOYvf.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 37

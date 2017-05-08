@@ -14,6 +14,8 @@ class GitasDT_CSS {
         $ICOSET_OTOBUS = 1,
         $ICOSET_PATIP_OTOBUS_ISTATISTIK = 2,
         $ICOSET_REVIZYON_TALEP = 3,
+        $ICOSET_VARYANT = 4,
+        $ICOSET_VARYANT_PG = 5,
 
         // tekli icolar
         $ICO_PARCA_TIPI = 0,
@@ -24,6 +26,7 @@ class GitasDT_CSS {
         $ICO_SEPET = 5,
         $ICO_SURUCUBEYAZ = 6,
         $ICO_IEF_YESIL = 7,
+        $ICO_VARYANT = 8,
 
 
         // renk classlari
@@ -48,12 +51,16 @@ class GitasDT_CSS {
             return  '[[ "stats", "talep", "ayarlar", "arti" ], // parça tipi,
                     [ "surucusari", "stats", "parca", "buyutec", "ayarlar" ], 
                     [ "arti" ],
-                    [ "sepet", "buyutec" ]]';
+                    [ "sepet", "buyutec" ],
+                    [ "editmor", "arti" ],
+                    [ "tickgri", "arti" ]]';
         } else if( $seviye == Personel::$MUHASEBE ){
             return  '[[ "stats", "talep", "ayarlar", "arti" ], // parça tipi,
                     [ "surucusari", "stats", "parca", "buyutec", "ayarlar" ], 
                     [ "arti" ],
-                    [ "sepet", "buyutec" ]]';
+                    [ "sepet", "buyutec" ],
+                     [ "ico_dt_editmor", "arti" ],
+                     [ "tickgri", "arti" ]]';
         } else if( $seviye == Personel::$SERVIS ){
             return  '[[ "stats", "talep", "arti" ], // parça tipi,
                     [ "stats", "parca", "buyutec" ], // otobus

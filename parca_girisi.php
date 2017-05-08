@@ -53,7 +53,12 @@
 
                             </div>
 
-
+                            <div class="form-col">
+                                <div class="binput-container">
+                                    <label for="aciklama">Açıklama</label>
+                                    <input type="text" name="aciklama" id="aciklama" />
+                                </div>
+                            </div>
 
 
                         </div>
@@ -88,9 +93,24 @@
                             </div>
                         </div>
 
+                        <div class="form-row garanti">
+                            <div class="form-col garanti">
+                                <div class="binput-container">
+                                    <label for="garanti_baslangic">Garanti Başlangıç</label>
+                                    <input type="text" name="garanti_baslangic" id="garanti_baslangic" />
+                                </div>
+                            </div>
+                            <div class="form-col garanti">
+                                <div class="binput-container">
+                                    <label for="garanti_suresi">Garanti Süresi</label>
+                                    <input type="text" name="garanti_suresi" class="posnum" id="garanti_suresi" />
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="form-row">
                             <input type="hidden" name="req" value="parca_girisi" />
-                            <input type="hidden" name="parca_giris_id" value="<?php echo $PGID ?>" />
+                            <input type="hidden" name="parca_giris_gid" value="<?php echo $PGID ?>" />
                             <button class="mnbtn mor">EKLE</button>
                         </div>
 
@@ -140,7 +160,7 @@
                     </div>
 
                     <div class="input-row">
-                        <div class="binput-container parca-tipi-varyant-cont"></div>
+                        <button type="button" class="mnbtn mor varyant-ekle-btn" title="Varyant ekle">VARYANT</button>
                     </div>
 
                     <div class="input-row">
@@ -256,8 +276,22 @@
         </div>
     </script>
 
-    <script type="text/javascript">
 
+    <script type="text/html" id="varyant-table">
+        <div class="dtable">
+            <table id="main-table" class="gitas-table">
+                <thead>
+                <tr>
+                    <td>VARYANT</td>
+                </tr>
+                </thead>
+                <tbody class="main-tbody">
+                </tbody>
+            </table>
+        </div>
+    </script>
+    <script type="text/javascript">
+        var PTIP_TANIMLI_VARYANTLAR = {};
 
         $(document).ready(function(){
 
@@ -267,11 +301,11 @@
                     var data = $(this).serialize();
                     GitasREQ.parca_tipi_ekle( data, function(res){
                         if( res.ok ){
-                            select.append("<option value='"+res.data.stok_kodu+"'>"+res.data.isim+"</option>");
+                            select.append("<option value='"+res.data.gid+"'>"+res.data.isim+"</option>");
                             $AH("parca_tipi").selectedIndex = $AH("parca_tipi").options.length - 1;
                             form.reset();
-                            $(".parca-tipi-varyant-cont").html("");
                             select.trigger("change");
+                            PTIP_TANIMLI_VARYANTLAR = {};
                         } else {
                             FormValidation.show_serverside_errors( res.inputret );
                         }
@@ -282,7 +316,71 @@
                 event.preventDefault();
             });
 
-            $(document).on("change", ".parca-tip-select", function(){
+            $(document).on("click", ".varyant-ekle-btn", function(){
+                Popup.on($("#varyant-table").html(), "Varyant Tanımlamaları");
+                GitasREQ.varyantlar_ekleme_dt( function(res){
+                    var html = "";
+                    for( var j = 0; j < res.data.length; j++ ){
+                        html += init_row( res.data[j] );
+                    }
+                    $(".main-tbody").html(html);
+                    var table = $('table#main-table'), btn;
+                    table.DataTable();
+                    for( var key in PTIP_TANIMLI_VARYANTLAR ) {
+                        btn = table.find("[data-id='" + key + "']").find(".tickgri");
+                        btn.addClass("tickyesil");
+                        btn.removeClass("tickgri");
+                    }
+                });
+
+            });
+
+            $(document).on("click", ".arti", function(){
+                var _this = $(this),
+                    parent = _this.parent().parent().parent().parent().parent(),
+                    part2 = parent.find(".part2"),
+                    varyant = parent.attr("data-id");
+                _this.toggleClass("eksi");
+                if( part2.attr("veri-alindi") == "true" ){
+                    part2.toggleClass("hidden");
+                } else {
+                    GitasREQ.varyant_genislet( varyant, function(res){
+                        console.log(res.data);
+                        part2.html(init_varyant_minitable(res.data, true));
+                        part2.fadeIn();
+                        parent.find(".minitable").DataTable();
+                        part2.attr("veri-alindi", "true");
+                        var btn;
+                        for( var key in PTIP_TANIMLI_VARYANTLAR ){
+                            btn = part2.find("[data-id='"+key+"']").find(".minitableico");
+                            btn.addClass( "tickyesil");
+                            btn.removeClass( "tickgri");
+                        }
+                    });
+
+                }
+            });
+
+            $(document).on("click", ".tickyesil, .tickgri", function(){
+                var _this = $(this),
+                    parent = _this.parent().parent().parent().parent().parent();
+                if( parent.attr("data-id") == undefined ) parent = _this.parent().parent();
+                if( _this.hasClass("tickyesil") ){
+                    _this.removeClass("tickyesil");
+                    _this.addClass("tickgri");
+                    delete PTIP_TANIMLI_VARYANTLAR[parent.attr("data-id")];
+                    remove_elem($("#v_"+parent.attr("data-id")).get(0));
+                } else {
+                    _this.removeClass("tickgri");
+                    _this.addClass("tickyesil");
+                    PTIP_TANIMLI_VARYANTLAR[parent.attr("data-id")] = true;
+                    $("#parca_tipi_ekle").append("<input type='hidden' name='varyantlar[]' id='v_"+parent.attr("data-id")+"' value='"+parent.attr("data-id")+"' />");
+                }
+                console.log(PTIP_TANIMLI_VARYANTLAR);
+            });
+
+
+            /*$(document).on("change", ".parca-tip-select", function(){
                 var html = "";
                 if( $(this).val() == "2" ){
                     html = '<label for="varyant_isim">Varyant</label>'+
@@ -306,10 +404,9 @@
 
             $(document).on("click", "[btn-role='varyant_sil_noajax']", function(){
                 remove_elem( this.parentNode );
-            });
+            });*/
 
             $("#parca_ekle").submit(function(event){
-
                 if( FormValidation.check( $AH("parca_ekle") ) ){
                     var data = $(this).serialize();
                     console.log(serialize( $AH("parca_ekle") ));
@@ -381,7 +478,11 @@
                 event.preventDefault();
             });
 
-
+            $.datetimepicker.setLocale('tr');
+            var dtpicker_options_dt = {
+                format:'Y-m-d'
+            };
+            $("#garanti_baslangic").datetimepicker(dtpicker_options_dt);
             $("#parca_tipi").change(function(){
                 var val = $("#parca_tipi option:selected").val(),
                     dinamik = $(".dinamik"), varyant_append = $(".varyant-append"), garanti =  $(".garanti");
@@ -390,7 +491,20 @@
                     return;
                 }
 
-                GitasREQ.parca_tipi_select( val, function(res){
+
+                GitasREQ.parca_tipi_select_giris( val, function(res){
+                    console.log(res);
+                    varyant_append.html("");
+                    if( res.data.varyantlar.length == 0 ) return;
+                    var html;
+                    html ="<div class='binput-container'><label for='varyant_gid'>Varyant</label><select class='select_no_zero uzun' name='varyant_gid' id='varyant_gid'><option value='0'>Seçiniz..</option>";
+                    for( var x = 0; x < res.data.varyantlar.length; x++ ){
+                        html += "<option value='"+res.data.varyantlar[x].gid+"'>"+res.data.varyantlar[x].isim+"</option>";
+                    }
+                    html += "</select></div>";
+                    varyant_append.append( html );
+                });
+                /*GitasREQ.parca_tipi_select( val, function(res){
                     console.log(res);
                     varyant_append.html("");
                     var html;
@@ -401,26 +515,18 @@
                     } else {
                         html ="<div class='binput-container'><label for='aciklama'>Açıklama</label><select class='select_no_zero uzun' name='aciklama' id='aciklama'><option value='0'>Seçiniz..</option>";
                         for( var x = 0; x < res.data.varyantlar.length; x++ ){
-                            html += "<option value='"+res.data.varyantlar[x].stok_kodu+"'>"+res.data.varyantlar[x].aciklama+"</option>";
+                            html += "<option value='"+res.data.varyantlar[x].gid+"'>"+res.data.varyantlar[x].isim+"</option>";
                         }
                         html += "</select></div>";
                         varyant_append.append( html );
                         remove_elem( garanti.get(0) );
 
                     }
-                });
+                });*/
             });
 
 
         });
-
-        var TEMPLATE_BARKODLU =
-                '<div class="form-col garanti">'+
-                    '<div class="binput-container">'+
-                        '<label for="garanti_suresi">Garanti Süresi DP</label>'+
-                        '<input type="text" name="garanti_suresi" id="garanti_suresi" />'+
-                    '</div>'+
-                '</div>';
 
 
     </script>

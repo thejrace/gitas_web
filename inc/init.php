@@ -23,6 +23,7 @@
     } else{
         if( !isset($GIRIS_FLAG) ){
             header("Location: giris.php");
+            //die;
         }
     }
 
@@ -58,7 +59,8 @@
                 PARCA_GIRISLERI_DT                  = 28,
                 PARCA_TIPI_EKLE                     = 29,
                 PARCA_TALEP_EKLEME                  = 30,
-                PARCA_TALEP_KAPAMA                  = 31;
+                PARCA_TALEP_KAPAMA                  = 31,
+                VARYANTLAR_DT                       = 32;
 
 	    // 0 admin
 	    // 1 servis
@@ -96,7 +98,8 @@
                 self::PARCA_GIRISLERI_DT,
                 self::PARCA_TIPI_EKLE,
                 self::PARCA_TALEP_EKLEME,
-                self::PARCA_TALEP_KAPAMA
+                self::PARCA_TALEP_KAPAMA,
+                self::VARYANTLAR_DT
             ),
 	        1 => array(
 	            self::IS_EMRI_FORMU_EKLEME,

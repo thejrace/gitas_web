@@ -15,6 +15,7 @@ abstract class Data_Out {
                 $return_text,
                 $table;
 
+    public static $BOS = "[VY]";
     public function __construct( $db_table, $db_keys, $id = null ){
         $this->pdo = DB::getInstance();
         $this->table = $db_table;
@@ -32,7 +33,10 @@ abstract class Data_Out {
     }
 
     public function get_details( $key = null ){
-        if( isset($key) ) return $this->details[$key];
+        if( isset($key) ){
+            if( !isset($this->details[$key]) ) return "[VY]";
+            return $this->details[$key];
+        }
         return $this->details;
     }
 

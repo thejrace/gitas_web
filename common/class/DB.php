@@ -12,7 +12,7 @@ class DB {
 
 	private function __construct() {
 		try {
-			$this->_pdo = new PDO('mysql:host='.DB_IP.';dbname='.DB_NAME, DB_NAME, DB_PASS);
+			$this->_pdo = new PDO('mysql:host='.DB_IP.';dbname='.DB_NAME, "root", DB_PASS);
 			$this->query("SET NAMES 'utf8'; SET CHARSET 'utf8'");
 		} catch(PDOException $e) {
 			die($e->getMessage());

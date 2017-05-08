@@ -17,7 +17,8 @@ class Gitas_Hash{
                     $PF_ISEMRI_FORMU = "IEF",
                     $PF_REVIZYON_TALEP = "REVTA",
                     $PF_PARCA_TALEP = "PARTA",
-                    $PF_SATICI_FRIMA = "SFIRM";
+                    $PF_SATICI_FRIMA = "SFIRM",
+                    $PF_VARYANT = "VARY";
 
     public static   $BARKODSUZ_PARCA    = 0,
                     $BARKODLU_PARCA     = 1,
@@ -31,7 +32,8 @@ class Gitas_Hash{
                     $TAKVIM_KAYIT       = 10,
                     $REVIZYON_TALEP     = 11,
                     $REVIZYON_TEKLIF    = 12,
-                    $STOK_FIRMA         = 13;
+                    $STOK_FIRMA         = 13,
+                    $VARYANT            = 14;
 
 
     // @data -> isimlendirme icin gelecek verileri tutan array
@@ -43,13 +45,20 @@ class Gitas_Hash{
                 // unique bulana kadar kontrol ediyoruz db yi
                 do {
                     $hash = $data["parca_tipi"] . self::$PF_BARKODLU_PARCA . Common::generate_random_string( 40 );
-                    $check_query = DB::getInstance()->query("SELECT * FROM " . DBT_BARKODLU_PARCALAR . " WHERE stok_kodu = ?", array( $hash ) )->results();
+                    $check_query = DB::getInstance()->query("SELECT * FROM " . DBT_PARCALAR . " WHERE stok_kodu = ?", array( $hash ) )->results();
                 } while ( count( $check_query )  > 0 );
 
             break;
 
             case self::$BARKODSUZ_PARCA:
-                $hash = $data["parca_tipi"] . self::$PF_BARKODSUZ_PARCA . self::turkce_sef($data["aciklama"]);
+                $hash = $data["parca_tipi"] . self::$PF_BARKODSUZ_PARCA . Common::generate_random_string( 15 );
+            break;
+
+            case self::$VARYANT:
+                do {
+                    $hash = self::$PF_GITAS . self::$PF_VARYANT . self::turkce_sef($data["isim"]) . Common::generate_random_string( 15 );
+                    $check_query = DB::getInstance()->query("SELECT * FROM " . DBT_VARYANTLAR . " WHERE gid = ?", array( $hash ) )->results();
+                } while ( count( $check_query )  > 0 );
             break;
 
             case self::$PARCA_TIPI:

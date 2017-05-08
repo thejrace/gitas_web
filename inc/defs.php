@@ -1,6 +1,6 @@
 <?php
 
-	define("DB_NAME", "hederoy");
+	define("DB_NAME", "gitas_servis");
 	define("DB_PASS", "Dogansaringulu9");
 	define("DB_IP", "127.0.0.1");
 
@@ -15,6 +15,11 @@
 
 
 	define("DBT_PARCA_TIPLERI", "parca_tipleri");
+	define("DBT_VARYANTLAR", "varyantlar");
+
+	define("DBT_VARYANT_TANIMLAMALAR", "varyant_tanimlamalar");
+
+	define("DBT_PARCALAR", "parcalar");
 	define("DBT_BARKODLU_PARCALAR", "barkodlu_parcalar");
 	define("DBT_BARKODSUZ_PARCALAR", "barkodsuz_parcalar");
 	define("DBT_PARCA_GIRISLERI", "parca_girisleri");
@@ -47,7 +52,7 @@
 
 
 
-	define("MAIN_URL", "http://localhost/gitasWeb/");
+	define("MAIN_URL", "http://localhost/gitas_web/");
 
     define("URL_ISEMRI_FORMLARI", MAIN_URL . "is_emri_formlari.php");
     define("URL_ISEMRI_FORMU", MAIN_URL . "is_emri_formu_2.php");

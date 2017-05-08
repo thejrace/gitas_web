@@ -8,10 +8,11 @@ Gitas.AJAX_REQ = {
     PARCA: Gitas.AJAX_URL + "parca.php",
     PARCA_GIRISI: Gitas.AJAX_URL + "parca_girisi.php",
     PARCA_TALEP: Gitas.AJAX_URL + "parca_talep.php",
-    PARCA_TIPI: Gitas.AJAX_URL + "parca_tipi.php",
+    PARCA_TIPI: Gitas.AJAX_URL + "parca_tipi_2.php",
     SATICI_FIRMA: Gitas.AJAX_URL + "satici_firma.php",
     STOK: Gitas.AJAX_URL + "stok.php",
-    REVIZYON_TALEPLERI: Gitas.AJAX_URL + "revizyon_talepleri.php"
+    REVIZYON_TALEPLERI: Gitas.AJAX_URL + "revizyon_talepleri.php",
+    VARYANTLAR: Gitas.AJAX_URL + "varyantlar.php"
 };
 
 var GPopup = function( options ){
@@ -136,8 +137,8 @@ var GitasREQ = {
     parca_tipi_istatistik: function( req, patip, cb ){
         this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req:req, patip:patip }, cb );
     },
-    parca_tipi_select: function( val, cb ){
-        this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req: "parca_tipi_select", parca_tipi: val }, cb );
+    parca_tipi_select_giris: function( val, cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req: "parca_tipi_select_giris", parca_tipi: val }, cb );
     },
     parca_tipi_ayarlar: function( patip, cb ){
         this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req:"parca_tipi_ayarlar", parca_tipi:patip }, cb );
@@ -177,6 +178,18 @@ var GitasREQ = {
     },
     giris: function( data, cb ){
         this.default_req( "", data, cb );
+    },
+    varyantlar_dt: function( cb ){
+        this.default_req( Gitas.AJAX_REQ.VARYANTLAR, { req: "veri_al" }, cb );
+    },
+    varyant_ekle: function( data, cb ){
+        this.default_req( Gitas.AJAX_REQ.VARYANTLAR, data, cb );
+    },
+    varyant_genislet: function( varyant, cb ){
+        this.default_req( Gitas.AJAX_REQ.VARYANTLAR, { req:"varyant_veri_al", varyant: varyant }, cb );
+    },
+    varyantlar_ekleme_dt: function( cb ){
+        this.default_req( Gitas.AJAX_REQ.VARYANTLAR, { req: "ekleme_veri_al" }, cb );
     }
 };
 
@@ -190,7 +203,8 @@ var GitasDT_CSS = {
         "tickgri",
         "sepet",
         "surucubeyaz",
-        "formyesil"
+        "formyesil",
+        "varyant"
     ],
     ICO_SETS: [],
     COLOR_SETS: [
@@ -305,6 +319,40 @@ function init_stok_minitable( data ) {
             '</table></div>';
     }
 
+}
+
+function init_varyant_minitable( data, parca_tipi ){
+
+    var tbody = "", item;
+    for( var j = 0; j < data.length; j++ ) {
+        item = data[j];
+        tbody += '<tr data-id="'+item.gid+'">'+
+            '<td>'+item.isim+'</td>';
+        if( parca_tipi ){
+            tbody +=
+                '<td><button type="button" class="mtbtn minitableico tickgri" btn-role="altvaryantekle"></button></td>'+
+                '<td></td>'+
+                '</tr>';
+        } else {
+            tbody +=
+                '<td><button type="button" class="mtbtn minitableico edit" btn-role="mtduzenle"></button></td>'+
+                '<td><button type="button" class="mtbtn minitableico sil" btn-role="mtsil"></button></td>'+
+                '</tr>';
+        }
+
+    }
+
+    return '<div style="background:#3d3d3d;" class="minitable-container"><table class="minitable">'+
+        '<thead>'+
+        '<tr>'+
+        '<td>VARYANT</td>'+
+        '<td></td>'+
+        '<td></td>'+
+        '</tr>'+
+        '</thead>'+
+        '<tbody>'+ tbody +
+        '</tbody>'+
+        '</table></div>';
 }
 
 $(function(){

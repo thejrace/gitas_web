@@ -275,12 +275,12 @@
 
             $Yeni_Personel = new Personel();
             $Yeni_Personel->ekle(array(
-                "seviye"        => Personel::$SURUCU,
+                "seviye"        => Personel::$ADMIN,
                 "sicil_no"      => "",
-                "isim"          => "Oğuzhan Avinç",
-                "eposta"        => "oguz@gmail.com",
+                "isim"          => "Ahmet Kanbur",
+                "eposta"        => "ahmet@ahmet.com",
                 "pass"          => "123",
-                "telefon_1"     => "055548745",
+                "telefon_1"     => "05432390269",
                 "telefon_2"     => ""
             ));
             echo $Yeni_Personel->get_return_text();
@@ -512,7 +512,7 @@
 
 
 
-     $db_setup = new DBSetup();
+     ///$db_setup = new DBSetup();
     //$db_setup->tablolari_olustur();
     //$db_setup->parca_tipi_init();
 
@@ -522,8 +522,8 @@
     //$GTest->parca_tipi_test();
     //$GTest->parca_test();
     //$GTest->parca_giris_test();
-    //$GTest->personel_test();
-    $GTest->auto_login_test();
+    $GTest->personel_test();
+    //$GTest->auto_login_test();
     //$GTest->login_test();
     //$GTest->logout_test();
     //$GTest->aktive_user_test();

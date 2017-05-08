@@ -19,9 +19,10 @@
             "adet"                  => array(array("req" => true), ""),
             "fatura_no"             => array(array("req" => true), ""),
             "satici_firma"          => array(array("req" => true ), ""),
-            "aciklama"              => array(array("req" => true ), ""),
+            "aciklama"              => array(array(), ""),
             "parca_tipi"            => array(array("req" => true ), ""),
-            "garanti_suresi"        => array(array("req" => true ), "")
+            "garanti_baslangic"     => array(array(), ""),
+            "garanti_suresi"        => array(array(), "")
         );
 
         switch( Input::get("req") ){
@@ -63,6 +64,7 @@
 
 
             case "parca_girisi":
+
                 if( in_array( Aktiviteler::PARCA_GIRISI, $KULLANICI_IZINLER ) ) {
                     $Validation = new Validation(new InputErrorHandler);
                     // Formu kontrol et
@@ -71,48 +73,17 @@
                         $OK = 0;
                         $input_output = $Validation->errors()->js_format();
                     } else {
-                        $TOTAL_PARCALAR = array();
-                        $Parca_Tipi = new Parca_Tipi($_POST["parca_tipi"]);
-                        if ($Parca_Tipi->exists()) {
-                            if ($Parca_Tipi->get_details("tip") == Parca_Tipi::$BARKODSUZ) {
-                                $Barkodsuz_Parca = new Barkodsuz_Parca($_POST["aciklama"]);
-                                $Barkodsuz_Parca->add_gecici_data(array(
-                                    "ptip" => Parca_Tipi::$BARKODSUZ,
-                                    "eklenecek_miktar" => $_POST["adet"],
-                                    "fatura_no" => $_POST["fatura_no"],
-                                    "satici_firma" => $_POST["satici_firma"]
-                                ));
-                                $TOTAL_PARCALAR[] = $Barkodsuz_Parca;
-                            } else {
-                                for ($x = 0; $x < $_POST["adet"]; $x++) {
-                                    $Barkodlu_Parca = new Barkodlu_Parca();
-                                    $Barkodlu_Parca->set_gecici_data(array(
-                                        "ptip" => Parca_Tipi::$BARKODLU,
-                                        "aciklama" => $_POST["aciklama"],
-                                        "tip" => $_POST["parca_tipi"],
-                                        "fatura_no" => $_POST["fatura_no"],
-                                        "satici_firma" => $_POST["satici_firma"],
-                                        "garanti_suresi" => $_POST["garanti_suresi"]
-                                    ));
-                                    // direk obje olarak ekliyoruz
-                                    $TOTAL_PARCALAR[] = $Barkodlu_Parca;
-                                }
-                            }
-                            $Parca_Girisi = new Parca_Girisi();
-                            $Parca_Girisi->set_gid($_POST["parca_giris_id"]);
-                            $Parca_Girisi->ekle($TOTAL_PARCALAR);
-                            if ($Parca_Girisi->is_ok()) {
-                                // parçalarin detayi alinacak
-                                $DATA["eklenenler"] = $Parca_Girisi->get_eklenenler();
-                            } else {
-                                $OK = 0;
-                            }
-                        }
+
+                        $Parca_Girisi = new Parca_Girisi();
+                        $Parca_Girisi->set_gid($_POST["parca_giris_gid"]);
+                        $Parca_Girisi->ekle( $_POST );
+                        $DATA["eklenenler"] = $Parca_Girisi->get_eklenenler();
+
                     }
                 }
 
-
             break;
+
         }
 
         $output = json_encode(array(

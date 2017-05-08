@@ -460,6 +460,9 @@ html, body {
 .dtico.artikucuk {
 	background:url('../img/ico_dt_artikucuk.png');
 }
+.dtico.varyant {
+	background:url('../img/ico_dt_varyant.png');
+}
 .dtico.ayarlar {
 	background:url('../img/ico_dt_ayarlar.png');
 }
@@ -604,7 +607,12 @@ html, body {
 .minitableico.letyok {
 	background:url('../img/ico_minitable_letyok.png');
 }
-
+.minitableico.tickyesil {
+	background:url('../img/ico_dt_tickyesil.png');
+}
+.minitableico.tickgri {
+	background:url('../img/ico_dt_tickgri.png');
+}
 .minitableico.lethurda {
 	background:url('../img/ico_minitable_lethurda.png');
 }
@@ -820,7 +828,7 @@ html, body {
 	padding:10px 0;
 }
  .form-row {
-
+	padding:10px 0;
 }
 .form-row .form-col{
 	display:inline-block;
