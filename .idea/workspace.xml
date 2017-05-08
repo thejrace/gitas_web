@@ -574,15 +574,15 @@
       <workItem from="1493977251056" duration="16351000" />
       <workItem from="1494059406559" duration="6150000" />
       <workItem from="1494148975606" duration="887000" />
-      <workItem from="1494235630734" duration="33649000" />
+      <workItem from="1494235630734" duration="33732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57037000" />
+    <option name="totallyTimeSpent" value="57120000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
