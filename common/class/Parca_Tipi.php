@@ -17,12 +17,12 @@ class Parca_Tipi extends Data_Out {
     public static   $BARKODLU   = 1,
                     $BARKODSUZ  = 2;
 
-    public static   $AKTIF         = 1,
-                    $ARACTA        = 2,
-                    $REVIZYONDA    = 3,
-                    $HURDA         = 4,
-                    $KAYIP         = 5,
-                    $SATILDI       = 6;
+    public static   $AKTIF         = "AK",
+                    $ARACTA        = "AR",
+                    $REVIZYONDA    = "RE",
+                    $HURDA         = "HU",
+                    $KAYIP         = "KA",
+                    $SATILDI       = "SA";
 
     public static   $ADET       = "Adet",
                     $LITRE      = "Litre",
@@ -34,6 +34,42 @@ class Parca_Tipi extends Data_Out {
     public function __construct( $id = null ){
         $db_keys = array( "id", "gid", "isim" );
         parent::__construct( DBT_PARCA_TIPLERI, $db_keys, $id );
+    }
+
+    public function otobus_onceki_girisler( $plaka, $varyant ){
+        $output = array();
+        $Otobus = new Otobus( $plaka );
+        $varyant_str = "";
+        $varyant_gid = "";
+
+        if( $varyant != "" ){
+            $Varyant = new Varyant( $varyant );
+            if( $Varyant->get_details("parent") != null ){
+                $varyant_gid = $Varyant->get_details("parent");
+                $Parent = new Varyant( $varyant_gid );
+                $varyant_str .= $Parent->get_details("isim") . " - ";
+            }
+            $varyant_str .= $Varyant->get_details("isim");
+        }
+
+        foreach( $Otobus->is_emri_formlarini_listele() as $form ){
+            $Form = new Is_Emri_Formu( $form["gid"] );
+            foreach( $Form->girenleri_listele() as $giren ){
+                $Parca = new Parca($giren["stok_kodu"]);
+                if( $Parca->get_details("parca_tipi") == $this->details["gid"] && $Parca->get_details("durum") == Parca_Tipi::$ARACTA ){
+                    // parent varyantlari ayiriyoruz
+                    if( $varyant_gid != "" && $Parca->get_details("varyant_gid") != $varyant_gid ) continue;
+                    $output[] = array(
+                        "stok_kodu" => $Parca->get_details("stok_kodu"),
+                        "varyant"   => $varyant_str,
+                        "aciklama"  => $Parca->get_details("aciklama"),
+                        "km"        => $Form->get_details("gelis_km"),
+                        "tarih"     => $Form->get_details("tarih")
+                    );
+                }
+            }
+        }
+        return $output;
     }
 
     public function ekle( $input ){
@@ -83,20 +119,39 @@ class Parca_Tipi extends Data_Out {
         $this->pdo->query("UPDATE " . $this->table . " SET varyantli = ? WHERE gid = ?", array( 1, $this->details["gid"] ) );
     }
 
-    public function varyantlari_listele( $tip = 1 ){
+    public function varyantlari_listele( $tip ){
         $output = array();
         if( $tip == 1 ){
             // giris
             foreach( $this->pdo->query("SELECT * FROM " . DBT_VARYANT_TANIMLAMALAR . " WHERE parca_tipi = ?", array($this->details["gid"]))->results() as $v_tanimlama ){
                 $Varyant = new Varyant( $v_tanimlama["varyant_gid"] );
-                if( $Varyant->get_details("parent") == null ){
+                if( $Varyant->get_details("parent") == Data_Out::$BOS ){
                     $output[] = array( "isim" => $Varyant->get_details("isim"), "gid" => $v_tanimlama["varyant_gid"] );
                 }
             }
         } else {
             // cikis
+            foreach( $this->pdo->query("SELECT * FROM " . DBT_VARYANT_TANIMLAMALAR . " WHERE parca_tipi = ?", array($this->details["gid"]))->results() as $v_tanimlama ){
+                $Varyant = new Varyant( $v_tanimlama["varyant_gid"] );
+                if( $Varyant->get_details("parent") != Data_Out::$BOS ){
+                    $Parent = new Varyant( $Varyant->get_details("parent") );
+                    $output[] = array( "parent" => $Parent->get_details("isim"), "isim" => $Varyant->get_details("isim"), "gid" => $v_tanimlama["varyant_gid"] );
+                }
+            }
 
+        }
+        return $output;
+    }
 
+    // iş emri formunda parça girişi yaparken, barkodsuz girişlerde varyant varsa, select value leri
+    // direk parcalar tablosundan stok kodu yapiyoruz
+    public function barkodsuz_varyantlari_parca_olarak_listele(){
+        $output = array();
+        foreach( $this->pdo->query("SELECT * FROM " . DBT_VARYANT_TANIMLAMALAR . " WHERE parca_tipi = ?", array($this->details["gid"]))->results() as $v_tanimlama ){
+            $Varyant = new Varyant( $v_tanimlama["varyant_gid"]);
+            foreach( $this->pdo->query("SELECT * FROM " . DBT_PARCALAR . " WHERE varyant_gid = ? && parca_tipi = ?", array( $v_tanimlama["varyant_gid"], $this->details["gid"]))->results() as $parca ) {
+                $output[] = array( "isim" => $Varyant->get_details("isim"), "gid" => $parca["stok_kodu"] );
+            }
         }
         return $output;
     }

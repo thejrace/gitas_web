@@ -157,3 +157,49 @@
 [08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecreatefrompng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPTEST4BLpyzozB5iAyaagooIXzT8w3faijx28kmrlyOBOYvf.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
 [08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 21
 [08-May-2017 16:25:31 Europe/Berlin] PHP Warning:  imagepng(C:/xampp/htdocs/gitas_web/qr/temp/GTSPATIPTEST4BLpyzozB5iAyaagooIXzT8w3faijx28kmrlyOBOYvf.png): failed to open stream: No such file or directory in C:\xampp\htdocs\gitas_web\common\class\QR_Output.php on line 37
+[08-May-2017 16:31:52 Europe/Berlin] PHP Fatal error:  Call to undefined method Is_Emri_Formu::gid_olustur() in C:\xampp\htdocs\gitas_web\ajax\otobus.php on line 38
+[08-May-2017 16:32:24 Europe/Berlin] PHP Fatal error:  Call to undefined method Is_Emri_Formu::gid_olustur() in C:\xampp\htdocs\gitas_web\ajax\otobus.php on line 38
+[08-May-2017 17:21:31 Europe/Berlin] PHP Notice:  Undefined variable: Parca_Tipi in C:\xampp\htdocs\gitas_web\ajax\is_emri_formu.php on line 35
+[08-May-2017 17:21:31 Europe/Berlin] PHP Fatal error:  Class name must be a valid object or a string in C:\xampp\htdocs\gitas_web\ajax\is_emri_formu.php on line 35
+[08-May-2017 17:24:11 Europe/Berlin] PHP Notice:  Undefined variable: Parca_Tipi in C:\xampp\htdocs\gitas_web\ajax\is_emri_formu.php on line 35
+[08-May-2017 17:24:11 Europe/Berlin] PHP Fatal error:  Class name must be a valid object or a string in C:\xampp\htdocs\gitas_web\ajax\is_emri_formu.php on line 35
+[08-May-2017 17:25:20 Europe/Berlin] PHP Notice:  Undefined index: varyant in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 17:25:52 Europe/Berlin] PHP Notice:  Undefined index: varyant in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 17:25:52 Europe/Berlin] PHP Notice:  Undefined index: isim in C:\xampp\htdocs\gitas_web\common\class\Data_Out.php on line 38
+[08-May-2017 18:31:59 Europe/Berlin] PHP Notice:  Undefined index: parca_tipi in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 18:34:10 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 18:34:13 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 18:34:54 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 18:34:56 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 18:35:05 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 80
+[08-May-2017 20:29:04 Europe/Berlin] PHP Notice:  Undefined index: varyant_gid in C:\xampp\htdocs\gitas_web\ajax\is_emri_formu.php on line 22
+[08-May-2017 20:29:04 Europe/Berlin] PHP Warning:  Missing argument 2 for Parca_Tipi::otobus_onceki_girisler(), called in C:\xampp\htdocs\gitas_web\ajax\is_emri_formu.php on line 22 and defined in C:\xampp\htdocs\gitas_web\common\class\Parca_Tipi.php on line 39
+[08-May-2017 20:29:04 Europe/Berlin] PHP Notice:  Undefined index: plaka in C:\xampp\htdocs\gitas_web\common\class\Otobus.php on line 134
+[08-May-2017 20:29:04 Europe/Berlin] PHP Notice:  Undefined variable: varyant in C:\xampp\htdocs\gitas_web\common\class\Parca_Tipi.php on line 49
+[08-May-2017 21:08:21 Europe/Berlin] PHP Warning:  Missing argument 1 for Parca_Tipi::varyantlari_listele(), called in C:\xampp\htdocs\gitas_web\ajax\parca_tipi.php on line 96 and defined in C:\xampp\htdocs\gitas_web\common\class\Parca_Tipi.php on line 120
+[08-May-2017 21:08:21 Europe/Berlin] PHP Notice:  Undefined variable: tip in C:\xampp\htdocs\gitas_web\common\class\Parca_Tipi.php on line 122
+[08-May-2017 22:56:04 Europe/Berlin] PHP Notice:  Undefined index: varyant_gid in C:\xampp\htdocs\gitas_web\common\class\Parca_Girisi.php on line 46
+[08-May-2017 23:21:31 Europe/Berlin] PHP Fatal error:  Call to undefined function query() in C:\xampp\htdocs\gitas_web\is_emri_formu_2.php on line 7
+[08-May-2017 23:25:05 Europe/Berlin] PHP Notice:  Undefined index: aciklama in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 134
+[08-May-2017 23:25:05 Europe/Berlin] PHP Notice:  Undefined index: varyant_gid in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 140
+[08-May-2017 23:25:05 Europe/Berlin] PHP Notice:  Undefined index: varyant_gid in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 140
+[08-May-2017 23:25:05 Europe/Berlin] PHP Notice:  Undefined index: garanti_baslangic in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 51
+[08-May-2017 23:25:05 Europe/Berlin] PHP Notice:  Undefined index: aciklama in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 134
+[08-May-2017 23:25:05 Europe/Berlin] PHP Notice:  Undefined index: varyant_gid in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 140
+[08-May-2017 23:25:05 Europe/Berlin] PHP Notice:  Undefined index: varyant_gid in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 140
+[08-May-2017 23:25:05 Europe/Berlin] PHP Notice:  Undefined index: garanti_baslangic in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 51
+[08-May-2017 23:32:55 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\gitas_web\common\class\DB.php on line 56
+[08-May-2017 23:32:55 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\gitas_web\common\class\DB.php on line 56
+[08-May-2017 23:32:55 Europe/Berlin] PHP Notice:  Undefined index: gid in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 171
+[08-May-2017 23:33:06 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\gitas_web\common\class\DB.php on line 56
+[08-May-2017 23:33:06 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\gitas_web\common\class\DB.php on line 56
+[08-May-2017 23:33:06 Europe/Berlin] PHP Notice:  Undefined index: gid in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 171
+[08-May-2017 23:36:38 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\gitas_web\common\class\DB.php on line 56
+[08-May-2017 23:36:38 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\gitas_web\common\class\DB.php on line 56
+[08-May-2017 23:36:38 Europe/Berlin] PHP Notice:  Undefined index: gid in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 171
+[08-May-2017 23:37:05 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\gitas_web\common\class\DB.php on line 56
+[08-May-2017 23:37:05 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\gitas_web\common\class\DB.php on line 56
+[08-May-2017 23:37:05 Europe/Berlin] PHP Notice:  Undefined index: gid in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 171
+[08-May-2017 23:40:38 Europe/Berlin] PHP Notice:  Undefined index: aciklama in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 134
+[08-May-2017 23:40:38 Europe/Berlin] PHP Notice:  Undefined index: garanti_baslangic in C:\xampp\htdocs\gitas_web\common\class\Parca.php on line 51
+[09-May-2017 00:46:04 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72

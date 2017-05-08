@@ -11,11 +11,21 @@ class Parca{
     private $pdo, $return_text, $details = array(), $table = DBT_PARCALAR,
             $ok = true, $exists = false;
 
+    public static   $DREVIZE = "R",
+                    $DHURDA = "H",
+                    $DKAYIP = "Y",
+                    $DBILGIYOK = "BY";
+
     public function __construct( $parca_tipi_veya_stok_kodu = null, $varyant_gid = null ){
         $this->pdo = DB::getInstance();
         $query = array();
         if( $parca_tipi_veya_stok_kodu != null && $varyant_gid != null ){
-            $query = $this->pdo->query("SELECT * FROM " . $this->table . " WHERE parca_tipi = ? && varyant_gid = ?", array( $parca_tipi_veya_stok_kodu, $varyant_gid ) )->results();
+            if( $varyant_gid == "YOK" ){
+                $query = $this->pdo->query("SELECT * FROM " . $this->table . " WHERE parca_tipi = ? && varyant_gid IS NULL", array( $parca_tipi_veya_stok_kodu ) )->results();
+            } else {
+                $query = $this->pdo->query("SELECT * FROM " . $this->table . " WHERE parca_tipi = ? && varyant_gid = ?", array( $parca_tipi_veya_stok_kodu, $varyant_gid ) )->results();
+            }
+
         } else if( $parca_tipi_veya_stok_kodu != null ){
             $query = $this->pdo->query("SELECT * FROM " . $this->table . " WHERE stok_kodu = ?", array( $parca_tipi_veya_stok_kodu) )->results();
         }
@@ -37,7 +47,8 @@ class Parca{
             "parca_giris_gid"   => $input["parca_giris_gid"]
         );
         if( isset( $input["varyant_gid"]) ) $parca_data["varyant_gid"] = $input["varyant_gid"];
-        if( trim($input["garanti_baslangic"]) != "" ){
+        ( isset( $input["durum"]) ) ? $parca_data["durum"] = $input["durum"] : $parca_data["durum"] = "AK";
+        if( isset($input["garanti_baslangic"] ) && trim($input["garanti_baslangic"]) != "" ){
             $parca_data["garanti_baslangic"] = $input["garanti_baslangic"];
             $parca_data["garanti_suresi"] = $input["garanti_suresi"];
         }
@@ -47,6 +58,10 @@ class Parca{
             return;
         }
         $this->return_text = "Parça(lar) eklendi.";
+    }
+
+    public function barkodlu_kullan(){
+        $this->pdo->query("UPDATE " . $this->table . " SET durum = ? WHERE stok_kodu = ?", array( Parca_Tipi::$ARACTA, $this->details["stok_kodu"]));
     }
 
     // miktar arttırma yapiyoruz
@@ -59,7 +74,8 @@ class Parca{
                 "stok_kodu"     => $this->details["stok_kodu"],
                 "parca_tipi"    => $input["parca_tipi"],
                 "aciklama"      => $input["aciklama"],
-                "miktar"        => $this->details["miktar"]
+                "miktar"        => $this->details["miktar"],
+                "durum"         => "AK"
             );
             if( isset( $input["varyant_gid"]) ) $parca_data["varyant_gid"] = $input["varyant_gid"];
             $this->pdo->insert($this->table, $parca_data);
@@ -73,6 +89,17 @@ class Parca{
 
     public function barkodsuz_miktar_guncelle( $yeni_miktar ){
         $this->pdo->query("UPDATE " . $this->table . " SET miktar = ? WHERE stok_kodu = ?", array( $yeni_miktar, $this->details["stok_kodu"] ) );
+    }
+
+    public function durum_guncelle( $form_durum ){
+        if( $form_durum == Parca::$DREVIZE ){
+            $durum = Parca_Tipi::$REVIZYONDA;
+        } else if( $form_durum == Parca::$DHURDA ){
+            $durum = Parca_Tipi::$HURDA;
+        } else {
+            $durum = Parca_Tipi::$KAYIP;
+        }
+        $this->pdo->query("UPDATE " . $this->table . " SET durum = ? WHERE stok_kodu = ?", array( $durum, $this->details["stok_kodu"]));
     }
 
     public function get_details( $key = null ){

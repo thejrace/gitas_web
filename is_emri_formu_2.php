@@ -4,26 +4,27 @@
     $TITLE = "İş Emri Formu Oluştur";
     $AKTIVITE_KOD = Aktiviteler::IS_EMRI_FORMU_EKLEME;
 
+
     $KISAYOL_PARCALAR = array(
         "Balata" => array(
-            "Sağ Ön"        => "GTSPATIPBALATABSONSAG",
-            "Sol Ön"        => "GTSPATIPBALATABSONSOL",
-            "Sağ Arka"      => "GTSPATIPBALATABSARKASAG",
-            "Sol Arka"      => "GTSPATIPBALATABSARKASOL"
+            "Sağ Ön"        => array( "stok_kodu" => "GTSPATIPBALATABScE4L1mEaczeun18", "varyant_gid" => "GTSVARYONK3Al2YWb7O74WcP" ),
+            "Sol Ön"        => array( "stok_kodu" => "GTSPATIPBALATABSeBVdlvZPi9sN4a1", "varyant_gid" => "GTSVARYON1QbZKLQ4PE1QulI"),
+            "Sağ Arka"      => array( "stok_kodu" => "GTSPATIPBALATABScE4L1mEaczeun18", "varyant_gid" => "GTSVARYARKAmYejSdthZ52WxAv"),
+            "Sol Arka"      => array( "stok_kodu" => "GTSPATIPBALATABSeBVdlvZPi9sN4a1", "varyant_gid" => "GTSVARYARKAUramlUZWLB9WfKu"),
         ),
         "Yağ" => array(
-            "Diferansiyel"  => "GTSPATIPYAGBSDIFERANSIYEL",
-            "Motor"         => "GTSPATIPYAGBSMOTOR",
-            "Şanzıman"      => "GTSPATIPYAGBSSANZIMAN",
-            "Direksiyon"    => "GTSPATIPYAGBSDIREKSIYON",
-            "Gres"          => "GTSPATIPYAGBSGRES",
-            "Sıvı Gres"     => "GTSPATIPYAGBSSIVIGRES"
+            "Diferansiyel"  => "GTSPATIPYAGBSpmthG8MzqN5mCW7",
+            "Motor"         => "GTSPATIPYAGBSl4haYynZvsfT3ZJ",
+            "Şanzıman"      => "GTSPATIPYAGBSdd8UWwGRPcTZfIR",
+            "Direksiyon"    => "GTSPATIPYAGBSZHD7iEvMCXCkOyB",
+            "Gres"          => "GTSPATIPYAGBSudWvtF5X0wr2iBY",
+            "Sıvı Gres"     => "GTSPATIPYAGBSRcSbm2lrma7PjFo"
         ),
         "Muhtelif" => array(
-            "Antifriz"      => "GTSPATIPANTIFRIZBSANTIFRIZ",
-            "Balata Spreyi" => "GTSPATIPBALATASPREYIBSBALATASPREYI",
-            "Bant"          => "GTSPATIPBANTBSBANT",
-            "Silikon"       => "GTSPATIPSILIKONBSSILIKON"
+            "Antifriz"      => "GTSPATIPANTIFIRIZBSlIcM8vW0wEDKCm8",
+            "Balata Spreyi" => "GTSPATIPBALATASPREYIBSzQHQ1HVgFl5unJN",
+            "Bant"          => "GTSPATIPBANTBSYkY2wkSBzKgTr5d",
+            "Silikon"       => "GTSPATIPSILIKONBSgtk7OO7GQJyyz5D"
         )
     );
 
@@ -210,28 +211,28 @@
                     <div class="rcontent">
                         <div class="input-row">
                             <div class="binput-container">
-                                <div class="obareycb-container balata" key="<?php echo $KISAYOL_PARCALAR["Balata"]["Sağ Ön"] ?>" value="0">
+                                <div class="obareycb-container balata" varyant_gid="<?php echo $KISAYOL_PARCALAR["Balata"]["Sağ Ön"]["varyant_gid"]?>" key="<?php echo $KISAYOL_PARCALAR["Balata"]["Sağ Ön"]["stok_kodu"] ?>" value="0">
                                     <button type="button" class="obareycb"></button>
                                     <label class="obareycb-lbl" >Sağ Ön</label>
                                 </div>
                             </div>
 
                             <div class="binput-container">
-                                <div class="obareycb-container balata" key="<?php echo $KISAYOL_PARCALAR["Balata"]["Sağ Arka"] ?>" value="0">
+                                <div class="obareycb-container balata" varyant_gid="<?php echo $KISAYOL_PARCALAR["Balata"]["Sağ Arka"]["varyant_gid"]?>" key="<?php echo $KISAYOL_PARCALAR["Balata"]["Sağ Arka"]["stok_kodu"] ?>" value="0">
                                     <button type="button" class="obareycb"></button>
                                     <label class="obareycb-lbl" >Sağ Arka</label>
                                 </div>
                             </div>
 
                             <div class="binput-container">
-                                <div class="obareycb-container balata" key="<?php echo $KISAYOL_PARCALAR["Balata"]["Sol Ön"] ?>" value="0">
+                                <div class="obareycb-container balata" varyant_gid="<?php echo $KISAYOL_PARCALAR["Balata"]["Sol Ön"]["varyant_gid"]?>" key="<?php echo $KISAYOL_PARCALAR["Balata"]["Sol Ön"]["stok_kodu"] ?>" value="0">
                                     <button type="button" class="obareycb"></button>
                                     <label class="obareycb-lbl" >Sol Ön</label>
                                 </div>
                             </div>
 
                             <div class="binput-container">
-                                <div class="obareycb-container balata" key="<?php echo $KISAYOL_PARCALAR["Balata"]["Sol Arka"] ?>" value="0">
+                                <div class="obareycb-container balata" varyant_gid="<?php echo $KISAYOL_PARCALAR["Balata"]["Sol Arka"]["varyant_gid"]?>" key="<?php echo $KISAYOL_PARCALAR["Balata"]["Sol Arka"]["stok_kodu"] ?>" value="0">
                                     <button type="button" class="obareycb"></button>
                                     <label class="obareycb-lbl" >Sol Arka</label>
                                 </div>
@@ -430,6 +431,7 @@
                                 <thead>
                                 <tr>
                                     <td>PARÇA TİPİ</td>
+                                    <td>VARYANT</td>
                                     <td>AÇIKLAMA</td>
                                     <td>MİKTAR</td>
                                     <td>STOK KODU</td>
@@ -515,6 +517,10 @@
                 <input type="text" id="barkod" class="uzun" ok="0" parca_tipi="0" />
             </div>
 
+            <div class="cikis-varyant-cont">
+
+            </div>
+
             <div class="parca-info">
 
             </div>
@@ -562,13 +568,6 @@
 
             <div class="input-row">
                 <div class="binput-container">
-                    <label for="garanti">Garanti Bitiş Tarihi</label>
-                    <input type="text" id="garanti" class="orta" />
-                </div>
-            </div>
-
-            <div class="input-row">
-                <div class="binput-container">
                     <div class="obareycb-container" key="Durum" val="H">
                         <button type="button" class="obareycb"></button>
                         <label class="obareycb-lbl" >Hurda</label>
@@ -598,6 +597,7 @@
                 <thead>
                     <tr>
                         <td>STOK KODU</td>
+                        <td>VARYANT</td>
                         <td>AÇIKLAMA</td>
                         <td>GİRİŞ KM</td>
                         <td>GİRİŞ TARİHİ</td>
@@ -726,11 +726,13 @@
 
                 inputlar = kisayol_adim.find(".balata");
                 for( var j = 0; j < inputlar.length; j++ ){
-                    this.giren_parcalar[ inputlar[j].getAttribute("key") ] = new Parca({
+                    this.giren_parcalar[ inputlar[j].getAttribute("varyant_gid") ] = new Parca({
                         data: {
                             tip: Parca_Tipi.BARKODSUZ,
                             stok_kodu: inputlar[j].getAttribute("key"),
-                            miktar: 0
+                            varyant_gid: inputlar[j].getAttribute("varyant_gid"),
+                            miktar: 0,
+                            balata: true
                         },
                         inputs: {
                             cb:{ elem: inputlar[j] }
@@ -878,7 +880,13 @@
                             // sadece cb olan
                             if ($(item.inputs.cb.elem).hasClass("selected")) {
                                 item.data["miktar"] = 1;
-                                GIRENLER[sk] = item.data;
+                                if( item.data.balata != undefined ){
+                                    GIRENLER[item.data.varyant_gid] = item.data;
+                                } else {
+                                    GIRENLER[sk] = item.data;
+                                }
+
+
                             } else {
                                 item.data["miktar"] = 0;
                             }
@@ -913,21 +921,22 @@
                             parca_yok: true
                         }
                     } else {
-                        if( item.garanti != undefined ){
+                        if( item.stok_kodu != "YOK" ){
                             // stokta olmayan parca
                             CIKANLAR[sk] = {
                                 ref: item.ref,
                                 stok_kodu: item.stok_kodu,
                                 durum: item.durum,
                                 aciklama: item.aciklama,
-                                garanti: item.garanti
+                                varyant_gid: item.varyant_gid
                             }
                         } else {
                             // stoktaki parça
                             CIKANLAR[sk] = {
                                 ref: item.ref,
                                 stok_kodu: item.stok_kodu,
-                                durum: item.durum
+                                durum: item.durum,
+                                varyant_gid: item.varyant_gid
                             }
                         }
                     }
@@ -1006,9 +1015,9 @@
             $("#tamamla").click(function(){
                 if( kaydet(1) ){
                     if( confirm( "İş Emri Formu kaydedildi. Yazdırma sayfasına gitmek istiyor musunuz?") ){
-                        location.reload();
+                        //location.reload();
                     } else {
-                        location.reload();
+                        //location.reload();
                     }
                 }
             });
@@ -1063,31 +1072,17 @@
                            varyant_append.html("");
                            return;
                        }
-                       $.ajax({
-                           type: "POST",
-                           url:Gitas.AJAX_URL + "parca_tipi.php",
-                           dataType: 'json',
-                           data: { req: "parca_tipi_select_cikis", parca_tipi: _this.val() },
-                           success: function(res){
-                               console.log(res);
-                               varyant_append.html("");
-                               var html;
-                               if( res.data.tip == "1"){
-                                   html ="<label for='aciklama'>Açıklama</label><input type='text' id='aciklama'>";
-                                   varyant_append.append( html );
-                               } else {
-                                   html ="<label for='aciklama'>Açıklama</label><select class='uzun' parca_tipi='"+_opt.html()+"' name='aciklama' id='aciklama'><option value='0'>Seçiniz..</option>";
-                                   for( var x = 0; x < res.data.varyantlar.length; x++ ){
-                                       html += "<option value='"+res.data.varyantlar[x].stok_kodu+"'>"+res.data.varyantlar[x].aciklama+"</option>";
-                                   }
-                                   html += "</select>";
-                                   varyant_append.append( html );
-                               }
-                           },
-                           error: function( jqXHR, textStatus, errorThrown ){
-                               console.log(textStatus);
-                               console.log(errorThrown);
+                       GitasREQ.barkodsuz_varyant_stok_kodu_listele( _this.val(), function(res){
+                           console.log(res);
+                           varyant_append.html("");
+                           if( res.data.varyantlar.length == 0 ) return;
+                           var html;
+                           html ="<div class='binput-container'><label for='varyant_gid'>Varyant</label><select class='select_no_zero uzun' name='varyant_gid' id='varyant_gid'><option value='0'>Seçiniz..</option>";
+                           for( var x = 0; x < res.data.varyantlar.length; x++ ){
+                               html += "<option value='"+res.data.varyantlar[x].gid+"'>"+res.data.varyantlar[x].isim+"</option>";
                            }
+                           html += "</select><input type='hidden' id='patip_val' value='"+_opt.html()+"' /></div>";
+                           varyant_append.append( html );
                        });
                    }
                    $(".parca-tipi").html( _opt.html() );
@@ -1100,6 +1095,7 @@
                     notf = _this.parent().parent().find(".parca-info");
 
                 _this.attr("ok", "0");
+                var cikis_varyantlar_input = $(".cikis-varyant-cont");
                 $.ajax({
                     type: "POST",
                     url: Gitas.AJAX_URL + "is_emri_formu.php",
@@ -1108,21 +1104,33 @@
                     success: function (res) {
                         console.log(res);
                         Loader.off();
+                        cikis_varyantlar_input.html("");
                         if( res.ok ){
+                            if( res.data.cikis_varyantlar != undefined ){
+                                _this.attr("cikis_varyant_var", "true");
+                                var cvaryant = '<div class="binput-container">'+
+                                                    '<label for="cikis_varyant">Varyant</label><select id="cikis_varyant" name="cikis_varyant" class="select_no_zero"><option value="0">Seçiniz...</option>';
+                                for( var j = 0; j < res.data.cikis_varyantlar.length; j++ ){
+                                    cvaryant += '<option keyval="'+res.data.cikis_varyantlar[j]["parent"]+' - '+res.data.cikis_varyantlar[j]["isim"]+'" value="'+res.data.cikis_varyantlar[j]["gid"]+'">'+res.data.cikis_varyantlar[j]["parent"]+' - '+res.data.cikis_varyantlar[j]["isim"]+'</option>';
+                                }
+                                cikis_varyantlar_input.html( cvaryant + "</select></div>" );
+                            }
                             _this.attr("ok", "1")
-                                 .attr("aciklama", res.data.aciklama)
-                                 .attr("firma", res.data.firma)
-                                 .attr("stoga_giris_tarihi", res.data.stok_tarih)
-                                 .attr("revize", res.data.revize);
+                                .attr("varyant", res.data.parca.varyant)
+                                .attr("aciklama", res.data.parca.aciklama)
+                                .attr("firma", res.data.parca.firma)
+                                .attr("stoga_giris_tarihi", res.data.parca.tarih);
 
                             notf.html('<div class="state ok">Parça Bulundu!</div>'+
                                 '<ul>'+
-                                '<li>Parça Tipi: <span id="barkod_parca_tipi">'+res.data.parca_tipi+'</span></li>'+
-                                '<li>Açıklama: <span id="barkod_aciklama">'+res.data.aciklama+'</span></li>'+
-                                '<li>Firma: '+res.data.firma+'</li>'+
-                                '<li>Stoğa Giriş Tarihi: '+res.data.stok_tarih+'</li>'+
-                                '<li>Revize: '+res.data.revize+'</li>'+
+                                '<li>Parça Tipi: <span id="barkod_parca_tipi">'+res.data.parca.parca_tipi+'</span></li>'+
+                                '<li>Varyant: <span id="barkod_varyant">'+res.data.parca.varyant+'</span></li>'+
+                                '<li>Açıklama: <span id="barkod_aciklama">'+res.data.parca.aciklama+'</span></li>'+
+                                '<li>Firma: '+res.data.parca.firma+'</li>'+
+                                '<li>Stoğa Giriş Tarihi: '+res.data.parca.tarih+'</li>'+
                                 '</ul>');
+
+
                         } else {
                             notf.html('<div class="state bok">Parça Bulunamadı!</div>');
                         }
@@ -1156,26 +1164,40 @@
 
             $(document).on("click", "#barkodlu-tamam", function(){
                 var barkod = $("#barkod"),
+                    cikis_varyant = $("#cikis_varyant"),
                     val = barkod.val(),
-                    parca_tipi  = barkod.attr("parca_tipi");
+                    parca_tipi  = barkod.attr("parca_tipi"),
+                    varyant = barkod.attr("varyant"),
+                    varyant_gid = "YOK";
                 if( barkod.attr("ok") == "1" ){
                     if( FORM.giren_parcalar[val] != undefined ){
                         alert("Bu parça zaten girildi!");
                     } else {
+                        var parca_data = {
+                            tip: Parca_Tipi.BARKODLU,
+                            stok_kodu: val,
+                            miktar: 1
+                        };
+                        if( cikis_varyant.length == 1 && cikis_varyant.val() == "0"){
+                            alert("Çıkış varyantı seçimini yapınız!");
+                            return;
+                        }
+                        if( barkod.attr("cikis_varyant_var") != undefined ){
+
+                            parca_data["varyant_gid"] = cikis_varyant.val();
+                            varyant_gid = parca_data["varyant_gid"];
+                            varyant = cikis_varyant.find("option:selected").attr("keyval");
+                        }
                         FORM.giren_parcalar[val] = new Parca({
-                            data: {
-                                tip: Parca_Tipi.BARKODLU,
-                                stok_kodu: val,
-                                miktar: 1
-                            },
+                            data: parca_data,
                             inputs: {}
                         });
                         var cikislar_cont = $(".cikislar-cont"),
                             parca_kutu = cikislar_cont.find("."+parca_tipi);
                         var kutu_html = '<div class="parca-cikis-cont bok" stok_kodu="'+val+'">'+
-                                            '<div class="title">'+parca_tipi+'</div>'+
+                                            '<div class="title">'+parca_tipi+ ' ( V:' + varyant +' )</div>'+
                                             '<div class="state">Bilgi verilmedi.</div>'+
-                                            '<div class="buton-cont"><button type="button" parca_tipi="'+parca_tipi+'" class="mnbtn mor onceki-girisler-btn">ÖNCEKİ GİRİŞLER</button></div>'+
+                                            '<div class="buton-cont"><button type="button" varyant_gid="'+varyant_gid+'" parca_tipi="'+parca_tipi+'" class="mnbtn mor onceki-girisler-btn">ÖNCEKİ GİRİŞLER</button></div>'+
                                             '<div class="obareycb-container parca-cikmadi" >'+
                                             '<button type="button" class="obareycb"></button>'+
                                             '<label class="obareycb-lbl" >Parça Çıkmadı</label>'+
@@ -1209,6 +1231,7 @@
                         });
                         $(".parca-giris-eklenenler").append('<tr>'+
                                 '<td>'+parca_tipi+'</td>'+
+                                '<td>'+varyant+'</td>'+
                                 '<td>'+barkod.attr("aciklama")+'</td>'+
                                 '<td>1</td>'+
                                 '<td>'+val.substr(0, 25)+'...</td>'+
@@ -1223,10 +1246,10 @@
             });
 
             $(document).on("click", "#barkodsuz-tamam", function(){
-                var aciklama_elem = $("#aciklama"),
-                    aciklama = aciklama_elem.val(),
+                var varyant_elem = $("#varyant_gid"),
+                    aciklama = varyant_elem.val(),
                     miktar = $("#miktar").val(),
-                    opt = aciklama_elem.find("option:selected");
+                    opt = varyant_elem.find("option:selected");
                 if( aciklama == "0" || miktar.trim() == "" || !FormValidation.posnum(miktar)){
                     alert("Formda eksiklikler var!");
                 } else {
@@ -1245,10 +1268,12 @@
                             inputs: {}
                         });
                         $(".parca-giris-eklenenler").append('<tr>'+
-                            '<td>'+aciklama_elem.attr("parca_tipi")+'</td>'+
+                            '<td>'+$("#patip_val").val()+'</td>'+
                             '<td>'+opt.html()+'</td>'+
+                            '<td></td>'+
                             '<td class="miktar">'+miktar+'</td>'+
                             '<td>'+aciklama.substr(0, 25)+'...</td>'+
+
                             '<td><button type="button" stok_kodu="'+aciklama+'" class="dtbtn dtico carpikirmizi giren-parca-sil"></button></td>'+
                             '</tr>');
                     }
@@ -1262,17 +1287,18 @@
                 Popup.on($("script[data-template='popup-onceki-girisler-table']").html(), "Parça Çıkışı" );
 
                 var _pt = _this.attr("parca_tipi"),
+                    _varyant_gid = _this.attr("varyant_gid"),
                     _ref = _this.parent().parent().attr("stok_kodu");
                 $(".info-parca-tipi").html(_pt);
                 $(".popup-cikis-form-btn").attr("parca_tipi", _pt);
-                $("#giris_ref").val(_ref);
+                $("#giris_ref").val(_ref).attr("varyant_gid", _varyant_gid );
 
                 Loader.on();
                 $.ajax({
                     type: "POST",
                     url: Gitas.AJAX_URL + "is_emri_formu.php",
                     dataType: 'json',
-                    data: {req: "onceki_parca_girisleri", plaka: FORM.otobus_data.plaka.value, parca_tipi: _pt },
+                    data: {req: "onceki_parca_girisleri", plaka: FORM.otobus_data.plaka.value, parca_tipi: _pt, varyant_gid:_varyant_gid },
                     success: function (res) {
                         console.log(res);
                         if (res.ok) {
@@ -1282,6 +1308,7 @@
                                 if( FORM.cikan_parcalar[_ref].stok_kodu == res.data[j].stok_kodu ) continue;
                                 cikan_body.append('<tr data-id="'+res.data[j].stok_kodu+'">'+
                                     '<td title="'+res.data[j].stok_kodu+'" >'+res.data[j].stok_kodu.substr(0, 25)+'...</td>'+
+                                    '<td>'+res.data[j].varyant+'</td>'+
                                     '<td>'+res.data[j].aciklama+'</td>'+
                                     '<td>'+res.data[j].km+'</td>'+
                                     '<td>'+res.data[j].tarih+'</td>'+
@@ -1383,18 +1410,18 @@
             $(document).on("click", ".popup-cikis-form-btn", function(){
                 var _this = $(this);
                 Popup.on($("script[data-template='popup-onceki-girisler-form']").html(), "Parça Girişi" );
-                $("#giris_ref").val(_this.parent().parent().find("#giris_ref").val());
-                $("#garanti").datetimepicker(dtpicker_options_dt);
-
+                var giris_ref = _this.parent().parent().find("#giris_ref");
+                $("#giris_ref").val(giris_ref.val()).attr("varyant_gid", giris_ref.attr("varyant_gid"));
             });
 
             $(document).on("click", "#cikis-barkodsuz-tamam", function(){
 
                 var _aciklama = $("#aciklama").val(),
-                    _garanti = $("#garanti").val(),
                     _durum = $(this).parent().find(".selected"),
-                    _ref = $("#giris_ref").val();
-                if( _aciklama.trim() == "" || _garanti.trim() == "" || _durum.length == 0 ){
+                    giris_ref_elem = $("#giris_ref"),
+                    _ref = giris_ref_elem.val(),
+                    _varyant_gid = giris_ref_elem.attr("varyant_gid");
+                if( _aciklama.trim() == "" || _durum.length == 0 ){
                     alert("Formda eksiklikler var!");
                 } else {
 
@@ -1402,7 +1429,7 @@
 
                     FORM.cikan_parcalar[_ref].durum = _durum.attr("val");
                     FORM.cikan_parcalar[_ref].stok_kodu = "YOK"; // server side da YOK gorunce stoğa eklicez
-                    FORM.cikan_parcalar[_ref].garanti = _garanti;
+                    FORM.cikan_parcalar[_ref].varyant_gid = _varyant_gid;
                     FORM.cikan_parcalar[_ref].aciklama = _aciklama;
                     FORM.cikan_parcalar[_ref].ref = _ref;
                     FORM.cikan_parcalar[_ref].ok = Cikan_Parca_Durum.PARCA_VAR;

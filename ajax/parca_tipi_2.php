@@ -65,6 +65,20 @@
 
             break;
 
+            case "barkodsuz_varyant_stok_kodu_listele":
+
+                $Parca_Tipi = new Parca_Tipi( Input::get("parca_tipi") );
+                if( $Parca_Tipi->exists() ){
+                    $DATA["varyantlar"] = $Parca_Tipi->barkodsuz_varyantlari_parca_olarak_listele();
+                } else {
+                    $Ok = 0;
+                }
+                $TEXT = $Parca_Tipi->get_return_text();
+
+            break;
+
+
+
 
 
         }

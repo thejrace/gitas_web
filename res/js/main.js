@@ -140,6 +140,9 @@ var GitasREQ = {
     parca_tipi_select_giris: function( val, cb ){
         this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req: "parca_tipi_select_giris", parca_tipi: val }, cb );
     },
+    barkodsuz_varyant_stok_kodu_listele: function( val, cb ){
+        this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req: "barkodsuz_varyant_stok_kodu_listele", parca_tipi: val }, cb );
+    },
     parca_tipi_ayarlar: function( patip, cb ){
         this.default_req( Gitas.AJAX_REQ.PARCA_TIPI, { req:"parca_tipi_ayarlar", parca_tipi:patip }, cb );
     },

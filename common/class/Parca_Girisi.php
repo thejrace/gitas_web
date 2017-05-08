@@ -43,7 +43,12 @@ class Parca_Girisi extends Data_Out{
                 );
             }
         } else {
-            $Parca = new Parca( $input["parca_tipi"], $input["varyant_gid"] );
+            if( isset($input["varyant_gid"] ) ){
+                $Parca = new Parca( $input["parca_tipi"], $input["varyant_gid"] );
+            } else {
+                $Parca = new Parca( $input["parca_tipi"], "YOK" );
+            }
+
             $Parca->barkodsuz_ekle($input);
             $this->eklenenler[] = array(
                 "tip"       => $Parca_Tipi->get_details("isim"),

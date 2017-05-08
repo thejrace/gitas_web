@@ -18,42 +18,43 @@ if( $_POST ){
 
         case "onceki_parca_girisleri":
 
-            $Otobus = new Otobus(Input::get("plaka"));
-            if($Otobus->exists()){
-                // giren parclari listele
-                $DATA = $Otobus->parcalari_listele( 1, Input::get("parca_tipi") );
-            } else {
-                $OK = 0;
-            }
-            $TEXT = $Otobus->get_return_text();
+            $Parca_Tipi = new Parca_Tipi( Input::get("parca_tipi") );
+            $DATA = $Parca_Tipi->otobus_onceki_girisler( Input::get("plaka"), $_POST["varyant_gid"] );
+            $TEXT = $Parca_Tipi->get_return_text();
 
-            break;
+        break;
 
         case "parca_barkod_kontrol":
 
-            $Parca = new Barkodlu_Parca( Input::get("barkod") );
-            $Parca_Tipi = new Parca_Tipi( Input::get("parca_tipi"));
-            if( !$Parca->exists() || $Parca->get_details("tip") != $Parca_Tipi->get_details("gid") ||  $Parca->get_details("kullanildi") == 1 || $Parca->get_details("durum") == 0 || $Parca->get_details("kayip") == 1 ){
-                $OK = 0;
-            } else {
-                //$Parca_Tipi = new Parca_Tipi( $Parca->get_details("tip") );
-                $Parca_Giris = new Parca_Girisi( $Parca->get_details("parca_giris_id") );
-                $Firma = new Satici_Firma( $Parca->get_details("satici_firma") );
-                if( $Parca->get_details("revize") ){
-                    $revize = "Evet";
+            $Parca = new Parca( Input::get("barkod") );
+            if( $Parca->exists() && $Parca->get_details("durum") == Parca_Tipi::$AKTIF ){
+                $Parca_Tipi = new Parca_Tipi( $Parca->get_details("parca_tipi") );
+                if( $Parca_Tipi->get_details("isim") == $_POST["parca_tipi"] && $Parca_Tipi->get_details("tip") == Parca_Tipi::$BARKODLU ){
+                    $Parca_Giris = new Parca_Girisi( $Parca->get_details("parca_giris_gid") );
+                    $Firma = new Satici_Firma( $Parca->get_details("satici_firma") );
+                    $varyant = "YOK";
+                    if( $Parca_Tipi->get_details("varyantli") ){
+                        $Varyant = new Varyant($Parca->get_details("varyant_gid"));
+                        $varyant = $Varyant->get_details("isim");
+                    }
+                    $DATA["parca"] = array(
+                        "parca_tipi" => $Parca_Tipi->get_details("isim") ,
+                        "varyant"    => $varyant,
+                        "aciklama"   => $Parca->get_details("aciklama"),
+                        "firma"      => $Firma->get_details("isim"),
+                        "tarih"      => $Parca_Giris->get_details("tarih")
+                    );
+                    $cikis_varyantlar = $Parca_Tipi->varyantlari_listele( 0 );
+                    if( count($cikis_varyantlar) > 0 ) $DATA["cikis_varyantlar"] = $cikis_varyantlar;
                 } else {
-                    $revize = "Hayır";
+                    $OK = 0;
                 }
-                $DATA = array(
-                    "parca_tipi" => $Parca->get_details("tip") ,
-                    "aciklama"   => $Parca->get_details("aciklama"),
-                    "firma"      => $Firma->get_details("isim"),
-                    "tarih"      => $Parca_Giris->get_details("tarih"),
-                    "revize"     => $revize
-                );
-
+            } else {
+                $OK = 0;
             }
             $TEXT = $Parca->get_return_text();
+
+
 
         break;
 
