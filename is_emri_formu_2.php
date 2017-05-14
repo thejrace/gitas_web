@@ -922,19 +922,19 @@
                         }
                     } else {
                         if( item.stok_kodu != "YOK" ){
-                            // stokta olmayan parca
+                            // stokta olan parca
                             CIKANLAR[sk] = {
                                 ref: item.ref,
                                 stok_kodu: item.stok_kodu,
                                 durum: item.durum,
-                                aciklama: item.aciklama,
                                 varyant_gid: item.varyant_gid
                             }
                         } else {
-                            // stoktaki parça
+                            // stokta olmayan parça
                             CIKANLAR[sk] = {
                                 ref: item.ref,
                                 stok_kodu: item.stok_kodu,
+                                aciklama: item.aciklama,
                                 durum: item.durum,
                                 varyant_gid: item.varyant_gid
                             }

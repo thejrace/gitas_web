@@ -11,14 +11,17 @@
     $Parca_Tipi = new Parca_Tipi(Input::get("psk"));
     if( !$Parca_Tipi->exists() ) exit;
 
-    if( $Parca_Tipi->get_details("tip") == Parca_Tipi::$BARKODSUZ ){
-        $varyantlar = array();
-        foreach( $Parca_Tipi->varyantlari_listele() as $varyant ) $varyantlar[] = $varyant["aciklama"];
-        $varyant_str = implode( " - ", $varyantlar );
+    if( $Parca_Tipi->get_details("varyantli") == 1 ){
+        $giris_varyantlar = array();
+        $cikis_varyantlar = array();
+        foreach( $Parca_Tipi->varyantlari_listele(0) as $varyant ) $cikis_varyantlar[$varyant["isim"]] = $varyant["isim"];
+        foreach( $Parca_Tipi->varyantlari_listele(1) as $varyant ) $giris_varyantlar[$varyant["isim"]] = $varyant["isim"];
+        $g_varyant_str = implode( " - ", $giris_varyantlar );
+        $c_varyant_str = implode( " - ", $cikis_varyantlar );
     } else {
-        $varyant_str = "Barkodlu";
+        $g_varyant_str = "YOK";
+        $c_varyant_str = "YOK";
     }
-
 
     $statdata = array(
         array(
@@ -30,7 +33,8 @@
                 array( "key" => "Kritik Seviye Limiti", "val" => $Parca_Tipi->get_details("kritik_seviye_limiti" ) ),
                 array( "key" => "İdeal Değişim KM ( Alt - Üst )", "val" =>  $Parca_Tipi->get_details("ideal_degisim_sikligi_alt") . " - " . $Parca_Tipi->get_details("ideal_degisim_sikligi_ust")  ),
                 array( "key" => "İdefal Değişim Ay ( Alt - Üst )", "val" => $Parca_Tipi->get_details("ideal_degisim_sikligi_tarih_alt") . " - " . $Parca_Tipi->get_details("ideal_degisim_sikligi_tarih_ust") ),
-                array( "key" => "Varyantlar", "val" => $varyant_str )
+                array( "key" => "Giriş Varyantlar", "val" => $g_varyant_str ),
+                array( "key" => "Çıkış Varyantlar", "val" => $c_varyant_str )
             )
         )
     );

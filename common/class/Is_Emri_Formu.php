@@ -180,4 +180,169 @@ class Is_Emri_Formu extends Data_Out{
         return $this->pdo->query("SELECT * FROM " . DBT_ISEMRI_FORMU_PERSONEL_DETAY . " WHERE form_gid = ?", array( $this->details["gid"]))->results();
     }
 
+    public function detay_html(){
+        $Surucu = new Personel($this->details["surucu"]);
+        $Yapan = new Personel($this->details["giris_yapan"]);
+
+        $cikanlar_html = "";
+        foreach( $this->form_cikanlari_listele() as $cikan ){
+            $Parca = new Parca( $cikan["stok_kodu"] );
+            $Parca_Tipi = new Parca_Tipi( $Parca->get_details("parca_tipi") );
+            $Satici_Firma = new Satici_Firma( $Parca->get_details("satici_firma"));
+            $tooltip_data = 'Fatura No: ' . $Parca->get_details("fatura_no") . '<br> Satıcı Firma: ' . $Satici_Firma->get_details("isim");
+            if( $cikan["durum"] == Parca::$DREVIZE || $cikan["durum"] == Parca::$DHURDA  ){
+                $durum = "Hurda";
+                if( $cikan["durum"] == Parca::$DREVIZE ){
+                    $durum = "Revize";
+                }
+                $cikanlar_html .= '<tr>
+                    <td>'.$Parca_Tipi->get_details("isim").'</td>
+                    <td>'.$Parca->get_details("aciklama").'</td>
+                    <td>'.$cikan["miktar"].' '.$Parca_Tipi->get_details("miktar_olcu_birimi").'</td>
+                    <td title="'.$cikan["stok_kodu"].'">'.substr($cikan["stok_kodu"], 0, 25).'...</td>
+                    <td>'.$durum.'</td>
+                    <td><button type="button" class="mtbtn minitableico buyutec" onmouseover="Obarey_Tooltip(\'text\', \''.$tooltip_data.'\', this, event)" data-id="'.$cikan["stok_kodu"].'"></button></td>
+                    </tr>';
+            } else if( $cikan["durum"] == Parca::$DKAYIP ){
+                $cikanlar_html .= '<tr>
+                    <td>'.$Parca_Tipi->get_details("isim").'</td>
+                    <td>'.$Parca->get_details("aciklama").'</td>
+                    <td>'.$cikan["miktar"].' '.$Parca_Tipi->get_details("miktar_olcu_birimi").'</td>
+                    <td title="'.$cikan["stok_kodu"].'">'.substr($cikan["stok_kodu"], 0, 25).'...</td>
+                    <td>Parça çıkmadı / kayıp</td>
+                    <td><button type="button" class="mtbtn minitableico buyutec" onmouseover="Obarey_Tooltip(\'text\', \''.$tooltip_data.'\', this, event)" data-id="'.$cikan["stok_kodu"].'"></button></td>
+                    </tr>';
+            } else if( $cikan["durum"] == Parca::$DBILGIYOK ){
+                // stok kodu yerine takilan parçanın stok kodu
+                // parca tipini burdan alicaz
+                $cikanlar_html .= '<tr>
+                    <td>'.$Parca_Tipi->get_details("isim").'</td>
+                    <td>'.$Parca->get_details("aciklama").'</td>
+                    <td>'.$cikan["miktar"].' '.$Parca_Tipi->get_details("miktar_olcu_birimi").'</td>
+                    <td>YOK</td>
+                    <td>Kaydı olmayan parça çıkmadı / kayıp</td>
+                    <td></td>
+                    </tr>';
+            }
+        }
+
+        $girenler_html = "";
+        foreach( $this->girenleri_listele() as $giren ){
+            $Parca = new Parca($giren["stok_kodu"]);
+            $Parca_Tipi = new Parca_Tipi( $Parca->get_details("parca_tipi") );
+            $parca_adi = "";
+            if( $Parca->get_details("varyant_gid") != Data_Out::$BOS ){
+                // parent varyant var
+                // alt varyant kontrolu yapiyoruz
+                $Varyant_Parent = new Varyant( $Parca->get_details("varyant_gid"));
+                $parca_adi = $Varyant_Parent->get_details("isim");
+                if( isset($giren["varyant_gid"] ) ){
+                    $Varyant_Alt = new Varyant( $giren["varyant_gid"] );
+                    $parca_adi .= " - " . $Varyant_Alt->get_details("isim");
+                }
+            }
+
+            $Satici_Firma = new Satici_Firma( $Parca->get_details("satici_firma"));
+            $tooltip_data = 'Fatura No: ' . $Parca->get_details("fatura_no") . '<br> Satıcı Firma: ' . $Satici_Firma->get_details("isim");
+            if( $giren["ekleme"] == 1 ) $tooltip_data .= " </br> Ekleme Yapıldı";
+
+            $girenler_html .= '<tr>
+                    <td>'.$Parca_Tipi->get_details("isim").'</td>
+                    <td>'.$parca_adi.'</td>
+                    <td>'.$Parca->get_details("aciklama").'</td>
+                    <td>'.$giren["miktar"].' '.$Parca_Tipi->get_details("miktar_olcu_birimi").'</td>
+                    <td title="'.$giren["stok_kodu"].'">'.substr($giren["stok_kodu"], 0, 25).'...</td>
+                    <td><button type="button" onmouseover="Obarey_Tooltip(\'text\', \''.$tooltip_data.'\', this, event)" class="mtbtn minitableico buyutec"></button></td>
+                    </tr>';
+        }
+
+        $personel_html = "";
+        foreach( $this->personel_listele() as $personel ){
+            $Personel = new Personel($personel["personel"] );
+            $personel_html .= '<tr>
+                            <td>'.$Personel->get_details("isim").'</td>
+                            <td>'.substr($personel["is_tanimi"],0, 35).'</td>
+                            <td>'.$personel["baslama"].'</td>
+                            <td>'.$personel["bitis"].'</td>
+                            <td><button type="button" onmouseover="Obarey_Tooltip(\'text\', \''.$personel["is_tanimi"].'\', this, event)" class="mtbtn minitableico buyutec"></button></td>
+                        </tr>';
+
+        }
+
+
+
+        return '<div class="detay-popup">'
+            . '<div class="input-row"><div class="input-col">'  . new Template_Detay_Cont( "Plaka / Kapı No", $this->details["plaka"] . " / " . $this->details["aktif_kapi_no"] ) . '</div>'
+            . '<div class="input-row"><div class="input-col">'  . new Template_Detay_Cont( "Geliş KM", $this->details["gelis_km"] ) . '</div>'
+            . '<div class="input-col">'  . new Template_Detay_Cont( "Giriş Yapan", $Yapan->get_details("isim") ) . '</div>'
+            . '<div class="input-col">'  . new Template_Detay_Cont( "Sürücü", $Surucu->get_details("isim") ) . '</div> </div>'
+            . new Template_Detay_Cont( "Geliş Tarih / Çıkış Tarih ", $this->details["gelis_tarih"] . " / " . $this->details["cikis_tarih"])
+
+
+            . new Template_Detay_Cont( "Şikayet", $this->details["sikayet"] )
+            . new Template_Detay_Cont( "Arıza Tespit", $this->details["ariza_tespit"] )
+            . new Template_Detay_Cont( "Yapılan Onarım", $this->details["yapilan_onarim"] )
+            . new Template_Detay_Cont( "Araç Yıkama / Kalibrasyon Yapıldı", Common::intevha($this->details["arac_yikama"]) . " / " . Common::intevha($this->details["kalibrasyon_yapildi"]) )
+            . '
+            <div class="input-container au ">
+                <label>Giren Parçalar</label>
+                <table class="obarey-table">
+                    <thead>
+                        <tr>
+                            <td>Parça Tipi</td>
+                            <td>Varyant</td>
+                            <td>Açıklama</td>
+                            <td>Miktar</td>
+                            <td>Stok Kodu</td>
+                            <td>Notlar</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        '.$girenler_html.'
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="input-container au ">
+                <label>Çıkan Parçalar</label>
+                <table class="obarey-table">
+                    <thead>
+                        <tr>
+                            <td>Parça Tipi</td>
+                            <td>Varyant</td>
+                            <td>Açıklama</td>
+                            <td>Miktar</td>
+                            <td>Stok Kodu</td>
+                            <td>Durum</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        '.$cikanlar_html.'
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="input-container au ">
+                <label>Personel Detay</label>
+                <table class="obarey-table">
+                    <thead>
+                        <tr>
+                            <td>Personel</td>
+                            <td>İş Tanımı</td>
+                            <td>Başlangıç</td>
+                            <td>Bitiş</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        '.$personel_html.'
+                    </tbody>
+                </table>
+            </div>
+            
+            
+            </div>';
+    }
+
 }

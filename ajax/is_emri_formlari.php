@@ -25,15 +25,9 @@
                         $query = DB::getInstance()->query("SELECT * FROM " . DBT_ISEMRI_FORMLARI . " ORDER BY tarih DESC")->results();
                     }
                     foreach ($query as $form) {
-                        if ($form["durum"] == Is_Emri_Formu::$TASLAK) {
-                            $durum = "Taslak Halinde";
-                            $ico = GitasDT_CSS::$ICO_IEF_GRI;
-                            $color = GitasDT_CSS::$C_BEYAZ;
-                        } else {
-                            $durum = "Tamamlandı";
-                            $ico = GitasDT_CSS::$ICO_TICK_GRI;
-                            $color = GitasDT_CSS::$C_GRI;
-                        }
+                        $durum = "Tamamlandı";
+                        $ico = GitasDT_CSS::$ICO_TICK_GRI;
+                        $color = GitasDT_CSS::$C_GRI;
                         $right_content = array(
                             "text" => $form["tarih"]
                         );

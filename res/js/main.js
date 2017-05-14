@@ -281,6 +281,7 @@ function init_stok_minitable( data ) {
             if( !barkodlu ) barkodlu = true;
             if( item.revize == "1") revize_ico += '<button type="button" class="mtbtn minitableico letrevize"></button>';
             tbody += '<tr data-id="'+item.stok_kodu+'">'+
+                        '<td>'+item.varyant+'</td>'+
                         '<td>'+item.aciklama+'</td>'+
                         '<td title="'+item.stok_kodu+'">'+item.stok_kodu.substr(0, 25)+'...</td>'+
                         '<td>'+revize_ico+'</td>'+
@@ -300,6 +301,7 @@ function init_stok_minitable( data ) {
                     '<thead>'+
                         '<tr>'+
                             '<td>STOK KODU</td>'+
+                            '<td>VARYANT</td>'+
                             '<td>AÇIKLAMA</td>'+
                             '<td></td>'+
                             '<td></td>'+

@@ -522,7 +522,7 @@
     //$GTest->parca_tipi_test();
     //$GTest->parca_test();
     //$GTest->parca_giris_test();
-    $GTest->personel_test();
+    //$GTest->personel_test();
     //$GTest->auto_login_test();
     //$GTest->login_test();
     //$GTest->logout_test();
@@ -533,6 +533,9 @@
     //$GTest->otobus_test();
     //$GTest->marka_model_test();
     //$GTest->satici_firma_test();
+    $P = new Parca_Tipi("GTSPATIPBALATA");
+    echo '<pre>';
+    print_r( $P->barkodsuz_varyantlari_parca_olarak_listele() );
 
 
 

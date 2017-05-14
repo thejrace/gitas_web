@@ -139,6 +139,12 @@ class Parca_Tipi extends Data_Out {
                 }
             }
 
+            // giriş varyanti var cikis varyanti yoksa; hem giriş hem çıkış varyantı tanımlanmış girişleri aliyoruz
+            $girisler = $this->varyantlari_listele(1);
+            if( count($girisler) > 0 && count($output) == 0 ){
+                $output = $girisler;
+            }
+
         }
         return $output;
     }
@@ -158,25 +164,40 @@ class Parca_Tipi extends Data_Out {
 
     // stok.php dt data
     public function parca_tablo_data(){
-
+        $data = array();
+        foreach( $this->parcalari_listele(self::$AKTIF) as $parca ){
+            $Varyant = new Varyant( $parca["varyant_gid"] );
+            $parca_isim = $Varyant->get_details("isim");
+            if( $this->details["tip"] == self::$BARKODSUZ ){
+                $data[] = array(
+                    "aciklama"  => $parca_isim,
+                    "miktar"    => $parca["miktar"] . " " . $this->details["miktar_olcu_birimi"],
+                    "stok_kodu" => $parca["stok_kodu"]
+                );
+            } else {
+                $data[] = array(
+                    "stok_kodu"     => $parca["stok_kodu"],
+                    "varyant"       => $parca_isim,
+                    "aciklama"      => $parca["aciklama"],
+                    "fatura_no"     => $parca["fatura_no"],
+                    "satici_firma"  => $parca["satici_firma"],
+                    "revize"        => $parca["revize"]
+                );
+            }
+        }
+        return $data;
     }
+
+
+
+    public function parcalari_listele( $tip ){
+        return $this->pdo->query("SELECT * FROM " . DBT_PARCALAR . " WHERE parca_tipi = ? && durum = ?", array( $this->details["gid"], $tip ) )->results();
+    }
+
 
     public function girisleri_listele(){
 
     }
-
-    public function cikislari_listele(){
-
-    }
-
-    public function otobus_degisim_plan( $plaka ){
-
-    }
-
-    public function surucu_degisim_plan( $sicil_no ){
-
-    }
-
     public function servisci_degisim_plan( $personel_gid ){
 
     }
@@ -198,6 +219,166 @@ class Parca_Tipi extends Data_Out {
     public function sil( $input ){
         $this->pdo->query("DELETE FROM " . $this->table . " WHERE gid = ?", array( $this->details["gid"] ) );
         $this->return_text = "Parça tipi silindi.";
+    }
+
+    // yapilmis parça girişinin detaylarini alirken kullandigimiz metod
+    // parça giriş içeriklerini listelemez sadece miktar, tarih, gid
+    public function get_girisler(){
+        $output = array();
+        $query = $this->pdo->query("SELECT * FROM " . DBT_PARCALAR . " WHERE parca_tipi = ?", array( $this->details["gid"] ) )->results();
+        if( $this->details["tip"] == Parca_Tipi::$BARKODSUZ ){
+            foreach( $query as $parca_varyant ){
+                $giren_query = $this->pdo->query("SELECT * FROM " . DBT_BARKODSUZ_PARCA_GIRISLERI . " WHERE stok_kodu = ?", array( $parca_varyant["stok_kodu"] ) )->results();
+                foreach( $giren_query as $giris ){
+                    $Parca_Giris = new Parca_Girisi( $giris["parca_giris_gid"] );
+                    if($Parca_Giris->exists()){
+                        if( isset( $output[ $giris["parca_giris_gid"] ] ) ){
+                            $output[ $giris["parca_giris_gid"] ]["miktar"]+= $giris["miktar"];
+                        } else {
+                            $Personel = new Personel( $Parca_Giris->get_details("giris_yapan") );
+                            $output[ $giris["parca_giris_gid"] ] = array(
+                                "miktar"        => $giris["miktar"],
+                                "giris_yapan"   => $Personel->get_details("isim"),
+                                "tarih"         => $Parca_Giris->get_details("tarih")
+                            );
+                        }
+
+                    }
+                }
+            }
+        } else{
+            foreach( $query as $giris ){
+                if( isset( $output[ $giris["parca_giris_gid"] ] ) ){
+                    $output[ $giris["parca_giris_gid"] ]["miktar"]++;
+                } else {
+                    $Parca_Giris = new Parca_Girisi( $giris["parca_giris_gid"] );
+                    if($Parca_Giris->exists()){
+                        $Personel = new Personel( $Parca_Giris->get_details("giris_yapan") );
+                        $output[ $giris["parca_giris_gid"] ] = array(
+                            "miktar"        => 1,
+                            "giris_yapan"   => $Personel->get_details("isim"),
+                            "tarih"         => $Parca_Giris->get_details("tarih")
+                        );
+                    }
+                }
+            }
+        }
+
+        return Common::array_sort_by_column( $output, "tarih", SORT_DESC );
+    }
+
+    // burada cikislar otobuse girenler anlaminda
+    public function get_cikislar(){
+        $output = array();
+        foreach( $this->pdo->query("SELECT * FROM " . DBT_ISEMRI_FORMU_GIRENLER )->results() as $cikis ){
+            $Parca = new Parca( $cikis["stok_kodu"] );
+            if( $Parca->get_details("parca_tipi") == $this->details["gid"] ){
+                if( isset( $output[ $cikis["form_gid"] ] ) ){
+                    $output[ $cikis["form_gid"] ]["miktar"]++;
+                } else {
+                    $Form = new Is_Emri_Formu( $cikis["form_gid"]  );
+                    $output[ $cikis["form_gid"] ] = array(
+                        "miktar"        => 1,
+                        "plaka"         => $Form->get_details("plaka"),
+                        "tarih"         => $Form->get_details("tarih"),
+                        "surucu"        => $Form->get_details("surucu")
+                    );
+                }
+            }
+        }
+
+
+        return Common::array_sort_by_column( $output, "tarih", SORT_DESC );
+    }
+
+    public function otobus_degisim_plan( $plaka ){
+        if( $this->details["tip"] == Parca_Tipi::$BARKODSUZ ){
+            return $this->barkodsuz_degisim_plan( $plaka );
+        } else {
+            return $this->barkodlu_degisim_plan( $plaka );
+        }
+    }
+
+    private function barkodsuz_degisim_plan( $plaka ){
+        $output = array();
+        // barkodsuz parça tipinin her bir varyanti için formları kontrol edicez
+
+        foreach( $this->get_cikislar() as $formgid => $parca ){
+            $Form = new Is_Emri_Formu( $formgid );
+            // parça tipi çıkışlarından girilen plaka olmayanlari dahil etme
+            if( $Form->get_details("plaka") != $plaka ) continue;
+            foreach( $Form->girenleri_listele() as $giren ){
+                $Parca = new Parca( $giren["stok_kodu"] );
+                $varyant_isim = Data_Out::$BOS;
+                if( isset($giren["varyant_gid"] ) ){
+                    $Varyant = new Varyant( $giren["varyant_gid"] );
+                    $Ana_Varyant = new Varyant( $Parca->get_details("varyant_gid") );
+                    $varyant_isim = $Ana_Varyant->get_details("isim") . " - " . $Varyant->get_details("isim");
+                } else {
+                    // giriş - çıkış varyanti olanlar icin parça tipinden varyant kontrolu yapiyoruz
+                    $Parca_Tipi = new Parca_Tipi( $Parca->get_details("parca_tipi"));
+                    if( $Parca_Tipi->get_details("varyantli") == 1 ){
+                        $Ana_Varyant = new Varyant( $Parca->get_details("varyant_gid") );
+                        $varyant_isim = $Ana_Varyant->get_details("isim");
+                    }
+                }
+
+                if( $Parca->get_details("parca_tipi") == $this->details["gid"] ) {
+                    $Surucu = new Personel($Form->get_details("surucu"));
+                    $output[$varyant_isim][] = array(
+                        "tarih"     => $Form->get_details("tarih"),
+                        "km"        => $Form->get_details("gelis_km"),
+                        "surucu"    => $Surucu->get_details("isim"),
+                        "ekleme"    => $giren["ekleme"],
+                        "miktar"    => $giren["miktar"] . " " . $this->details["miktar_olcu_birimi"]
+                    );
+                }
+            }
+        }
+
+        $output["barkodsuz"] = true;
+        return $output;
+    }
+    private function barkodlu_degisim_plan( $plaka ){
+        $output = array();
+        foreach( $this->get_cikislar() as $formgid => $parca ) {
+            $Form = new Is_Emri_Formu($formgid);
+            // parça tipi çıkışlarından girilen plaka olmayanlari dahil etme
+            if ($Form->get_details("plaka") != $plaka) continue;
+            foreach( $Form->girenleri_listele() as $giren ) {
+                $Giren_Parca = new Parca($giren["stok_kodu"]);
+                // barkodluda parça tipinden yakalıyoruz
+                if( $Giren_Parca->get_details("parca_tipi") == $this->details["gid"] ){
+                    $Surucu = new Personel(  $Form->get_details("surucu") );
+                    $output[] = array(
+                        "tarih"     => $Form->get_details("tarih"),
+                        "km"        => $Form->get_details("gelis_km"),
+                        "surucu"    => $Surucu->get_details("isim")
+                    );
+                }
+            }
+        }
+        return $output;
+    }
+
+    private function bazli_istatistik( $baz ){
+        $output = array();
+        foreach( $this->get_cikislar() as $form_id => $form_data ){
+            if( isset( $output[$form_data[$baz]] ) ){
+                $output[$form_data[$baz]]++;
+            } else {
+                $output[$form_data[$baz]] = 1;
+            }
+        }
+        return $output;
+    }
+
+    public function otobus_istatistik(){
+        return $this->bazli_istatistik("plaka");
+    }
+
+    public function surucu_istatistik(){
+        return $this->bazli_istatistik("surucu");
     }
 
     public static function kategori_convert( $kat ){
