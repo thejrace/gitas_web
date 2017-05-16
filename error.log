@@ -1,2 +1,74 @@
 [14-May-2017 22:52:09 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
 [14-May-2017 22:52:18 Europe/Berlin] PHP Fatal error:  Class 'Barkodlu_Parca' not found in C:\xampp\htdocs\gitas_web\ajax\parca.php on line 34
+[15-May-2017 18:54:54 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 18:55:08 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 18:55:38 Europe/Berlin] PHP Fatal error:  Class 'Barkodlu_Parca' not found in C:\xampp\htdocs\gitas_web\ajax\parca.php on line 34
+[15-May-2017 19:39:57 Europe/Berlin] PHP Fatal error:  Call to undefined method Is_Emri_Formu::form_girenleri_listele() in C:\xampp\htdocs\gitas_web\common\class\Otobus.php on line 245
+[15-May-2017 19:40:28 Europe/Berlin] PHP Fatal error:  Class 'Barkodlu_Parca' not found in C:\xampp\htdocs\gitas_web\ajax\parca.php on line 34
+[15-May-2017 19:43:39 Europe/Berlin] PHP Fatal error:  Class 'Barkodlu_Parca' not found in C:\xampp\htdocs\gitas_web\ajax\parca.php on line 34
+[15-May-2017 19:44:12 Europe/Berlin] PHP Fatal error:  Class 'Barkodlu_Parca' not found in C:\xampp\htdocs\gitas_web\ajax\parca.php on line 34
+[15-May-2017 20:03:00 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 20:03:57 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 20:07:05 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 21:18:48 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\yazdirma_tema_is_emri_formu_cikanlar.php on line 21
+[15-May-2017 21:19:32 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\yazdirma_tema_is_emri_formu_cikanlar.php on line 21
+[15-May-2017 21:19:34 Europe/Berlin] PHP Notice:  Undefined index: tip in C:\xampp\htdocs\gitas_web\yazdirma_tema_is_emri_formu_cikanlar.php on line 21
+[15-May-2017 21:51:44 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$insert' (T_VARIABLE) in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 181
+[15-May-2017 21:52:24 Europe/Berlin] PHP Notice:  Undefined index: varyant_gid in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 180
+[15-May-2017 21:52:24 Europe/Berlin] PHP Notice:  Undefined index: varyant_gid in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 180
+[15-May-2017 22:12:10 Europe/Berlin] PHP Catchable fatal error:  Object of class Parca could not be converted to string in C:\xampp\htdocs\gitas_web\common\class\DB.php on line 56
+[15-May-2017 22:15:17 Europe/Berlin] PHP Catchable fatal error:  Object of class Parca could not be converted to string in C:\xampp\htdocs\gitas_web\common\class\DB.php on line 56
+[15-May-2017 22:33:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:43 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:44 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:46 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:47 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:47 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:47 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:47 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:47 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:52 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:52 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:52 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:52 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:52 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:52 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:52 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:52 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:52 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:52 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:33:52 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:35:29 Europe/Berlin] PHP Notice:  Undefined variable: GIRIS_FLAG in C:\xampp\htdocs\gitas_web\inc\init.php on line 24
+[15-May-2017 22:36:10 Europe/Berlin] PHP Notice:  Undefined variable: GIRIS_FLAG in C:\xampp\htdocs\gitas_web\inc\init.php on line 24
+[15-May-2017 22:36:10 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:38:42 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[15-May-2017 22:53:50 Europe/Berlin] PHP Notice:  Undefined index: plaka in C:\xampp\htdocs\gitas_web\common\class\Otobus.php on line 134
+[16-May-2017 10:12:08 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[16-May-2017 10:21:08 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[16-May-2017 10:37:56 Europe/Berlin] PHP Notice:  Undefined variable: TITLE in C:\xampp\htdocs\gitas_web\inc\header.php on line 72
+[16-May-2017 12:35:57 Europe/Berlin] PHP Notice:  Undefined index: parent_varyant in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 175
+[16-May-2017 12:35:57 Europe/Berlin] PHP Notice:  Undefined index: parent_varyant in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 175
+[16-May-2017 12:35:57 Europe/Berlin] PHP Notice:  Undefined index: parent_varyant in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 175
+[16-May-2017 12:35:57 Europe/Berlin] PHP Notice:  Undefined index: parent_varyant in C:\xampp\htdocs\gitas_web\common\class\Is_Emri_Formu.php on line 175
+[16-May-2017 13:16:09 Europe/Berlin] PHP Catchable fatal error:  Object of class Parca could not be converted to string in C:\xampp\htdocs\gitas_web\common\class\DB.php on line 56

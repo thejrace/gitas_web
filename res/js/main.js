@@ -292,7 +292,7 @@ function init_stok_minitable( data ) {
             tbody += '<tr data-id="'+item.stok_kodu+'">'+
                 '<td>'+item.aciklama+'</td>'+
                 '<td title="'+item.miktar+'">'+item.miktar+'</td>'+
-                '<td><button type="button" class="mtbtn minitableico buyutec" btn-role="mtparcadata"></button></td>'+
+                '<td><button type="button" class="mtbtn minitableico" ></button></td>'+
                 '</tr>';
         }
     }
@@ -300,9 +300,9 @@ function init_stok_minitable( data ) {
         return '<div style="background:#3d3d3d;" class="minitable-container"><table class="minitable">'+
                     '<thead>'+
                         '<tr>'+
-                            '<td>STOK KODU</td>'+
                             '<td>VARYANT</td>'+
                             '<td>AÇIKLAMA</td>'+
+                            '<td>STOK KODU</td>'+
                             '<td></td>'+
                             '<td></td>'+
                         '</tr>'+

@@ -5,7 +5,10 @@
 //	var_dump(Session::get("test"));
 //	var_dump(Session::get("test2"));
 
+
+
 	require 'inc/header.php';
+
 
 ?>
 

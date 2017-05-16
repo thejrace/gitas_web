@@ -30,15 +30,13 @@
         switch( Input::get("req") ){
 
             case 'parca_detay':
+                // sadece barkodlu parçada var
                 if( in_array( Aktiviteler::PARCA_TIPI_ALT_STOK_DETAY, $KULLANICI_IZINLER ) ) {
-                    $Parca = new Barkodlu_Parca(Input::get("stok_kodu"));
-                    if (!$Parca->exists()) {
-                        $Parca = new Barkodsuz_Parca(Input::get("stok_kodu"));
-                        if (!$Parca->exists()) {
-                            $OK = 0;
-                        }
+                    $Parca = new Parca( Input::get("stok_kodu") );
+                    if( $Parca->exists() ){
+                        $DATA = $Parca->detay_html();
                     }
-                    $DATA = $Parca->detay_html();
+
                     $TEXT = $Parca->get_return_text();
                 }
 

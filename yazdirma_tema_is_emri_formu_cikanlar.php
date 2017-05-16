@@ -18,10 +18,28 @@
 
     $CIKANLAR = array();
     foreach( $Form->form_cikanlari_listele() as $cikan ){
-        if( $cikan["tip"] == Parca_Tipi::$BARKODLU ){
-            $Parca = new Barkodlu_Parca( $cikan["stok_kodu"] );
-            $Parca_Tipi = new Parca_Tipi( $Parca->get_details("tip"));
-            $CIKANLAR[] = QR_Output::olustur( $cikan["stok_kodu"], $Parca_Tipi->get_details("isim"), $Parca->get_details("aciklama") );
+        $Parca = new Parca( $cikan["stok_kodu"] );
+        $varyant = "";
+
+        if( !isset($cikan["varyant_gid"] ) && !isset($cikan["parent_varyant"] ) ) {
+            $Ana_Varyant = new Varyant( $Parca->get_details("varyant_gid") );
+            $varyant = $Ana_Varyant->get_details("isim");
+        } else {
+            if( isset($cikan["parent_varyant"]) ){
+                $Ana_Varyant = new Varyant($cikan["parent_varyant"] );
+                $varyant = $Ana_Varyant->get_details("isim");
+            }
+            if( isset($cikan["varyant_gid"])){
+                $Alt_Varyant = new Varyant( $cikan["varyant_gid"] );
+                $varyant .= " - " . $Alt_Varyant->get_details("isim");
+            }
+        }
+
+        $Parca_Tipi = new Parca_Tipi( $Parca->get_details("parca_tipi"));
+        if( $Parca_Tipi->get_details("tip") == Parca_Tipi::$BARKODLU ){
+
+
+            $CIKANLAR[] = QR_Output::olustur( $cikan["stok_kodu"], $Parca_Tipi->get_details("isim"), $varyant );
         }
     }
 

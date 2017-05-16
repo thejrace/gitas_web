@@ -36,13 +36,13 @@
                         $color = GitasDT_CSS::$C_BEYAZ;
                         $miktar = 0;
                         $miktar_str = "";
-                        if( $parca_tipi["tip"] == Parca_Tipi::$BARKODSUZ ){
-                            $stok_query = DB::getInstance()->query("SELECT * FROM " . DBT_PARCALAR . " WHERE parca_tipi = ? && durum = ?", array($parca_tipi["gid"], Parca_Tipi::$AKTIF))->results();
-                            foreach( $stok_query as $parca ){
-                                $miktar += $parca["miktar"];
-                                $miktar_str = $miktar . " " . $parca_tipi["miktar_olcu_birimi"];
-                            }
+
+                        $stok_query = DB::getInstance()->query("SELECT * FROM " . DBT_PARCALAR . " WHERE parca_tipi = ? && durum = ?", array($parca_tipi["gid"], Parca_Tipi::$AKTIF))->results();
+                        foreach( $stok_query as $parca ){
+                            $miktar += $parca["miktar"];
+                            $miktar_str = $miktar . " " . $parca_tipi["miktar_olcu_birimi"];
                         }
+
                         if ($miktar <= 0 || ($parca_tipi["kritik_seviye_limiti"] > 0 && $parca_tipi["kritik_seviye_limiti"] > $miktar)) {
                             $color = GitasDT_CSS::$C_KIRMIZI;
                             $right_content_var = true;

@@ -134,6 +134,11 @@
 			return $query_syn;
 		}
 
+        public static function strtoupper_TR($str){
+            $str = str_replace( array("i", "ı", "ü", "ğ", "ş", "ö", "ç"),  array("İ", "I", "Ü", "Ğ", "Ş", "Ö", "Ç"),  $str );
+            return strtoupper($str);
+        }
+
 		public static function array_php_to_js( $var_name, $array ){
 			$c = 1;
 			$js = "var ".$var_name." = [";

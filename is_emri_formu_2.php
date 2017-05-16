@@ -7,24 +7,24 @@
 
     $KISAYOL_PARCALAR = array(
         "Balata" => array(
-            "Sağ Ön"        => array( "stok_kodu" => "GTSPATIPBALATABScE4L1mEaczeun18", "varyant_gid" => "GTSVARYONK3Al2YWb7O74WcP" ),
-            "Sol Ön"        => array( "stok_kodu" => "GTSPATIPBALATABSeBVdlvZPi9sN4a1", "varyant_gid" => "GTSVARYON1QbZKLQ4PE1QulI"),
-            "Sağ Arka"      => array( "stok_kodu" => "GTSPATIPBALATABScE4L1mEaczeun18", "varyant_gid" => "GTSVARYARKAmYejSdthZ52WxAv"),
-            "Sol Arka"      => array( "stok_kodu" => "GTSPATIPBALATABSeBVdlvZPi9sN4a1", "varyant_gid" => "GTSVARYARKAUramlUZWLB9WfKu"),
+            "Sağ Ön"        => array( "stok_kodu" => "GTSPATIPBALATABSjXQ8sjdaCtoQevz", "varyant_gid" => "GTSVARYONK3Al2YWb7O74WcP" ),
+            "Sol Ön"        => array( "stok_kodu" => "GTSPATIPBALATABS1i1u1f6mH5lTofP", "varyant_gid" => "GTSVARYON1QbZKLQ4PE1QulI"),
+            "Sağ Arka"      => array( "stok_kodu" => "GTSPATIPBALATABSjXQ8sjdaCtoQevz", "varyant_gid" => "GTSVARYARKAmYejSdthZ52WxAv"),
+            "Sol Arka"      => array( "stok_kodu" => "GTSPATIPBALATABS1i1u1f6mH5lTofP", "varyant_gid" => "GTSVARYARKAUramlUZWLB9WfKu"),
         ),
         "Yağ" => array(
-            "Diferansiyel"  => "GTSPATIPYAGBSpmthG8MzqN5mCW7",
-            "Motor"         => "GTSPATIPYAGBSl4haYynZvsfT3ZJ",
-            "Şanzıman"      => "GTSPATIPYAGBSdd8UWwGRPcTZfIR",
-            "Direksiyon"    => "GTSPATIPYAGBSZHD7iEvMCXCkOyB",
-            "Gres"          => "GTSPATIPYAGBSudWvtF5X0wr2iBY",
+            "Diferansiyel"  => "GTSPATIPYAGBS7114vbdL03HTQtr",
+            "Motor"         => "GTSPATIPYAGBSZs1zRvJHd0WyppH",
+            "Şanzıman"      => "GTSPATIPYAGBSPXTmlji1upXSR0b",
+            "Direksiyon"    => "GTSPATIPYAGBS4INSnQQ1oYZiei4",
+            "Gres"          => "GTSPATIPYAGBSIuxpIgURh79MRas",
             "Sıvı Gres"     => "GTSPATIPYAGBSRcSbm2lrma7PjFo"
         ),
         "Muhtelif" => array(
-            "Antifriz"      => "GTSPATIPANTIFIRIZBSlIcM8vW0wEDKCm8",
-            "Balata Spreyi" => "GTSPATIPBALATASPREYIBSzQHQ1HVgFl5unJN",
-            "Bant"          => "GTSPATIPBANTBSYkY2wkSBzKgTr5d",
-            "Silikon"       => "GTSPATIPSILIKONBSgtk7OO7GQJyyz5D"
+            "Antifriz"      => "GTSPATIPANTIFIRIZBScgYT2MKIpZ5khuJ",
+            "Balata Spreyi" => "GTSPATIPBALATASPREYIBSkXJbmJ0tdz1iCNf",
+            "Bant"          => "GTSPATIPBANTBS67nSRTegX496eCJ",
+            "Silikon"       => "GTSPATIPSILIKONBSKNfErriJrNMplz1"
         )
     );
 
@@ -695,7 +695,7 @@
                 this.geri_btn = $("#form_geri");
 
                 this.sayfa_degistir(0);
-                this.ileri_btn.attr("disabled", true);
+                //this.ileri_btn.attr("disabled", true);
 
                 var kisayol_adim = $("[index='"+2+"']");
 
@@ -794,6 +794,7 @@
             this.ref_id = options.ref_id;
             this.durum = options.durum;
             this.ok = options.ok;
+            this.parent_varyant = options.parent_varyant;
         };
 
         function kaydet( t ){
@@ -927,7 +928,8 @@
                                 ref: item.ref,
                                 stok_kodu: item.stok_kodu,
                                 durum: item.durum,
-                                varyant_gid: item.varyant_gid
+                                varyant_gid: item.varyant_gid,
+                                parent_varyant_gid: item.parent_varyant
                             }
                         } else {
                             // stokta olmayan parça
@@ -936,7 +938,8 @@
                                 stok_kodu: item.stok_kodu,
                                 aciklama: item.aciklama,
                                 durum: item.durum,
-                                varyant_gid: item.varyant_gid
+                                varyant_gid: item.varyant_gid,
+                                parent_varyant_gid: item.parent_varyant
                             }
                         }
                     }
@@ -1023,7 +1026,7 @@
             });
 
 
-            $("#plaka").keyup(debounce(function(){
+            /*$("#plaka").keyup(debounce(function(){
                 if( FORM.plaka_girildi ){
                     if( !confirm("Eğer plakayı değiştirirseniz parça giriş - çıkışları sıfırlanacaktır. Emin misiniz?") ){
                         $(this).val( FORM.plaka );
@@ -1055,7 +1058,7 @@
                         }
                     });
                 }
-            }, 500, false));
+            }, 500, false));*/
 
             $("#parca_tipi").change(function(){
                var _this = $(this),
@@ -1117,6 +1120,7 @@
                             }
                             _this.attr("ok", "1")
                                 .attr("varyant", res.data.parca.varyant)
+                                .attr("varyant_gid", res.data.parca.varyant_gid)
                                 .attr("aciklama", res.data.parca.aciklama)
                                 .attr("firma", res.data.parca.firma)
                                 .attr("stoga_giris_tarihi", res.data.parca.tarih);
@@ -1168,7 +1172,7 @@
                     val = barkod.val(),
                     parca_tipi  = barkod.attr("parca_tipi"),
                     varyant = barkod.attr("varyant"),
-                    varyant_gid = "YOK";
+                    varyant_gid = "[YOK]";
                 if( barkod.attr("ok") == "1" ){
                     if( FORM.giren_parcalar[val] != undefined ){
                         alert("Bu parça zaten girildi!");
@@ -1227,8 +1231,10 @@
                         FORM.cikan_parcalar[val] = new Cikan_Parca({
                             elem: $(".cikislar-cont [stok_kodu='"+val+"']"),
                             ok: Cikan_Parca_Durum.BILGI_YOK,
+                            parent_varyant: barkod.attr("varyant_gid"),
                             ref_id: val
                         });
+                        console.log(barkod.attr("varyant_gid"));
                         $(".parca-giris-eklenenler").append('<tr>'+
                                 '<td>'+parca_tipi+'</td>'+
                                 '<td>'+varyant+'</td>'+
@@ -1465,8 +1471,10 @@
 
             $(document).on("click", ".cikandurum", function(){
                 var _this = $(this),
-                    _ref = $("#giris_ref").val(), // giren parcanin stok kodu
+                    _giris_ref_elem = $("#giris_ref"),
+                    _ref = _giris_ref_elem.val(), // giren parcanin stok kodu
                     _sk = _this.parent().parent().attr("data-id"), // cikan parcanin stok kodu
+                    _varyant_gid = _giris_ref_elem.attr("varyant_gid"),
                     _durum;
                 if( _this.hasClass("letrevize") ){
                     _durum = "R";
@@ -1478,6 +1486,7 @@
                 $(".cikislar-cont").find("[stok_kodu='"+_ref+"']").find(".obareycb-container").removeClass("selected").attr("value", 0);
                 FORM.cikan_parcalar[_ref].durum = _durum;
                 FORM.cikan_parcalar[_ref].ref = _ref;
+                FORM.cikan_parcalar[_ref].varyant_gid = _varyant_gid; // alt varyant
                 FORM.cikan_parcalar[_ref].stok_kodu = _sk; // cikan parcanin stok kodunu yapistir
                 FORM.cikan_parcalar[_ref].ok = Cikan_Parca_Durum.PARCA_VAR;
                 FORM.cikan_parcalar[_ref].elem.removeClass("bok");
@@ -1495,10 +1504,12 @@
                     delete FORM.cikan_parcalar[_ref].stok_kodu;
                     FORM.cikan_parcalar[_ref].ok = Cikan_Parca_Durum.PARCA_YOK;
                     FORM.cikan_parcalar[_ref].elem.removeClass("bok");
+                    FORM.cikan_parcalar[_ref].varyant_gid = "YOK";
                     FORM.cikan_parcalar[_ref].elem.addClass("ok");
                     FORM.cikan_parcalar[_ref].elem.find(".state").html("Parça Çıkmadı!");
                 } else {
                     FORM.cikan_parcalar[_ref].ok = Cikan_Parca_Durum.BILGI_YOK;
+                    FORM.cikan_parcalar[_ref].varyant_gid = "YOK";
                     FORM.cikan_parcalar[_ref].elem.addClass("bok");
                     FORM.cikan_parcalar[_ref].elem.find(".state").html("Bilgi yok!");
                 }

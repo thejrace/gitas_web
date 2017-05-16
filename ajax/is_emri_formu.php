@@ -32,14 +32,17 @@ if( $_POST ){
                 if( $Parca_Tipi->get_details("isim") == $_POST["parca_tipi"] && $Parca_Tipi->get_details("tip") == Parca_Tipi::$BARKODLU ){
                     $Parca_Giris = new Parca_Girisi( $Parca->get_details("parca_giris_gid") );
                     $Firma = new Satici_Firma( $Parca->get_details("satici_firma") );
-                    $varyant = "YOK";
-                    if( $Parca_Tipi->get_details("varyantli") ){
+                    $varyant = Data_Out::$BOS;
+                    $varyant_gid = Data_Out::$BOS;
+                    if( $Parca_Tipi->get_details("varyantli") != Data_Out::$BOS ){
                         $Varyant = new Varyant($Parca->get_details("varyant_gid"));
                         $varyant = $Varyant->get_details("isim");
+                        $varyant_gid = $Parca->get_details("varyant_gid");
                     }
                     $DATA["parca"] = array(
                         "parca_tipi" => $Parca_Tipi->get_details("isim") ,
                         "varyant"    => $varyant,
+                        "varyant_gid"  => $varyant_gid,
                         "aciklama"   => $Parca->get_details("aciklama"),
                         "firma"      => $Firma->get_details("isim"),
                         "tarih"      => $Parca_Giris->get_details("tarih")

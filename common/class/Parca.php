@@ -110,6 +110,44 @@ class Parca{
         return $this->details;
     }
 
+    public function detay_html(){
+        $Parca_Tipi = new Parca_Tipi( $this->details["parca_tipi"] );
+        if( $this->details["parca_giris_gid"] == "0" ){
+            $pgiris = "Araçtan çıkıp stoğa eklenmiş.";
+        } else {
+            $Parca_Giris = new Parca_Girisi($this->details["parca_giris_gid"] );
+            $pgiris = $Parca_Giris->get_details("tarih");
+        }
+        $varyant = Data_out::$BOS;
+        if( isset($this->details["varyant_gid"] ) ){
+            $Varyant = new Varyant( $this->details["varyant_gid"] );
+            $varyant = $Varyant->get_details("isim");
+        }
+        if( $this->details["satici_firma"] == "0" ){
+            $sfirma = "Bilgi yok.";
+        } else{
+            $Firma = new Satici_Firma( $this->details["satici_firma"] );
+            $sfirma = $Firma->get_details("isim");
+        }
+        $statdata = array(
+            array(
+                "header" => "PARÇA DETAYLARI",
+                "items"  => array(
+                    array( "key" => "PARÇA TİPİ", "val" => $Parca_Tipi->get_details("isim")  ),
+                    array( "key" => "STOK KODU", "val" => $this->details["stok_kodu"] ),
+                    array( "key" => "VARYANT", "val" => $varyant ),
+                    array( "key" => "AÇIKLAMA", "val" => $this->details["aciklama"] ),
+                    array( "key" => "STOĞA GİRİŞ TARİHİ", "val" => $pgiris ),
+                    array( "key" => "FATURA NO", "val" => $this->details["fatura_no"] ),
+                    array( "key" => "ALINAN FİRMA", "val" => $sfirma ),
+                    array( "key" => "GARANTİ BAŞLANGIÇ", "val" => $this->details["garanti_baslangic"] ),
+                    array( "key" => "GARANTİ SÜRESİ", "val" => $this->details["garanti_suresi"] ),
+                )
+            )
+        );
+        return Popup_Stats::init( $statdata );
+    }
+
     public function get_return_text(){
         return $this->return_text;
     }

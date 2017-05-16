@@ -3,16 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="353c8a31-e1ee-427f-9b2e-566d6143b60b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/is_emri_formlari.php" afterPath="$PROJECT_DIR$/ajax/is_emri_formlari.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/is_emri_formu.php" afterPath="$PROJECT_DIR$/ajax/is_emri_formu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/parca.php" afterPath="$PROJECT_DIR$/ajax/parca.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/parca_tipi_2.php" afterPath="$PROJECT_DIR$/ajax/parca_tipi_2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/GitasDT_CSS.php" afterPath="$PROJECT_DIR$/common/class/GitasDT_CSS.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/Common.php" afterPath="$PROJECT_DIR$/common/class/Common.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/Is_Emri_Formu.php" afterPath="$PROJECT_DIR$/common/class/Is_Emri_Formu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/Parca.php" afterPath="$PROJECT_DIR$/common/class/Parca.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/class/Parca_Tipi.php" afterPath="$PROJECT_DIR$/common/class/Parca_Tipi.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/error.log" afterPath="$PROJECT_DIR$/error.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/init.php" afterPath="$PROJECT_DIR$/inc/init.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/is_emri_formu_2.php" afterPath="$PROJECT_DIR$/is_emri_formu_2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parca_tipi.php" afterPath="$PROJECT_DIR$/parca_tipi.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/js/main.js" afterPath="$PROJECT_DIR$/res/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yazdirma_tema_is_emri_formu_cikanlar.php" afterPath="$PROJECT_DIR$/yazdirma_tema_is_emri_formu_cikanlar.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -174,36 +178,61 @@
       <file leaf-file-name="Is_Emri_Formu.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/class/Is_Emri_Formu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="170" column="37" lean-forward="false" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="37" />
+            <state relative-caret-position="560">
+              <caret line="251" column="13" lean-forward="true" selection-start-line="244" selection-start-column="12" selection-end-line="251" selection-end-column="13" />
               <folding>
-                <marker date="1494763445789" expanded="true" signature="8267:8333" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
-                <marker date="1494763445789" expanded="true" signature="8467:8533" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_CIKANLAR}" />
-                <marker date="1494763445789" expanded="true" signature="8661:8733" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_PERSONEL_DETAY}" />
-                <marker date="1494763445789" expanded="true" signature="9668:10274" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="10376:10993" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="11207:11593" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="12756:12784" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="12756:12892" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="12756:13332" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="13531:14021" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="14079:17337" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="14119:17337" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="15315:15940" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="15406:15921" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="15434:15796" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="15463:15767" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="15824:15896" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="15999:16661" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="16090:16642" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="16118:16517" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="16147:16488" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="16545:16617" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="16720:17292" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="16811:17273" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="16839:17148" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="16868:17119" ph="..." />
-                <marker date="1494763445789" expanded="true" signature="17176:17248" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="10788:10854" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+                <marker date="1494932967578" expanded="true" signature="10988:11054" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_CIKANLAR}" />
+                <marker date="1494932967578" expanded="true" signature="11182:11254" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_PERSONEL_DETAY}" />
+                <marker date="1494932967578" expanded="true" signature="12627:12655" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="12627:13275" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="13377:14036" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="14250:14678" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="15841:15869" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="15841:15977" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="15841:16417" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="16616:17106" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="17164:20710" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="17204:20710" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="18400:19025" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="18491:19006" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="18519:18881" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="18548:18852" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="18909:18981" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="19084:19746" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="19175:19727" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="19203:19602" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="19232:19573" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="19630:19702" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="19805:20377" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="19896:20358" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="19924:20233" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="19953:20204" ph="..." />
+                <marker date="1494932967578" expanded="true" signature="20261:20333" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yazdirma_tema_is_emri_formu_cikanlar.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/yazdirma_tema_is_emri_formu_cikanlar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="is_emri_formu_2.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/is_emri_formu_2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="1004" column="19" lean-forward="false" selection-start-line="1004" selection-start-column="19" selection-end-line="1004" selection-end-column="19" />
+              <folding>
+                <marker date="1494930867672" expanded="true" signature="1517:1531" ph="SELECT * FRO... ${DBT_PARCA_TIPLERI}" />
+                <marker date="1494930867672" expanded="true" signature="2495:2546" ph="SELECT * FRO... ${DBT_PERSONEL}" />
+                <marker date="1494930867672" expanded="true" signature="2634:2685" ph="SELECT * FRO... ${DBT_PERSONEL}" />
               </folding>
             </state>
           </provider>
@@ -212,42 +241,60 @@
       <file leaf-file-name="Parca_Tipi.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/class/Parca_Tipi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+            <state relative-caret-position="551">
+              <caret line="143" column="51" lean-forward="false" selection-start-line="143" selection-start-column="51" selection-end-line="143" selection-end-column="51" />
               <folding>
                 <element signature="n#get_duzenle_form#0;n#Parca_Tipi#0;n#!!top" expanded="false" />
-                <marker date="1494795563517" expanded="true" signature="5174:5241" ph="SELECT * FRO... ${DBT_VARYANT_TANIMLAMALAR}" />
-                <marker date="1494795563517" expanded="true" signature="5678:5745" ph="SELECT * FRO... ${DBT_VARYANT_TANIMLAMALAR}" />
-                <marker date="1494795563517" expanded="true" signature="6836:6903" ph="SELECT * FRO... ${DBT_VARYANT_TANIMLAMALAR}" />
-                <marker date="1494795563517" expanded="true" signature="7072:7085" ph="SELECT * FRO... " />
-                <marker date="1494795563517" expanded="true" signature="7072:7086" ph="SELECT * FRO... ${DBT_PARCALAR}" />
-                <marker date="1494795563517" expanded="true" signature="7072:7146" ph="SELECT * FRO... ${DBT_PARCALAR}" />
-                <marker date="1494795563517" expanded="true" signature="8546:8614" ph="SELECT * FRO... ${DBT_PARCALAR}" />
-                <marker date="1494795563517" expanded="true" signature="9608:9654" ph="DELETE FROM " />
-                <marker date="1494795563517" expanded="true" signature="9990:10045" ph="SELECT * FRO... ${DBT_PARCALAR}" />
-                <marker date="1494795563517" expanded="true" signature="10255:10326" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCA_GIRISLERI}" />
-                <marker date="1494795563517" expanded="true" signature="12338:12352" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
-                <marker date="1494795563517" expanded="true" signature="12338:12382" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+                <marker date="1494925044204" expanded="true" signature="5174:5241" ph="SELECT * FRO... ${DBT_VARYANT_TANIMLAMALAR}" />
+                <marker date="1494925044204" expanded="true" signature="5678:5745" ph="SELECT * FRO... ${DBT_VARYANT_TANIMLAMALAR}" />
+                <marker date="1494925044204" expanded="true" signature="6828:6895" ph="SELECT * FRO... ${DBT_VARYANT_TANIMLAMALAR}" />
+                <marker date="1494925044204" expanded="true" signature="7064:7077" ph="SELECT * FRO... " />
+                <marker date="1494925044204" expanded="true" signature="7064:7078" ph="SELECT * FRO... ${DBT_PARCALAR}" />
+                <marker date="1494925044204" expanded="true" signature="7064:7138" ph="SELECT * FRO... ${DBT_PARCALAR}" />
+                <marker date="1494925044204" expanded="true" signature="8543:8611" ph="SELECT * FRO... ${DBT_PARCALAR}" />
+                <marker date="1494925044204" expanded="true" signature="9605:9651" ph="DELETE FROM " />
+                <marker date="1494925044204" expanded="true" signature="9987:10042" ph="SELECT * FRO... ${DBT_PARCALAR}" />
+                <marker date="1494925044204" expanded="true" signature="10252:10323" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCA_GIRISLERI}" />
+                <marker date="1494925044204" expanded="true" signature="12335:12349" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+                <marker date="1494925044204" expanded="true" signature="12335:12379" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.php">
+      <file leaf-file-name="Common.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/class/Common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="535" column="39" lean-forward="false" selection-start-line="535" selection-start-column="25" selection-end-line="535" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="1904">
+              <caret line="136" column="44" lean-forward="false" selection-start-line="136" selection-start-column="31" selection-end-line="136" selection-end-column="44" />
+              <folding>
+                <marker date="1494871611751" expanded="true" signature="728:742" ph="SELECT * FRO... ${$data[&quot;table&quot;]}" />
+                <marker date="1494871611751" expanded="true" signature="8571:8617" ph="SELECT * FRO... ${$table}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parca_tipi.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parca_tipi.php">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+            <state relative-caret-position="378">
+              <caret line="294" column="70" lean-forward="false" selection-start-line="294" selection-start-column="70" selection-end-line="294" selection-end-column="70" />
+              <folding>
+                <marker date="1494870228324" expanded="true" signature="9509:9528" ph="..." />
+                <marker date="1494870228324" expanded="true" signature="11152:11171" ph="..." />
+                <marker date="1494870228324" expanded="true" signature="11732:11751" ph="..." />
+                <marker date="1494870228324" expanded="true" signature="12864:12883" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="is_emri_formu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajax/is_emri_formu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="49" column="72" lean-forward="false" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -256,25 +303,11 @@
       <file leaf-file-name="parca_tipi_2.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajax/parca_tipi_2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="135" column="97" lean-forward="false" selection-start-line="135" selection-start-column="55" selection-end-line="135" selection-end-column="97" />
+            <state relative-caret-position="-821">
+              <caret line="43" column="25" lean-forward="true" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
               <folding>
-                <marker date="1494794843531" expanded="true" signature="1294:1308" ph="SELECT * FRO... ${DBT_PARCA_TIPLERI}" />
-                <marker date="1494794843531" expanded="true" signature="1728:1796" ph="SELECT * FRO... ${DBT_PARCALAR}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parca.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/class/Parca.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1484">
-              <caret line="106" column="62" lean-forward="true" selection-start-line="106" selection-start-column="62" selection-end-line="106" selection-end-column="62" />
-              <folding>
-                <marker date="1494279992637" expanded="true" signature="682:760" ph="SELECT * FRO... ${$this-&gt;table}" />
-                <marker date="1494279992637" expanded="true" signature="878:952" ph="SELECT * FRO... ${$this-&gt;table}" />
-                <marker date="1494279992637" expanded="true" signature="1131:1185" ph="SELECT * FRO... ${$this-&gt;table}" />
+                <marker date="1494878899161" expanded="true" signature="1294:1308" ph="SELECT * FRO... ${DBT_PARCA_TIPLERI}" />
+                <marker date="1494878899161" expanded="true" signature="1649:1717" ph="SELECT * FRO... ${DBT_PARCALAR}" />
               </folding>
             </state>
           </provider>
@@ -288,7 +321,6 @@
       <find>tick</find>
       <find>class=&quot;garn</find>
       <find>form-row</find>
-      <find>varyant_gid</find>
       <find>parca_tipi</find>
       <find>okutun</find>
       <find>popup-barkodlu</find>
@@ -297,6 +329,16 @@
       <find>tip</find>
       <find>ekleme</find>
       <find>varyantlari_listele</find>
+      <find>plaka_girildi</find>
+      <find>varyant_gid</find>
+      <find>cikan_parcalar</find>
+      <find>parent_varyna</find>
+      <find>parent_varyant</find>
+      <find>ref_id</find>
+      <find>parent_v</find>
+      <find>YOK</find>
+      <find>cikis_varyant</find>
+      <find>cikis</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -316,24 +358,27 @@
         <option value="$PROJECT_DIR$/common/class/Active_User.php" />
         <option value="$PROJECT_DIR$/giris.php" />
         <option value="$PROJECT_DIR$/common/class/Login.php" />
-        <option value="$PROJECT_DIR$/inc/init.php" />
         <option value="$PROJECT_DIR$/yazdirma_tema_parca_girisi.php" />
         <option value="$PROJECT_DIR$/ajax/parca_girisi.php" />
-        <option value="$PROJECT_DIR$/ajax/parca.php" />
         <option value="$PROJECT_DIR$/common/class/Data_Out.php" />
-        <option value="$PROJECT_DIR$/ajax/is_emri_formu.php" />
         <option value="$PROJECT_DIR$/common/class/Parca_Girisi.php" />
-        <option value="$PROJECT_DIR$/common/class/Parca.php" />
         <option value="$PROJECT_DIR$/ajax/is_emri_formlari.php" />
+        <option value="$PROJECT_DIR$/common/class/GitasDT_CSS.php" />
+        <option value="$PROJECT_DIR$/error.log" />
+        <option value="$PROJECT_DIR$/parca_tipi.php" />
+        <option value="$PROJECT_DIR$/res/js/main.js" />
+        <option value="$PROJECT_DIR$/ajax/parca.php" />
+        <option value="$PROJECT_DIR$/common/class/Parca.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/common/class/Common.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/ajax/parca_tipi_2.php" />
+        <option value="$PROJECT_DIR$/ajax/is_emri_formu.php" />
+        <option value="$PROJECT_DIR$/inc/init.php" />
+        <option value="$PROJECT_DIR$/common/class/Parca_Tipi.php" />
         <option value="$PROJECT_DIR$/is_emri_formu_2.php" />
         <option value="$PROJECT_DIR$/common/class/Is_Emri_Formu.php" />
-        <option value="$PROJECT_DIR$/common/class/GitasDT_CSS.php" />
-        <option value="$PROJECT_DIR$/res/js/main.js" />
-        <option value="$PROJECT_DIR$/error.log" />
-        <option value="$PROJECT_DIR$/ajax/parca_tipi_2.php" />
-        <option value="$PROJECT_DIR$/common/class/Parca_Tipi.php" />
-        <option value="$PROJECT_DIR$/parca_tipi.php" />
-        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/yazdirma_tema_is_emri_formu_cikanlar.php" />
       </list>
     </option>
   </component>
@@ -388,7 +433,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -412,6 +456,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitas_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitas_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitas_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitas_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -449,6 +525,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -541,19 +618,21 @@
       <workItem from="1494148975606" duration="887000" />
       <workItem from="1494235630734" duration="33832000" />
       <workItem from="1494577523723" duration="900000" />
-      <workItem from="1494754863905" duration="15138000" />
+      <workItem from="1494754863905" duration="15633000" />
+      <workItem from="1494867137512" duration="9227000" />
+      <workItem from="1494922409010" duration="6796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73258000" />
+    <option name="totallyTimeSpent" value="89776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17270789" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17590618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14978679" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -585,27 +664,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/varyantlar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="80" column="73" lean-forward="false" selection-start-line="80" selection-start-column="73" selection-end-line="80" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4648">
-          <caret line="332" column="76" lean-forward="false" selection-start-line="332" selection-start-column="76" selection-end-line="332" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8568">
-          <caret line="612" column="21" lean-forward="false" selection-start-line="612" selection-start-column="21" selection-end-line="612" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ajax/varyantlar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="742">
@@ -649,7 +707,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
+          <folding>
+            <marker date="1494878899161" expanded="true" signature="1294:1308" ph="SELECT * FRO... ${DBT_PARCA_TIPLERI}" />
+            <marker date="1494878899161" expanded="true" signature="1649:1717" ph="SELECT * FRO... ${DBT_PARCALAR}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -742,17 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/Auto_Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1492959008149" expanded="true" signature="403:461" ph="SELECT * FRO... ${DBT_COOKIE_TOKENS}" />
-            <marker date="1492959008149" expanded="true" signature="1468:1526" ph="SELECT * FRO... ${DBT_COOKIE_TOKENS}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cikis.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -791,20 +841,6 @@
         <state relative-caret-position="476">
           <caret line="40" column="93" lean-forward="false" selection-start-line="40" selection-start-column="93" selection-end-line="40" selection-end-column="93" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/giris.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -849,18 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/Otobus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1344">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1492959008180" expanded="true" signature="467:517" ph="SELECT * FRO... ${$this-&gt;table}" />
-            <marker date="1492959008180" expanded="true" signature="840:901" ph="SELECT * FRO... ${$this-&gt;table}" />
-            <marker date="1492959008180" expanded="true" signature="4600:4657" ph="SELECT * FRO... ${DBT_ISEMRI_FORMLARI}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ajax/otobus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-252">
@@ -868,22 +892,6 @@
           <folding>
             <marker date="1493051237186" expanded="true" signature="1501:1515" ph="SELECT * FRO... ${DBT_OTOBUSLER}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/parca.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="33" column="47" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/is_emri_formu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="21" column="55" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -895,20 +903,6 @@
             <marker date="1494277286039" expanded="true" signature="438:485" ph="SELECT * FRO... ${$this-&gt;table}" />
             <marker date="1494277286039" expanded="true" signature="2884:2961" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCA_GIRISLERI}" />
             <marker date="1494277286039" expanded="true" signature="3066:3126" ph="SELECT * FRO... ${DBT_BARKODLU_PARCALAR}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/is_emri_formu_2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2091">
-          <caret line="936" column="56" lean-forward="false" selection-start-line="936" selection-start-column="56" selection-end-line="936" selection-end-column="56" />
-          <folding>
-            <element signature="e#54853#56791#0#HTML" expanded="false" />
-            <element signature="e#56865#59341#0#HTML" expanded="false" />
-            <marker date="1494759959287" expanded="true" signature="1517:1531" ph="SELECT * FRO... ${DBT_PARCA_TIPLERI}" />
-            <marker date="1494759959287" expanded="true" signature="2495:2546" ph="SELECT * FRO... ${DBT_PERSONEL}" />
-            <marker date="1494759959287" expanded="true" signature="2634:2685" ph="SELECT * FRO... ${DBT_PERSONEL}" />
           </folding>
         </state>
       </provider>
@@ -952,24 +946,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="279" column="28" lean-forward="true" selection-start-line="279" selection-start-column="28" selection-end-line="279" selection-end-column="28" />
-          <folding>
-            <marker date="1494772479856" expanded="true" signature="9509:9528" ph="..." />
-            <marker date="1494772479856" expanded="true" signature="11182:11201" ph="..." />
-            <marker date="1494772479856" expanded="true" signature="11762:11781" ph="..." />
-            <marker date="1494772479856" expanded="true" signature="12894:12913" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/class/GitasDT_CSS.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
           <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -989,107 +977,207 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/Parca.php">
+    <entry file="file://$PROJECT_DIR$/parca_tipi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1484">
-          <caret line="106" column="62" lean-forward="true" selection-start-line="106" selection-start-column="62" selection-end-line="106" selection-end-column="62" />
-          <folding>
-            <marker date="1494279992637" expanded="true" signature="682:760" ph="SELECT * FRO... ${$this-&gt;table}" />
-            <marker date="1494279992637" expanded="true" signature="878:952" ph="SELECT * FRO... ${$this-&gt;table}" />
-            <marker date="1494279992637" expanded="true" signature="1131:1185" ph="SELECT * FRO... ${$this-&gt;table}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/error.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="14">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/parca_tipi_2.php">
+    <entry file="file://$PROJECT_DIR$/common/class/Parca.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="135" column="97" lean-forward="false" selection-start-line="135" selection-start-column="55" selection-end-line="135" selection-end-column="97" />
+        <state relative-caret-position="565">
+          <caret line="129" column="50" lean-forward="true" selection-start-line="129" selection-start-column="50" selection-end-line="129" selection-end-column="50" />
           <folding>
-            <marker date="1494794843531" expanded="true" signature="1294:1308" ph="SELECT * FRO... ${DBT_PARCA_TIPLERI}" />
-            <marker date="1494794843531" expanded="true" signature="1728:1796" ph="SELECT * FRO... ${DBT_PARCALAR}" />
+            <marker date="1494870463660" expanded="true" signature="682:760" ph="SELECT * FRO... ${$this-&gt;table}" />
+            <marker date="1494870463660" expanded="true" signature="878:952" ph="SELECT * FRO... ${$this-&gt;table}" />
+            <marker date="1494870463660" expanded="true" signature="1131:1185" ph="SELECT * FRO... ${$this-&gt;table}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/Parca_Tipi.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-          <folding>
-            <element signature="n#get_duzenle_form#0;n#Parca_Tipi#0;n#!!top" expanded="false" />
-            <marker date="1494795563517" expanded="true" signature="5174:5241" ph="SELECT * FRO... ${DBT_VARYANT_TANIMLAMALAR}" />
-            <marker date="1494795563517" expanded="true" signature="5678:5745" ph="SELECT * FRO... ${DBT_VARYANT_TANIMLAMALAR}" />
-            <marker date="1494795563517" expanded="true" signature="6836:6903" ph="SELECT * FRO... ${DBT_VARYANT_TANIMLAMALAR}" />
-            <marker date="1494795563517" expanded="true" signature="7072:7085" ph="SELECT * FRO... " />
-            <marker date="1494795563517" expanded="true" signature="7072:7086" ph="SELECT * FRO... ${DBT_PARCALAR}" />
-            <marker date="1494795563517" expanded="true" signature="7072:7146" ph="SELECT * FRO... ${DBT_PARCALAR}" />
-            <marker date="1494795563517" expanded="true" signature="8546:8614" ph="SELECT * FRO... ${DBT_PARCALAR}" />
-            <marker date="1494795563517" expanded="true" signature="9608:9654" ph="DELETE FROM " />
-            <marker date="1494795563517" expanded="true" signature="9990:10045" ph="SELECT * FRO... ${DBT_PARCALAR}" />
-            <marker date="1494795563517" expanded="true" signature="10255:10326" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCA_GIRISLERI}" />
-            <marker date="1494795563517" expanded="true" signature="12338:12352" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
-            <marker date="1494795563517" expanded="true" signature="12338:12382" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/class/Is_Emri_Formu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="170" column="37" lean-forward="false" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="37" />
-          <folding>
-            <marker date="1494763445789" expanded="true" signature="8267:8333" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
-            <marker date="1494763445789" expanded="true" signature="8467:8533" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_CIKANLAR}" />
-            <marker date="1494763445789" expanded="true" signature="8661:8733" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_PERSONEL_DETAY}" />
-            <marker date="1494763445789" expanded="true" signature="9668:10274" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="10376:10993" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="11207:11593" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="12756:12784" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="12756:12892" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="12756:13332" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="13531:14021" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="14079:17337" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="14119:17337" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="15315:15940" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="15406:15921" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="15434:15796" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="15463:15767" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="15824:15896" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="15999:16661" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="16090:16642" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="16118:16517" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="16147:16488" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="16545:16617" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="16720:17292" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="16811:17273" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="16839:17148" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="16868:17119" ph="..." />
-            <marker date="1494763445789" expanded="true" signature="17176:17248" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parca_tipi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="154">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="535" column="39" lean-forward="false" selection-start-line="535" selection-start-column="25" selection-end-line="535" selection-end-column="39" />
+        <state relative-caret-position="691">
+          <caret line="534" column="34" lean-forward="false" selection-start-line="534" selection-start-column="34" selection-end-line="534" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/class/Otobus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="44" column="11" lean-forward="false" selection-start-line="44" selection-start-column="11" selection-end-line="51" selection-end-column="49" />
+          <folding>
+            <marker date="1492959008180" expanded="true" signature="467:517" ph="SELECT * FRO... ${$this-&gt;table}" />
+            <marker date="1492959008180" expanded="true" signature="840:901" ph="SELECT * FRO... ${$this-&gt;table}" />
+            <marker date="1492959008180" expanded="true" signature="4600:4657" ph="SELECT * FRO... ${DBT_ISEMRI_FORMLARI}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/parca.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="36" column="53" lean-forward="false" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/class/Common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="136" column="44" lean-forward="false" selection-start-line="136" selection-start-column="31" selection-end-line="136" selection-end-column="44" />
+          <folding>
+            <marker date="1494871611751" expanded="true" signature="728:742" ph="SELECT * FRO... ${$data[&quot;table&quot;]}" />
+            <marker date="1494871611751" expanded="true" signature="8571:8617" ph="SELECT * FRO... ${$table}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/giris.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/class/Auto_Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492959008149" expanded="true" signature="403:461" ph="SELECT * FRO... ${DBT_COOKIE_TOKENS}" />
+            <marker date="1492959008149" expanded="true" signature="1468:1526" ph="SELECT * FRO... ${DBT_COOKIE_TOKENS}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="294" column="70" lean-forward="false" selection-start-line="294" selection-start-column="70" selection-end-line="294" selection-end-column="70" />
+          <folding>
+            <marker date="1494870228324" expanded="true" signature="9509:9528" ph="..." />
+            <marker date="1494870228324" expanded="true" signature="11152:11171" ph="..." />
+            <marker date="1494870228324" expanded="true" signature="11732:11751" ph="..." />
+            <marker date="1494870228324" expanded="true" signature="12864:12883" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/parca_tipi_2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-821">
+          <caret line="43" column="25" lean-forward="true" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding>
+            <marker date="1494878899161" expanded="true" signature="1294:1308" ph="SELECT * FRO... ${DBT_PARCA_TIPLERI}" />
+            <marker date="1494878899161" expanded="true" signature="1649:1717" ph="SELECT * FRO... ${DBT_PARCALAR}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/is_emri_formu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="49" column="72" lean-forward="false" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/is_emri_formu_2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="1004" column="19" lean-forward="false" selection-start-line="1004" selection-start-column="19" selection-end-line="1004" selection-end-column="19" />
+          <folding>
+            <marker date="1494930867672" expanded="true" signature="1517:1531" ph="SELECT * FRO... ${DBT_PARCA_TIPLERI}" />
+            <marker date="1494930867672" expanded="true" signature="2495:2546" ph="SELECT * FRO... ${DBT_PERSONEL}" />
+            <marker date="1494930867672" expanded="true" signature="2634:2685" ph="SELECT * FRO... ${DBT_PERSONEL}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/class/Parca_Tipi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="143" column="51" lean-forward="false" selection-start-line="143" selection-start-column="51" selection-end-line="143" selection-end-column="51" />
+          <folding>
+            <element signature="n#get_duzenle_form#0;n#Parca_Tipi#0;n#!!top" expanded="false" />
+            <marker date="1494925044204" expanded="true" signature="5174:5241" ph="SELECT * FRO... ${DBT_VARYANT_TANIMLAMALAR}" />
+            <marker date="1494925044204" expanded="true" signature="5678:5745" ph="SELECT * FRO... ${DBT_VARYANT_TANIMLAMALAR}" />
+            <marker date="1494925044204" expanded="true" signature="6828:6895" ph="SELECT * FRO... ${DBT_VARYANT_TANIMLAMALAR}" />
+            <marker date="1494925044204" expanded="true" signature="7064:7077" ph="SELECT * FRO... " />
+            <marker date="1494925044204" expanded="true" signature="7064:7078" ph="SELECT * FRO... ${DBT_PARCALAR}" />
+            <marker date="1494925044204" expanded="true" signature="7064:7138" ph="SELECT * FRO... ${DBT_PARCALAR}" />
+            <marker date="1494925044204" expanded="true" signature="8543:8611" ph="SELECT * FRO... ${DBT_PARCALAR}" />
+            <marker date="1494925044204" expanded="true" signature="9605:9651" ph="DELETE FROM " />
+            <marker date="1494925044204" expanded="true" signature="9987:10042" ph="SELECT * FRO... ${DBT_PARCALAR}" />
+            <marker date="1494925044204" expanded="true" signature="10252:10323" ph="SELECT * FRO... ${DBT_BARKODSUZ_PARCA_GIRISLERI}" />
+            <marker date="1494925044204" expanded="true" signature="12335:12349" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+            <marker date="1494925044204" expanded="true" signature="12335:12379" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/class/Is_Emri_Formu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="251" column="13" lean-forward="true" selection-start-line="244" selection-start-column="12" selection-end-line="251" selection-end-column="13" />
+          <folding>
+            <marker date="1494932967578" expanded="true" signature="10788:10854" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_GIRENLER}" />
+            <marker date="1494932967578" expanded="true" signature="10988:11054" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_CIKANLAR}" />
+            <marker date="1494932967578" expanded="true" signature="11182:11254" ph="SELECT * FRO... ${DBT_ISEMRI_FORMU_PERSONEL_DETAY}" />
+            <marker date="1494932967578" expanded="true" signature="12627:12655" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="12627:13275" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="13377:14036" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="14250:14678" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="15841:15869" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="15841:15977" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="15841:16417" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="16616:17106" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="17164:20710" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="17204:20710" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="18400:19025" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="18491:19006" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="18519:18881" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="18548:18852" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="18909:18981" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="19084:19746" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="19175:19727" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="19203:19602" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="19232:19573" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="19630:19702" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="19805:20377" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="19896:20358" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="19924:20233" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="19953:20204" ph="..." />
+            <marker date="1494932967578" expanded="true" signature="20261:20333" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yazdirma_tema_is_emri_formu_cikanlar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
           <folding />
         </state>
       </provider>

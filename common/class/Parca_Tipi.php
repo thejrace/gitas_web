@@ -141,7 +141,7 @@ class Parca_Tipi extends Data_Out {
 
             // giriş varyanti var cikis varyanti yoksa; hem giriş hem çıkış varyantı tanımlanmış girişleri aliyoruz
             $girisler = $this->varyantlari_listele(1);
-            if( count($girisler) > 0 && count($output) == 0 ){
+            if( count($girisler) == count($output)  ){
                 $output = $girisler;
             }
 
@@ -162,7 +162,7 @@ class Parca_Tipi extends Data_Out {
         return $output;
     }
 
-    // stok.php dt data
+    // stok.php mini dt data
     public function parca_tablo_data(){
         $data = array();
         foreach( $this->parcalari_listele(self::$AKTIF) as $parca ){

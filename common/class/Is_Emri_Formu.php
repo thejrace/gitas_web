@@ -37,10 +37,28 @@ class Is_Emri_Formu extends Data_Out{
     public function ekle( $input_form_detaylari, $input_personeL_detay, $input_girenler, $input_cikanlar ){
         $this->details["gid"] = Gitas_Hash::hash_olustur(Gitas_Hash::$IS_EMRI_FORMU, array("plaka" => $input_form_detaylari["plaka"]));
         //$this->details["gid"] = $input_form_detaylari["form_gid"];
+        $aktif_kapi_no = Common::strtoupper_TR( $input_form_detaylari["aktif_kapi_no"] );
+        $Otobus = new Otobus( $input_form_detaylari["plaka"]);
+        if( $Otobus->exists() ){
+            $plaka = $Otobus->get_details("plaka");
+        } else {
+            $plaka = Common::strtoupper_TR( $input_form_detaylari["plaka"] );
+            $Otobus->ekle(array(
+                "plaka"             => $plaka,
+                "ruhsat_kapi_kodu"  => $aktif_kapi_no,
+                "aktif_kapi_kodu"   => $aktif_kapi_no,
+                "marka"             => Data_Out::$BOS,
+                "model"             => 0,
+                "model_yili"        => 0,
+                "sahip"             => Data_Out::$BOS,
+                "ogs"               => 0
+            ));
+        }
+
         if (!$this->pdo->insert($this->table, array(
             "gid"                   => $this->details["gid"],
-            "plaka"                 => $input_form_detaylari["plaka"],
-            "aktif_kapi_no"         => $input_form_detaylari["aktif_kapi_no"],
+            "plaka"                 => $plaka,
+            "aktif_kapi_no"         => $aktif_kapi_no,
             "gelis_km"              => $input_form_detaylari["gelis_km"],
             "surucu"                => $input_form_detaylari["surucu"],
             "gelis_tarih"           => $input_form_detaylari["gelis_tarih"],
@@ -154,11 +172,44 @@ class Is_Emri_Formu extends Data_Out{
                         "aciklama"              => "Revziyon talebi"
                     ));
                 }
-                $insert = $this->pdo->insert(DBT_ISEMRI_FORMU_CIKANLAR, array(
+
+                $cikan_insert_array = array(
                     "form_gid"  => $this->details["gid"],
                     "stok_kodu" => $Parca->get_details("stok_kodu"),
                     "durum"     => $cikan["durum"]
-                ));
+                );
+                if( isset($cikan["parent_varyant_gid"]) && $cikan["parent_varyant_gid"] != "[YOK]" ) $cikan_insert_array["parent_varyant"] = $cikan["parent_varyant_gid"];
+                if( $cikan["varyant_gid"] != "[YOK]" ) $cikan_insert_array["varyant_gid"] = $cikan["varyant_gid"];
+                /**
+                 *
+                 * Varyantları giriş-çıkış olan parçalarda gelen js data;
+                 * -----------------------------------------------------
+                    aciklama:"olmayanayna"
+                    durum:"H"
+                    parent_varyant_gid:"GTSVARYSAGkgGrIPNTSNganRs"
+                    ref:"GTSPATIPYANAYNABLs4HZZGlLkvUG5fKbl8HfIS7kgGQqBicZPU3YxgKS"
+                    stok_kodu:"YOK"
+                    varyant_gid:"[YOK]"
+
+                   Varyantı olmayan parça js data
+                 * -------------------------------
+                    aciklama:"tet" // aciklama  stok_kodu = YOK ise kullanılıyor sadece
+                    durum:"H"
+                    parent_varyant_gid:"[YOK]"
+                    ref:"GTSPATIPTEST4BLzx3VCKJVxOIM45tzrpZTl8IQ06C1aEcx1CoWhmFm" // yerine giren parçanin stok kodu
+                    stok_kodu:"YOK"
+                    varyant_gid:"[YOK]"
+
+                   Giriş - çıkış ayrı varyantı olan parça js data
+                 * ----------------------------------------------------
+                    durum:"R"
+                    parent_varyant_gid:"GTSVARYSOLIkfbvjGO0qobcg4"
+                    ref:"GTSPATIPKALIPERBLnYjs67aTI7lbVkipYAZazfUzV90bLDL7jy9YgeCP"
+                    stok_kodu:"GTSPATIPKALIPERBLm39IJrHOjLlkNmBkq4prVegKtH6QQOpOdq9gjRNh"
+                    varyant_gid:"GTSVARYARKAUramlUZWLB9WfKu"
+
+                */
+                $insert = $this->pdo->insert(DBT_ISEMRI_FORMU_CIKANLAR, $cikan_insert_array );
                 if( !$insert ){
                     $this->return_text = "Cıkan parça form içeriği eklenirken hata oluştu 2.";
                     $this->ok = false;
@@ -190,6 +241,15 @@ class Is_Emri_Formu extends Data_Out{
             $Parca_Tipi = new Parca_Tipi( $Parca->get_details("parca_tipi") );
             $Satici_Firma = new Satici_Firma( $Parca->get_details("satici_firma"));
             $tooltip_data = 'Fatura No: ' . $Parca->get_details("fatura_no") . '<br> Satıcı Firma: ' . $Satici_Firma->get_details("isim");
+            $varyant = Data_Out::$BOS;
+            if( isset($cikan["parent_varyant"]) ){
+                $Ana_Varyant = new Varyant($cikan["parent_varyant"] );
+                $varyant = $Ana_Varyant->get_details("isim");
+            }
+            if( isset($cikan["varyant_gid"])){
+                $Alt_Varyant = new Varyant( $cikan["varyant_gid"] );
+                $varyant .= " - " . $Alt_Varyant->get_details("isim");
+            }
             if( $cikan["durum"] == Parca::$DREVIZE || $cikan["durum"] == Parca::$DHURDA  ){
                 $durum = "Hurda";
                 if( $cikan["durum"] == Parca::$DREVIZE ){
@@ -197,6 +257,7 @@ class Is_Emri_Formu extends Data_Out{
                 }
                 $cikanlar_html .= '<tr>
                     <td>'.$Parca_Tipi->get_details("isim").'</td>
+                    <td>'.$varyant.'</td>
                     <td>'.$Parca->get_details("aciklama").'</td>
                     <td>'.$cikan["miktar"].' '.$Parca_Tipi->get_details("miktar_olcu_birimi").'</td>
                     <td title="'.$cikan["stok_kodu"].'">'.substr($cikan["stok_kodu"], 0, 25).'...</td>
@@ -206,6 +267,7 @@ class Is_Emri_Formu extends Data_Out{
             } else if( $cikan["durum"] == Parca::$DKAYIP ){
                 $cikanlar_html .= '<tr>
                     <td>'.$Parca_Tipi->get_details("isim").'</td>
+                    <td>'.$varyant.'</td>
                     <td>'.$Parca->get_details("aciklama").'</td>
                     <td>'.$cikan["miktar"].' '.$Parca_Tipi->get_details("miktar_olcu_birimi").'</td>
                     <td title="'.$cikan["stok_kodu"].'">'.substr($cikan["stok_kodu"], 0, 25).'...</td>
@@ -217,6 +279,7 @@ class Is_Emri_Formu extends Data_Out{
                 // parca tipini burdan alicaz
                 $cikanlar_html .= '<tr>
                     <td>'.$Parca_Tipi->get_details("isim").'</td>
+                    <td>'.$varyant.'</td>
                     <td>'.$Parca->get_details("aciklama").'</td>
                     <td>'.$cikan["miktar"].' '.$Parca_Tipi->get_details("miktar_olcu_birimi").'</td>
                     <td>YOK</td>
@@ -340,7 +403,8 @@ class Is_Emri_Formu extends Data_Out{
                     </tbody>
                 </table>
             </div>
-            
+            <a href="'.URL_YAZDIRMA_TEMA_IEF.'?form_gid='.$this->details["gid"].'" target="_blank" class="mnbtn mor yazdirbtn">YAZDIR</a>
+            <a href="'.URL_YAZDIRMA_TEMA_IEF_CIKANLAR.'?form_gid='.$this->details["gid"].'" target="_blank" class="mnbtn mor yazdirbtn">ÇIKANLAR BARKOD YAZDIR</a>
             
             </div>';
     }

@@ -21,9 +21,12 @@
         $Login = new Login;
         $Login->auto_action($Auto_Login->get_user_id());
     } else{
+        // kalan cookie leri temizle ( bunun olmamasi lazim cookie varsa login olacaz  TODO )
+        $Logout = new Logout();
+        $Logout->action();
         if( !isset($GIRIS_FLAG) ){
             header("Location: giris.php");
-            //die;
+            die;
         }
     }
 
